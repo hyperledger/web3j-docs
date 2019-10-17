@@ -3,8 +3,8 @@ site_description: "Documentation portal for the web3j Blockchain Library"
 site_author: "Web3 Labs"
 site_url: "https://web3j.io/"
 
-repo_name: "web3j/web3j"
-repo_url: "https://github.com/web3j/web3j"
+repo_name: "web3j/web3j-docs"
+repo_url: "https://github.com/web3j/web3j-docs"
 
 # Copyright
 copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
