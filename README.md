@@ -6,3 +6,32 @@ Web3j Documentation repository.
 To modify the documentation simply submit a pull request agains the master branch.
 
 Once the pull request has been merged the website will reflect the changes.
+
+## Project setup
+
+Make sure you have [Pipenv](https://docs.pipenv.org/en/latest/) installed.
+
+Then run the following to get up and running:
+
+```bash
+git clone https://github.com/web3j/web3j-docs.git
+cd web3j-docs
+pipenv install
+pipenv shell
+```
+
+## Build instructions
+
+Run locally using:
+
+```bash
+mkdocs serve
+```
+
+To build and push to web3j-docs:
+
+```bash
+mkdocs gh-deploy
+```
+
+
