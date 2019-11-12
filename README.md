@@ -17,7 +17,6 @@ Then run the following to get up and running:
 git clone https://github.com/web3j/web3j-docs.git
 cd web3j-docs
 pipenv install
-pipenv shell
 ```
 
 ## Build instructions
