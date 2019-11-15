@@ -20,7 +20,10 @@ pipenv install
 ```
 
 ## Build instructions
-
+Install mkdocs material theme:
+```bash
+pip install mkdocs-material
+```
 Run locally using:
 
 ```bash
