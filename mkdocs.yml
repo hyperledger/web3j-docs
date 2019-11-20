@@ -23,6 +23,7 @@ nav:
   - Using Infura with Web3j: using_infura_with_web3j.md
   - Ethereum Name Service: ethereum_name_service.md
   - Contracts Supported by Web3j: contracts_supported_by_web3j.md
+  - Local in-process EVM: local_ethereum.md
   - Troubleshooting: troubleshooting.md
   - Projects using Web3j: projects_using_web3j.md
   - Companies using Web3j: companies_using_web3j.md
