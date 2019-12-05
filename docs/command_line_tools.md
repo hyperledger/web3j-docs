@@ -199,6 +199,8 @@ The command can also be used non-interactively
 
 ```web3j generate-tests -i <Solidity java wrappers> -o <output path>```
 
+When passing in the path to the Solidity java wrappers class, the generated wrapper's classpath should be under a directory named java. If the classpath is `com.web3labs.GeneratedWrapper` then the directory structure should be as such: `/java/com/web3labs/GeneratedWrapper.java` where you would only pass the absolute path: `/home/user/java/`. Everything under the java directory is considered a classpath.
+
 Generated project structure
 ---------------------------
 
