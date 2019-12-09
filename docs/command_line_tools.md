@@ -9,6 +9,7 @@ A web3j binary is distributed with each release providing an interactive command
 - Wallet password management
 - Ether transfer from one wallet to another
 - Generation of Solidity smart contract wrappers
+- Generation of unit tests for Java smart contract wrappers
 - Smart contract auditing
 
 Installation
@@ -50,11 +51,12 @@ The `web3j new` and `web3j import` commands provide a convenient way to create a
 These commands provide the following functionality:
 
 - Creation of a new Java project.
-- Generation of a simple *Hello World* Solidity contract (named the `Greeter`) or import an exisiting Solidity project from a file or directory.
+- Generation of a simple *Hello World* Solidity contract (named the `Greeter`) or import an existing Solidity project from a file or directory.
 - Compilation of the Solidity files.
 - Configure the project to use the Gradle build tool.
 - Generate Java smart contract wrappers for all provided Solidity files.
 - Add the required web3j dependencies, to deploy and interact with the contracts.
+- Generate unit tests for the Java smart contract wrappers.
 
 ### web3j new
 
@@ -150,6 +152,8 @@ Please enter the path to your solidity file/folder (Required Field):
 /path/to/solidity
 Please enter the destination of your project (current by default): 
 .
+Would you like to generate unit test for your solidity contracts [Y/n] ?
+n
 Project created with name: myimportedproject at location: .
 $
 ```
@@ -157,7 +161,7 @@ $
 This command can also be used non-interactively
 
 ```
-web3j import -n <project name> -p <package name> -s <path to solidity sources> [-o <path>]
+web3j import -n <project name> -p <package name> -s <path to solidity sources> [-o <path>] -t
 ```
 
 or 
@@ -167,14 +171,43 @@ web3j import
 ```
 
 The `-s` option will work with a single solidity file or a folder containing solidity files.
+The `-t` option is false by default. By passing `-t` unit tests will be generated for the java wrappers.
 
+### web3j generate-tests
+
+When creating a new project or importing solidity contracts, by using:
+
+`web3j generate-tests`
+```
+
+              _      _____ _     _        
+             | |    |____ (_)   (_)       
+__      _____| |__      / /_     _   ___  
+\ \ /\ / / _ \ '_ \     \ \ |   | | / _ \ 
+ \ V  V /  __/ |_) |.___/ / | _ | || (_) |
+  \_/\_/ \___|_.__/ \____/| |(_)|_| \___/ 
+                         _/ |             
+                        |__/              
+
+Please enter the path of the generated contract wrappers.
+/home/alexander/Documents/dev/java/
+Where would you like to save your tests.
+/home/alexander/Documents/dev/unit-tests/
+Unit tests were generated successfully at location: /home/alexander/Documents/dev/unit-tests/
+```
+The command can also be used non-interactively
+
+```web3j generate-tests -i <Solidity java wrappers> -o <output path>```
+
+When adding the path to your Java wrappers make sure you specify the path up to the package root e.g:
+If a class with name HelloWorld and package name `io.web3j` is located under `/home/user/Documents/dev/io/web3j/HelloWorld.java`, the correct way to point to that class is `/home/user/Documents/dev`
 
 Generated project structure
 ---------------------------
 
 Your application code and tests will be located in the following project directories:
 
-- `./src/main/java` - Generated Java appliciation code stub
+- `./src/main/java` - Generated Java application code stub
 - `./src/test/java` - Generated Java test code stub
 - `./src/main/solidity` - Solidity source code
 
@@ -347,14 +380,15 @@ $ unzip web3j-<version>.zip
   inflating: web3j-3.0.0/bin/web3j.bat
 $ ./web3j-<version>/bin/web3j
 
-              _      _____ _     _
-             | |    |____ (_)   (_)
-__      _____| |__      / /_     _   ___
-\ \ /\ / / _ \ '_ \     \ \ |   | | / _ \
+              _      _____ _     _        
+             | |    |____ (_)   (_)       
+__      _____| |__      / /_     _   ___  
+\ \ /\ / / _ \ '_ \     \ \ |   | | / _ \ 
  \ V  V /  __/ |_) |.___/ / | _ | || (_) |
-  \_/\_/ \___|_.__/ \____/| |(_)|_| \___/
-                         _/ |
-                        |__/
+  \_/\_/ \___|_.__/ \____/| |(_)|_| \___/ 
+                         _/ |             
+                        |__/              
 
-Usage: web3j version|wallet|solidity|new|import ...
+Usage: web3j version|wallet|solidity|new|import|generate-tests|audit ...
+
 ```
