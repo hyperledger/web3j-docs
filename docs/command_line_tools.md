@@ -199,6 +199,9 @@ The command can also be used non-interactively
 
 ```web3j generate-tests -i <Solidity java wrappers> -o <output path>```
 
+When adding the path to your Java wrappers make sure you specify the path up to the package root e.g:
+If a class with name HelloWorld and package name `io.web3j` is located under `/home/user/Documents/dev/io/web3j/HelloWorld.java`, the correct way to point to that class is `/home/user/Documents/dev`
+
 Generated project structure
 ---------------------------
 
