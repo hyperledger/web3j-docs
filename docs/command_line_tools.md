@@ -313,6 +313,20 @@ Transaction hash: 0xb00afc5c2bb92a76d03e17bd3a0175b80609e877cb124c02d19000d52939
 Mined block number: 1849039
 ```
 
+To fund a wallet on the Rinkeby or Ropsten testnet using the faucets provided by Web3 Labs, use the following command:
+
+``` console
+web3j wallet fund <network name> 0x<address> 
+```
+
+For instance, to fund the address `0xc6c7224128b9714b47009be351d0ea5bcb16da29`, on Rinkeby:
+``` console
+web3j wallet fund rinkeby 0xc6c7224128b9714b47009be351d0ea5bcb16da29
+```
+
+Please note that this functionality requires a proof-of-work based captcha, and is rate-limited. [Rinkeby](https://rinkeby.faucet.epirus.io/) and [Ropsten](https://ropsten.faucet.epirus.io/) Web3 Labs faucets can also be accessed from your browser.
+
+
 Auditing Tools
 ------------
 
