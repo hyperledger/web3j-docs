@@ -51,7 +51,7 @@ With this configured you can now use your Web3j instance as normal.
 
 While running locally it is possible to debug the internal state of the EVM when deploying and invoking functions on a contracts.
 
-You do this by giving the embedded Web3j service what's called an operational tracer. We have developed one which allow for console based debugging sessions and code walk throughs called ```ConsoleDebugTracer```.
+You do this by giving the embedded Web3j service what's called an operation tracer. We have developed one which allow for console based debugging sessions and code walk throughs called ```ConsoleDebugTracer```.
 
 To enable this simply pass an instance of this in as a second parameter on the ```EmbeddedWeb3jService``` constructor.
 
