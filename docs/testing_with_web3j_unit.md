@@ -1,10 +1,8 @@
 Web3j Unit
 ===========
 
-A web3j-unit is an extension to [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) which enables you to test solidity contracts like any other Java code.
-Rather than having to spin up a node, or use Ganache for integration testing, Web3j-unit runs an EVM in process.
-Web3j-unit also provides you with the flexibility of testing against specific Geth, Besu or Parity nodes.
-A docker-compose network can also be spun up and used for testing contracts using web3j-unit.
+Web3j-unit is an extension to [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) which enables you to test solidity contracts like any other Java code.
+It allows you to test with both an embedded and dockerized Ethereum nodes, with out-of-the box support for Geth, Besu, and Parity nodes. A docker-compose network can also be configured easily for more complex setups.
 
 # Usage
 
@@ -70,7 +68,7 @@ Run the test!
 
 Create a new test with the `@EVMComposeTest` annotation. 
 
-By default, uses `test.yml` file in the project home, and runs web3j on service named `node1` exposing the port `8545`. 
+By default, it uses `test.yml` file in the project home, and runs web3j on service named `node1` exposing the port `8545`. 
 
 Can be customised to use specific docker-compose file, service name and port by `@EVMComposeTest("src/test/resources/geth.yml", "ethnode1", 8080)` Here, we connect to the service named `ethnode1` in the `src/test/resources/geth.yml` docker-compose file which exposes the port `8080` for web3j to connect to.
 
@@ -121,7 +119,7 @@ Run the test!
 
 ## Sample projects
 
-Sample project using `@EVMTest` can be found [here](https://github.com/web3j/web3j-unitexample).
+1. Sample project using `@EVMTest` can be found [here](https://github.com/web3j/web3j-unitexample).
 
-Sample project using `@EVMCompseTest` can be found [here](https://github.com/web3j/web3j-unit-docker-compose-example). This tests the Greeter contract using VMWare Concord nodes using a docker-compose file.
+2. [This](https://github.com/web3j/web3j-unit-docker-compose-example) uses `@EVMComposeTest` to test the Greeter contract using VMWare Concord nodes using a docker-compose file.
 
