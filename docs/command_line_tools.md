@@ -23,7 +23,7 @@ The simplest way to install the Web3j CLI is via the following script:
 curl -L https://get.web3j.io | sh
 ```
 
-You can veriify the installation was successful by running th web3j command:
+You can verify the installation was successful by running th web3j command:
 
 ```bash
 web3j version
