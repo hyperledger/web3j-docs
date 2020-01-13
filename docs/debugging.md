@@ -24,7 +24,7 @@ The ```ConsoleDebugTracer``` allows you to interact with the debugging session u
 
 | Command line option             | Description                                             |
 |---------------------------------|---------------------------------------------------------|
-| [enter]                         | Continue running until next code section or breakpoint. |
+| [enter]                         | Continue running until next code section.               |
 | [number]                        | Step forward X number of opcodes.                       |
 | next                            | Run until the next breakpoint.                          |
 | end                             | Run until the end of current transaction.               |
