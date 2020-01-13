@@ -26,6 +26,7 @@ The ```ConsoleDebugTracer``` allows you to interact with the debugging session u
 |---------------------------------|---------------------------------------------------------|
 | [enter]                         | Continue running until next code section or breakpoint. |
 | [number]                        | Step forward X number of opcodes.                       |
+| next                            | Run until the next breakpoint.                          |
 | end                             | Run until the end of current transaction.               |
 | abort                           | Terminate the function call.                            |
 | show\|hide opcodes              | Show or hide opcodes.                                   |
