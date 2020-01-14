@@ -1,9 +1,9 @@
 Debugging smart contracts and transactions
 ==========================================
 
-While running locally with the embedded EVM it is possible to debug the internal state when deploying and invoking functions on a contracts.
+While running locally with the embedded EVM it is possible to debug the internal state when deploying and invoking functions on a contract.
 
-You do this by giving the embedded Web3j service what's called an operation tracer. We have developed one which allow for console based debugging sessions and code walk throughs called ```ConsoleDebugTracer```.
+You do this by giving the embedded Web3j service what's called an operation tracer. We have developed one which allows for console-based debugging sessions and code walkthroughs called ```ConsoleDebugTracer```.
 
 To enable this simply pass an instance of this in as a second parameter on the ```EmbeddedWeb3jService``` constructor.
 
@@ -13,7 +13,7 @@ OperationTracer operationTracer = new ConsoleDebugTracer();
 Web3j web3j = Web3j.build(new EmbeddedWeb3jService(configuration, operationTracer));
 ```
 
-When your project leverages our [gradle plugin](https://github.com/web3j/web3j-gradle-plugin) the ```ConsoleDebugTracer``` will automatically pick up Solidity contract meta data and use that to display source code context. Usually these meta data json files are stored within ```build/resources/main/solidity```. If you have chosen to place these elsewhere you will need to specify their location when creating the debugger instance:
+When your project leverages our [gradle plugin](https://github.com/web3j/web3j-gradle-plugin) the ```ConsoleDebugTracer``` will automatically pick up Solidity contract metadata and use that to display source code context. Usually, these meta data json files are stored within ```build/resources/main/solidity```. If you have chosen to place these elsewhere you will need to specify their location when creating the debugger instance:
 
 ```java
 OperationTracer operationTracer = new ConsoleDebugTracer(new File("alternative/metadata/file/location"));
