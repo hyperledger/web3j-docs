@@ -46,23 +46,3 @@ Configuration configuration = new Configuration(new Address(credentials.getAddre
 ```
 
 With this configured you can now use your Web3j instance as normal.
-
-## How to debug smart contracts with the embedded EVM
-
-While running locally it is possible to debug the internal state of the EVM when deploying and invoking functions on a contracts.
-
-You do this by giving the embedded Web3j service what's called an operation tracer. We have developed one which allow for console based debugging sessions and code walk throughs called ```ConsoleDebugTracer```.
-
-To enable this simply pass an instance of this in as a second parameter on the ```EmbeddedWeb3jService``` constructor.
-
-```java
-OperationTracer operationTracer = new ConsoleDebugTracer();
-
-Web3j web3j = Web3j.build(new EmbeddedWeb3jService(configuration, operationTracer));
-```
-
-When your project leverages our [gradle plugin](https://github.com/web3j/web3j-gradle-plugin) the ```ConsoleDebugTracer``` will automatically pick up Solidity contract meta data and use that to display source code context. Usually these meta data json files are stored within ```build/resources/main/solidity```. If you have chosen to place these elsewhere you will need to specify their location when creating the debugger instance:
-
-```java
-OperationTracer operationTracer = new ConsoleDebugTracer(new File("alternative/metadata/file/location"));
-```
