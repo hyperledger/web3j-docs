@@ -46,19 +46,20 @@ If you encounter problems with the installation, please refer to the manual inst
 
 Web3j new & import
 -----------------------------------------
-The `web3j new` and `web3j import` commands provide a convenient way to create a new Java project using Web3j's Command Line Tools.
+The `web3j new` and `web3j import` commands provide a convenient way to create a new Kotlin/Java project using Web3j's Command Line Tools.
 
 These commands provide the following functionality:
 
-- Creation of a new Java project.
-- Generation of a simple *Hello World* Solidity contract (named the `Greeter`) or import an existing Solidity project from a file or directory.
+- Creation of a new Java/Kotlin project.
+- Generation of a simple *Hello World* Solidity contract (named the `HelloWorld`) or import an existing Solidity project from a file or directory.
 - Compilation of the Solidity files.
 - Configure the project to use the Gradle build tool.
 - Generate Java smart contract wrappers for all provided Solidity files.
 - Add the required web3j dependencies, to deploy and interact with the contracts.
 - Generate unit tests for the Java smart contract wrappers.
+- Generate a password protected wallet with each project.
 
-### web3j new
+### web3j new / web3j new --java
 
 To generate a new project interactively:
 
@@ -80,11 +81,11 @@ __      _____| |__      / /_     _   ___
                          _/ |             
                         |__/              
 
-Please enter the project name (required): 
+Please enter the project name [Web3App]:
 MyProject
-Please enter the package name for your project (required): 
+Please enter the package name for your project [io.web3j]:
 com.web3labs.eth
-Please enter the destination of your project (default .): 
+Please enter the destination of your project [/home/user/Documents/myfolder]: 
 myproject
 Downloading https://services.gradle.org/distributions/gradle-5.0-bin.zip
 ...................................................................
@@ -108,6 +109,7 @@ $
 Details of the created project structure are [below](#generated-project-structure).
 
 
+
 Or using non-interactive mode:
 
 ```bash
@@ -120,9 +122,9 @@ The `project name ` and `package name` values must comply with the Java standard
 
 
 
-### web3j import
+### web3j import / web3j import --java
 
-Similarly to `web3j new`, `web3j import` will create a new java project but with user defined smart contracts.
+Similarly to `web3j new`, `web3j import` will create a new  project but with user defined smart contracts. By default a Kotlin project will be generated if the `--java` option is not appended.
 
 Again, to generate a new project interactively:
 
@@ -144,15 +146,15 @@ __      _____| |__      / /_     _   ___
                          _/ |             
                         |__/              
 
-Please enter the project name (Required Field): 
+Please enter the project name [Web3App]:
 MyImportedProject
-Please enter the package name for your project (Required Field): 
+Please enter the package name for your project [io.web3j]:
 com.web3labs.eth
-Please enter the path to your solidity file/folder (Required Field): 
+Please enter the path to your solidity file/folder [Required Field]: 
 /path/to/solidity
-Please enter the destination of your project (current by default): 
+Please enter the destination of your project [/home/user/Documents/myfolder]: 
 .
-Would you like to generate unit test for your solidity contracts [Y/n] ?
+Would you like to generate unit test for your solidity contracts [Y/n] ? 
 n
 Project created with name: myimportedproject at location: .
 $
@@ -173,7 +175,7 @@ web3j import
 The `-s` option will work with a single solidity file or a folder containing solidity files.
 The `-t` option is false by default. By passing `-t` unit tests will be generated for the java wrappers.
 
-### web3j generate-tests
+### web3j generate-tests / web3j generate-tests --java
 
 When creating a new project or importing solidity contracts, by using:
 
@@ -190,10 +192,10 @@ __      _____| |__      / /_     _   ___
                         |__/              
 
 Please enter the path of the generated contract wrappers.
-/home/alexander/Documents/dev/java/
+/home/user/Documents/dev/java/
 Where would you like to save your tests.
-/home/alexander/Documents/dev/unit-tests/
-Unit tests were generated successfully at location: /home/alexander/Documents/dev/unit-tests/
+/home/user/Documents/dev/unit-tests/
+Unit tests were generated successfully at location: /home/user/Documents/dev/unit-tests/
 ```
 The command can also be used non-interactively
 
@@ -207,9 +209,19 @@ Generated project structure
 
 Your application code and tests will be located in the following project directories:
 
+For Kotlin:
+
+- `./src/main/kotlin` - Generated Kotlin application code stub
+- `./src/test/kotlin` - Generated Kotlin test code stub
+- `./src/main/solidity` - Solidity source code
+
+For Java:
+
 - `./src/main/java` - Generated Java application code stub
 - `./src/test/java` - Generated Java test code stub
 - `./src/main/solidity` - Solidity source code
+
+
 
 If you need to edit the build file, it is located in the project root directory:
 
