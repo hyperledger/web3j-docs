@@ -81,11 +81,11 @@ __      _____| |__      / /_     _   ___
                          _/ |             
                         |__/              
 
-Please enter the project name (required): 
+Please enter the project name [Web3App]:
 MyProject
-Please enter the package name for your project (required): 
+Please enter the package name for your project [io.web3j]:
 com.web3labs.eth
-Please enter the destination of your project (default .): 
+Please enter the destination of your project [/home/user/Documents/myfolder]: 
 myproject
 Downloading https://services.gradle.org/distributions/gradle-5.0-bin.zip
 ...................................................................
@@ -146,15 +146,15 @@ __      _____| |__      / /_     _   ___
                          _/ |             
                         |__/              
 
-Please enter the project name (Required Field): 
+Please enter the project name [Web3App]:
 MyImportedProject
-Please enter the package name for your project (Required Field): 
+Please enter the package name for your project [io.web3j]:
 com.web3labs.eth
-Please enter the path to your solidity file/folder (Required Field): 
+Please enter the path to your solidity file/folder [Required Field]: 
 /path/to/solidity
-Please enter the destination of your project (current by default): 
+Please enter the destination of your project [/home/user/Documents/myfolder]: 
 .
-Would you like to generate unit test for your solidity contracts [Y/n] ?
+Would you like to generate unit test for your solidity contracts [Y/n] ? 
 n
 Project created with name: myimportedproject at location: .
 $
@@ -209,9 +209,19 @@ Generated project structure
 
 Your application code and tests will be located in the following project directories:
 
+For Kotlin:
+
 - `./src/main/kotlin` - Generated Kotlin application code stub
 - `./src/test/kotlin` - Generated Kotlin test code stub
 - `./src/main/solidity` - Solidity source code
+
+For Java:
+
+- `./src/main/java` - Generated Java application code stub
+- `./src/test/java` - Generated Java test code stub
+- `./src/main/solidity` - Solidity source code
+
+
 
 If you need to edit the build file, it is located in the project root directory:
 
