@@ -209,5 +209,3 @@ final HumanStandardToken tokenBob =
         HumanStandardToken.load(
                 tokenAlice.getContractAddress(), nodeBob, tmBob, ZERO_GAS_PROVIDER);
 ```
-
-## API Reference
