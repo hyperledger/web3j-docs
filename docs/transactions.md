@@ -259,11 +259,11 @@ Transaction and RawTransaction objects are used interchangeably in all of the su
 
 The sending of Ether between two parties requires a minimal number of details of the transaction object:
 
-_to_
+`to`
 
  the destination wallet address
 
-_value_
+`value`
 
   the amount of Ether you wish to send to the destination address
 
@@ -293,12 +293,12 @@ When working with smart contract wrappers as outlined below, you will have to pe
 
 To deploy a new smart contract, the following attributes will need to be provided
 
-_value_
+`value`
 
  the amount of Ether you wish to deposit in the smart contract
  (assumes zero if not provided)
 
-_data_
+`data`
 
  the hex formatted, compiled smart contract creation code
 
@@ -346,16 +346,16 @@ Transaction transaction = Transaction.createContractTransaction(
 
 To transact with an existing smart contract, the following attributes will need to be provided:
 
-_to_
+`to`
 
  the smart contract address
 
-_value_
+`value`
 
  the amount of Ether you wish to deposit in the smart contract (if
  the smart contract accepts ether)
 
-_data_
+`data`
 
  the encoded function selector and parameter arguments
 

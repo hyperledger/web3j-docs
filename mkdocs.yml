@@ -14,6 +14,7 @@ nav:
   - Getting Started: getting_started.md
   - Modules: modules.md
   - Transactions: transactions.md
+  - Privacy & Permissioning: privacy.md
   - Smart Contracts: smart_contracts.md
   - Application Binary Interface: application_binary_interface.md
   - Recursive Length Prefix: recursive_length_prefix.md

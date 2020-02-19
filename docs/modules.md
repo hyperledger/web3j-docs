@@ -20,6 +20,7 @@ The below modules only depend on the core module.
 -   parity - Parity specific JSON-RPC module
 -   infura - Infura specific HTTP header support
 -   contracts - Support for specific EIP's (Ethereum Improvement Proposals)
+-   besu - Support for private transactions on Hyperledger Besu
 
 For most use cases (interacting with the network and smart contracts) the *core* module should be all you need. The dependencies of the core module are very granular and only likely to be of use if your project is
 focussed on a very specific interaction with the Ethereum network (such as ABI/RLP encoding, transaction signing but not submission, etc).
