@@ -44,29 +44,48 @@ compile ('org.web3j:core:4.2.0-android')
 Start a client
 --------------
 
-Start up an Ethereum client if you don't already have one running, such as [Geth](https://github.com/ethereum/go-ethereum/wiki/geth):
+Start a client
+--------------
 
-``` {.bash}
-$ geth --rpcapi personal,db,eth,net,web3 --rpc --rinkeby
-```
+Start up an Ethereum client if you don't already have one running.
 
-Or [Parity](https://github.com/paritytech/parity):
+`Geth <https://github.com/ethereum/go-ethereum/wiki/geth>`_:
 
-``` {.bash}
-$ parity --chain testnet
-```
+.. code-block:: bash
 
-Or use [Infura](https://infura.io/), which provides **free clients** running in the cloud:
+   $ geth --rpcapi personal,db,eth,net,web3 --rpc --testnet
 
-``` java
-Web3j web3 = Web3j.build(new HttpService("https://morden.infura.io/your-token"));
-```
+`Besu <http://besu.hyperledger.org/>`_:
 
-For further information refer to [Using Infura with web3j](using_infura_with_web3j.md).
 
-Instructions on obtaining Ether to transact on the network can be found in the [testnet section of the docs](transactions.md#ethereum-testnets).
+.. code-block:: bash
 
-When you no longer need a _Web3j_ instance you need to call the _shutdown_ method to close resources used by it.
+   $ besu ----network=dev
+
+
+
+`dev` network uses has `some handy default parameters <https://besu.hyperledger.org/en/stable/Reference/Accounts-for-Testing/#development-mode>`_.
+
+
+`Parity <https://github.com/paritytech/parity>`_:
+
+.. code-block:: bash
+
+   $ parity --chain testnet
+
+
+`Infura <https://infura.io/>`_, 
+Or use which provides **free clients** running in the cloud:
+
+.. code-block:: java
+
+   Web3j web3 = Web3j.build(new HttpService("https://ropsten.infura.io/your-token"));
+
+For further information refer to
+`Using Infura with web3j <https://docs.web3j.io/using_infura_with_web3j/>`_
+
+Instructions on obtaining Ether to transact on the network can be found in the
+`testnet section of the docs <https://docs.web3j.io/transactions/#ethereum-testnets>`_.
 
 ``` java
 web3.shutdown()
