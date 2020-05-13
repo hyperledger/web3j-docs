@@ -7,6 +7,7 @@ The [ABI module](https://github.com/web3j/web3j/tree/master/abi) in web3j provid
 
 -   Java implementations of all ABI types, including conversion from and to native Java types
 -   Function and event support
+-   ABIv2 support
 -   Plenty of unit tests
 
 Type mappings
@@ -19,10 +20,13 @@ The native Java to ABI type mappings used within web3j are as follows:
 -   byte[\] -> bytes
 -   String -> string and address types
 -   List<\> -> dynamic/static array
+-   T -> struct/tuple types
 
 BigInteger types have to be used for numeric types, as numeric types in Ethereum are 256 bit integer values.
 
 [Fixed point types](http://solidity.readthedocs.io/en/develop/abi-spec.html#types) have been defined for Ethereum, but are [not currently implemented in Solidity](https://github.com/ethereum/solidity/issues/409), hence web3j does not currently support them (they were provided in versions prior to 3.x). Once available in Solidity, they will be reintroduced back into the web3j ABI module.
+
+Solidity structs will have a corresponding class generated for them. When using ABI generated from solidity compiler version 0.5.x or less, the names of the corresponding classes will be arbitrary i.e. `struct Foo` in your contract will be called `StructN` in the smart contract wrapper, where `N` in a number greater than 0. When using ABI generated from solidity compiler 0.6.x or more, the names of the corresponding classes will be the same as the name of the struct in the Solidity contract i.e. `struct Foo` in your smart contract will be called `Foo` in the smart contract wrapper.
 
 For more information on using ABI types in Java, refer to [Solidity smart contract wrappers](smart_contracts.md#solidity-smart-contract-wrappers).
 
