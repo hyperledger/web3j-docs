@@ -115,7 +115,7 @@ BinFile is required for [Contract validity](#contract-validity)
 
 In versions prior to 3.x of web3j, the generated smart contract wrappers used native Solidity types. From web3j 3.x onwards, Java types are created by default. You can create Solidity types using the *--solidityTypes* command line argument.
 
-From version 4.6.x onwards, the generator supports ABIv2. This means that you can have structs as input/output/event parameters in your smart contract.
+From Web3j version 4.6.x onwards, the generator supports ABIv2 for contract compiled with Solidity compiler version 0.6.x. This means that you can have structs as input/output/event parameters in your smart contract.
 
 You can also generate the wrappers by calling the Java class directly:
 
