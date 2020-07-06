@@ -30,6 +30,7 @@ To purchase Ether you will need to go via an exchange. As different regions have
 There are a number of dedicated test networks in Ethereum, which are
 supported by various clients.
 
+- Goerli (All clients)
 - Rinkeby (Geth only)
 - Kovan (Parity only)
 - Ropsten (Geth and Parity)
@@ -44,11 +45,15 @@ If you need some Ether on the Ropsten testnet to get started, please post a mess
 
 ## Mining on testnet/private blockchains
 
-In the Ethereum test environment (testnet), the mining difficulty is set lower then the main environment (mainnet). This means that you can mine new Ether with a regular CPU, such as your laptop. What you'll need to do is run an Ethereum client such as Geth or Parity to start building up reserves. Further instructions are available on the respective sites.
+In the Ethereum test environment (testnet), the mining difficulty is set lower then the main environment (mainnet). This means that you can mine new Ether with a regular CPU, such as your laptop. What you'll need to do is run an Ethereum client such as Geth, Besu or Parity to start building up reserves. Further instructions are available on the respective sites.
 
 Geth
 
 <https://github.com/ethereum/go-ethereum/wiki/Mining>
+
+Besu
+
+<https://github.com/hyperledger/besu>
 
 Parity
 
@@ -97,14 +102,14 @@ Both mechanisms are supported via web3j.
 
 ## Transaction signing via an Ethereum client
 
-In order to transact via an Ethereum client, you first need to ensure that the client you're transacting with knows about your wallet address. You are best off running your own Ethereum client such as Geth/Parity in order to do this. Once you have a client running, you can
+In order to transact via an Ethereum client, you first need to ensure that the client you're transacting with knows about your wallet address. You are best off running your own Ethereum client such as Geth/Besu/Parity in order to do this. Once you have a client running, you can
 create a wallet via:
 
 - The [GethWiki](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts) contains a good run down of the different mechanisms Geth supports such as importing private key files, and creating a new account via it's console
 - Alternatively you can use a JSON-RPC admin command for your client, such as _personal_newAccount_ for
   [Parity](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module#personal_newaccount) or [Geth](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_newaccount)
 
-With your wallet file created, you can unlock your account via web3j by first of all creating an instance of web3j that supports Parity/Geth admin commands:
+With your wallet file created, you can unlock your account via web3j by first of all creating an instance of web3j that supports Geth/Besu/Parity admin commands:
 
 ```java
 Admin web3j = Admin.build(new HttpService());
