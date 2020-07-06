@@ -1,6 +1,10 @@
 Getting Started
 ===============
 
+The simplest way to get started with Web3j is via the powerful [Epirus CLI](https://docs.epirus.io/sdk/cli/). 
+
+However, if you wish to configure your project manually, you can follow the steps outlined here.
+
 Add the latest web3j version to your project build configuration.
 
 Maven
@@ -12,7 +16,7 @@ Java 8:
 <dependency>
   <groupId>org.web3j</groupId>
   <artifactId>core</artifactId>
-  <version>4.5.5</version>
+  <version>4.6.1</version>
 </dependency>
 ```
 
@@ -22,7 +26,7 @@ Android:
 <dependency>
   <groupId>org.web3j</groupId>
   <artifactId>core</artifactId>
-  <version>4.2.0-android</version>
+  <version>4.6.0-android</version>
 </dependency>
 ```
 
@@ -32,17 +36,14 @@ Gradle
 Java 8:
 
 ``` groovy
-compile ('org.web3j:core:4.5.5')
+compile ('org.web3j:core:4.6.1')
 ```
 
 Android:
 
 ``` groovy
-compile ('org.web3j:core:4.2.0-android')
+compile ('org.web3j:core:4.6.0-android')
 ```
-
-Start a client
---------------
 
 Start a client
 --------------
@@ -149,10 +150,10 @@ To generate the wrapper code, compile your smart contract:
 $ solc <contract>.sol --bin --abi --optimize -o <output-dir>/
 ```
 
-Then generate the wrapper code using web3j's [Command Line Tools](command_line_tools.md):
+Then generate the wrapper code using the [Epirus CLI](https://docs.epirus.io/sdk/cli/):
 
 ``` bash
-web3j solidity generate -b /path/to/<smart-contract>.bin -a /path/to/<smart-contract>.abi -o /path/to/src/main/java -p com.your.organisation.name
+epirus solidity generate -b /path/to/<smart-contract>.bin -a /path/to/<smart-contract>.abi -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
 Now you can create and deploy your smart contract:
@@ -405,6 +406,9 @@ final Web3j web3j = Web3j.build(webSocketService)
 final Flowable<NewHeadsNotification> notifications = web3j.newHeadsNotifications()
 ```
 
+TLS over Websockets
+-------------------
+
 It is also possible to use TLS with the WebSocketConnection, remember to change your protocol from `ws` to `wss`. For stricter requirements one can define a custom keystore for their SSL certificates by passing in a modified `WebSocketClient` to the `WebSocketService`:
 
 ```java
@@ -422,7 +426,7 @@ kmf.init(ks, KEYPASSWORD.toCharArray());
 final TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
 tmf.init(ks);
 
-//Create SSL socket
+// Create SSL socket
 final SSLContext sslContext = SSLContext.getInstance("TLS");
 sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), null);
 final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
@@ -437,14 +441,14 @@ final Web3j web3j = Web3j.build(webSocketService);
 Command line tools
 ------------------
 
-A web3j fat jar is distributed with each release providing command line tools. The command line tools allow you to use some of the functionality of web3j from the command line:
+The Epirus CLI is updated with each Web3j release allowing you to use some of the key features of Web3j from a CLI:
 
 -   Wallet creation
 -   Wallet password management
 -   Transfer of funds from one wallet to another
 -   Generate Solidity smart contract function wrappers
 
-Please refer to the [documentation](command_line_tools.md) for further information.
+Please refer to the [documentation](https://docs.epirus.io/sdk/cli/) for further information.
 
 Further details
 ---------------

@@ -1,27 +1,27 @@
 Quickstart
 ==========
 
-Web3j CLI
+Epirus CLI
 ---------
 
-Install the Web3j binary.
+Install the Epirus binary.
 
 To get the latest version on Mac OS or Linux, type the following in your terminal:
 
 ```bash
-curl -L https://get.web3j.io | sh
+curl -L get.epirus.io | sh && source ~/.epirus/source.sh
 ```
 
 Then to create a new project, simply run:
 
 ```bash
-web3j new
+epirus new
 ```
 
-Or, to import an existing Solidity project into Web3j, run:
+Or, to import an existing Solidity project into a Web3j project, run:
 
 ```bash
-web3j import
+epirus import
 ```
 
 Then to build your project run:
@@ -30,13 +30,13 @@ Then to build your project run:
 ./gradlew build
 ```
 
-For more information on using the Web3j CLI, head to the [CLI section](command_line_tools.md).
+For more information on using the Epirus CLI, head to the [Epirus Quickstart](https://docs.epirus.io/quickstart/#installation).
 
 
 Sample project
 --------------
 
-A [web3j sample project](https://github.com/web3j/sample-project-gradle) is available that demonstrates a number of core features of Ethereum with web3j, including:
+For the most current experience, we recommend you follow the [Epirus Quickstart](https://docs.epirus.io/quickstart/#installation) mentioned above. However, if you'd like to see a bare-bones project, you can refer to the [Web3j sample project](https://github.com/web3j/sample-project-gradle) is available that demonstrates a number of core features of Ethereum with web3j, including:
 
 -   Connecting to a node on the Ethereum network
 -   Loading an Ethereum wallet file
