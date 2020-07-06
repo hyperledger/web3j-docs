@@ -50,40 +50,27 @@ Start a client
 
 Start up an Ethereum client if you don't already have one running.
 
-`Geth <https://github.com/ethereum/go-ethereum/wiki/geth>`_:
+[Geth](https://github.com/ethereum/go-ethereum/wiki/geth):
 
-.. code-block:: bash
+``` bash
+$ geth --rpcapi personal,db,eth,net,web3 --rpc --testnet
+```
 
-   $ geth --rpcapi personal,db,eth,net,web3 --rpc --testnet
-
-`Besu <http://besu.hyperledger.org/>`_:
-
-
-.. code-block:: bash
-
-   $ besu ----network=dev
+[Hyperledger Besu](http://besu.hyperledger.org/):
 
 
+``` bash
+$ besu ----network=dev
+```
 
-`dev` network uses has `some handy default parameters <https://besu.hyperledger.org/en/stable/Reference/Accounts-for-Testing/#development-mode>`_.
-
-
-`Parity <https://github.com/paritytech/parity>`_:
-
-.. code-block:: bash
-
-   $ parity --chain testnet
+The `dev` network uses has [some handy default parameters](https://besu.hyperledger.org/en/stable/Reference/Accounts-for-Testing/#development-mode).
 
 
-`Infura <https://infura.io/>`_, 
-Or use which provides **free clients** running in the cloud:
+[Parity](https://github.com/paritytech/parity):
 
-.. code-block:: java
-
-   Web3j web3 = Web3j.build(new HttpService("https://ropsten.infura.io/your-token"));
-
-For further information refer to
-`Using Infura with web3j <https://docs.web3j.io/using_infura_with_web3j/>`_
+``` bash
+$ parity --chain testnet
+```
 
 Instructions on obtaining Ether to transact on the network can be found in the
 `testnet section of the docs <https://docs.web3j.io/transactions/#ethereum-testnets>`_.
