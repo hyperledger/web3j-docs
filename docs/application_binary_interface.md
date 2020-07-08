@@ -40,5 +40,5 @@ A full ABI specification is maintained with the [Solidity documentation](http://
 Dependencies
 ------------
 
-This is a very lightweight module, with the only third-party dependency being [Bouncy Castle](https://www.bouncycastle.org/) for cryptographic hashing ([Spongy Castle](https://rtyley.github.io/spongycastle/) on Android). The hope is that other projects wishing to work with
+This is a very lightweight module, with the only third-party dependency being [Bouncy Castle](https://www.bouncycastle.org/) for cryptographic hashing. The hope is that other projects wishing to work with
 Ethereum's ABI on the JVM or Android will choose to make use of this module rather then write their own implementations.

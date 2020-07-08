@@ -34,7 +34,7 @@ It has five runtime dependencies:
 -   [RxJava](https://github.com/ReactiveX/RxJava) for its reactive-functional API
 -   [OKHttp](https://hc.apache.org/httpcomponents-client-ga/index.html) for HTTP connections
 -   [Jackson Core](https://github.com/FasterXML/jackson-core) for fast JSON serialisation/deserialisation
--   [Bouncy Castle](https://www.bouncycastle.org/) ([Spongy Castle](https://rtyley.github.io/spongycastle/) on Android) for crypto
+-   [Bouncy Castle](https://www.bouncycastle.org/) for crypto
 -   [Jnr-unixsocket](https://github.com/jnr/jnr-unixsocket) for \*nix IPC (not available on Android)
 
 It also uses [JavaPoet](https://github.com/square/javapoet) for generating smart contract wrappers
