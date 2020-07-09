@@ -225,10 +225,13 @@ You should be able to run the server and see the following:
 ![image](img/Web3j-OpenAPI/Server_logs.png)
 
 ## Interact with the generated project:
-Interactions can be done using HTTP requests either through the `SwaggerUI`, on the link `{host}:{port}/swagger-ui`, or `Curls`:
+Interactions can be done using HTTP requests either through `Curls`:
 ```ssh
 $ curl -X POST "http://{host}:{port}/{application name}/contracts/helloworld/{contractAddress}/SayIt" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"greeting\":\"Hello OpenAPI\"}"
 ```
+Or, the `SwaggerUI`, on the link `{host}:{port}/swagger-ui`:
+
+![image](img/Web3j-OpenAPI/SwaggerUI_3.png)
 
 To interact via Java/Kotlin:
 
@@ -250,4 +253,3 @@ val receipt = helloWorld.contracts.greeter.deploy(
 
 val greeter = helloWorld.contracts.greeter.load(receipt.contractAddress)
 ```
-
