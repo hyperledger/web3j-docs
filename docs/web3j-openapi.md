@@ -15,11 +15,15 @@ The following Hello World contract :
 pragma solidity ^0.6.0;
 
 contract HelloWorld {
+
+ event Greeting(string greet);
+ 
  function hello() public pure returns (string memory) {
    return 'Hello Web3j-OpenAPI';
  }
  
- function sayIt(string memory greeting) public pure returns (string memory) {
+ function sayIt(string memory greeting) public returns (string memory) {
+   emit Greeting(greeting);
    return greeting;
  }
 }
@@ -80,17 +84,6 @@ and the available methods:
 
 ![image](img/Web3j-OpenAPI/SwaggerUI_2.png)
 
-# Why an OpenAPI generator?
-
-As stated above, the Web3j-OpenAPI generator creates an OpenAPI project from a smart contract. Thus, providing a way to interact with the Ethereum blockchain using HTTP requests.
-Such a generator is beneficial in the following ways:
-### By making it easier to interact with the Ethereum blockchain:
-Before this, interacting with the Ethereum blockchain required knowledge of a programming language other than Solidity, and then hardcoding the desired logic.This made it hard for people wishing to get involved in the smart contracts world and added extra technical requirements aside from knowing the language of smart contracts.
-
-### By Interacting with smart contracts without code:
-Being able to generate an OpenAPI project from a smart contract and interacting with it using HTTP requests, eliminates the need to code any interactions to be able to send them to the blockchain. Therefore, by using the Web3j-OpenAPI, it’s possible to interact with the Ethereum blockchain using no code, besides Solidity.
-
-
 ## Use cases
 An OpenAPI project can be generated using the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) as follows:
 
@@ -124,8 +117,8 @@ $ ./helloworld-server
 # Getting started with Web3j-OpenAPI
 
 ## How to generate a project:
-To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) installed on your machine. 
-It’s easy to do:
+To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) installed on your machine (Note - the Epirus CLI has replaced the Web3j CLI). 
+It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
 	
 ```
 curl -L get.epirus.io | sh
@@ -140,7 +133,7 @@ To check the generator available options.
 ![image](img/Web3j-OpenAPI/Generator_help.png)
 
 In this case, we will be using the above Hello World contract. 
-To compile it, you can use solc via SVM(link). This lets you handle multiple solidity compiler versions easily:
+To compile it, you can use solc via [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt). This lets you handle multiple solidity compiler versions easily:
 ```
 Svm install 0.6.0
 Svm use 0.6.0
@@ -152,7 +145,7 @@ Now, you should  see the ABI and Bin files in the directory. You  can use them t
 Epirus generate openapi --abi HelloWorld.abi --bin HelloWorld.bin --package-name com.tutorial --output . --name HelloWorldProject
 ```
 You should be seeing logs similar to the following:
-
+![image](img/Web3j-OpenAPI/Generator_logs.png)
 
 ## How to build
 
