@@ -68,7 +68,7 @@ Alternatively, if you wish to send regular transactions or have more control ove
 Smart contract examples
 -----------------------
 
-web3j provides a number of smart contract examples in the project directory [codegen/src/test/resources/solidity](https://github.com/web3j/web3j/tree/master/codegen/src/test/resources/solidity)
+Web3j provides a number of smart contract examples in the project directory [codegen/src/test/resources/solidity](https://github.com/web3j/web3j/tree/master/codegen/src/test/resources/solidity)
 
 It also provides integration tests for demonstrating the deploying and working with those smart contracts in the [integration-tests/src/test/java/org/web3j/protocol/scenarios](https://github.com/web3j/web3j/tree/master/integration-tests/src/test/java/org/web3j/protocol/scenarios) module.
 
@@ -94,12 +94,12 @@ Alternatively, if you do not wish to use a smart contract wrapper and would like
 Solidity smart contract wrappers
 --------------------------------
 
-web3j supports the auto-generation of smart contract function wrappers in Java from Solidity ABI files.
+Web3j supports the auto-generation of smart contract function wrappers in Java from Solidity ABI files.
 
-The web3j [Command Line Tools](command_line_tools.md) tools ship with a command line utility for generating the smart contract function wrappers:
+The Epirus [Command Line Tools](command_line_tools.md) tools ship with a command line utility for generating the smart contract function wrappers:
 
 ``` bash
-$ web3j solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
+$ epirus solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
 
    -h, --help                        Show this help message and exit.
    -V, --version                     Print version information and exit.
@@ -111,9 +111,9 @@ $ web3j solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<dest
    -p, --package=<packageName>       base package name.
 ```
 
-BinFile is required for [Contract validity](#contract-validity)
+`<binfile>` is required for [Contract validity](#contract-validity)
 
-In versions prior to 3.x of web3j, the generated smart contract wrappers used native Solidity types. From web3j 3.x onwards, Java types are created by default. You can create Solidity types using the *--solidityTypes* command line argument.
+In versions prior to 3.x of Web3j, the generated smart contract wrappers used native Solidity types. From Web3j 3.x onwards, Java types are created by default. You can create Solidity types using the *--solidityTypes* command line argument.
 
 From Web3j version 4.6.x onwards, the generator supports ABIv2 for contract compiled with Solidity compiler version 0.6.x. This means that you can have structs as input/output/event parameters in your smart contract.
 
@@ -136,11 +136,11 @@ The smart contract wrappers support all common operations for working with smart
 
 Any method calls that requires an underlying JSON-RPC call to take place will return a Future to avoid blocking.
 
-web3j also supports the generation of Java smart contract function wrappers directly from [Truffle's](http://truffleframework.com/) [Contract
+Web3j also supports the generation of Java smart contract function wrappers directly from [Truffle's](http://truffleframework.com/) [Contract
 Schema](https://github.com/trufflesuite/truffle/tree/develop/packages/truffle-contract-schema) via the [Command Line Tools](command_line_tools.md) utility.
 
 ``` bash
-$ web3j truffle generate [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
+$ epirus truffle generate [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
 And this also can be invoked by calling the Java class:
