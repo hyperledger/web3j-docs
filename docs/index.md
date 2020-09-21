@@ -12,7 +12,7 @@ The [Java and the Blockchain](https://www.youtube.com/watch?v=ea3miXs_P6Y) talk 
 Features
 ========
 
--   Complete implementation of Ethereum's [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) client API over HTTP and IPC
+-   Complete implementation of Ethereum's [JSON-RPC](https://eth.wiki/json-rpc/API) client API over HTTP and IPC
 -   Ethereum wallet support
 -   Auto-generation of Java smart contract wrappers to create, deploy, transact with and call smart contracts from native Java code ([Solidity](http://solidity.readthedocs.io/en/latest/using-the-compiler.html#using-the-commandline-compiler) and [Truffle](https://github.com/trufflesuite/truffle) definition formats supported)
 -   Reactive-functional API for working with filters

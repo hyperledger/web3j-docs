@@ -50,13 +50,13 @@ Start a client
 
 Start up an Ethereum client if you don't already have one running.
 
-[Geth](https://github.com/ethereum/go-ethereum/wiki/geth):
+[Geth](https://geth.ethereum.org/docs/getting-started):
 
 ``` bash
 $ geth --rpcapi personal,db,eth,net,web3 --rpc --testnet
 ```
 
-[Hyperledger Besu](http://besu.hyperledger.org/):
+[Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-for-testing):
 
 
 ``` bash
@@ -66,18 +66,15 @@ $ besu ----network=dev
 The `dev` network uses has [some handy default parameters](https://besu.hyperledger.org/en/stable/Reference/Accounts-for-Testing/#development-mode).
 
 
-[Parity](https://github.com/paritytech/parity):
+[Parity](https://openethereum.github.io/wiki/Basic-Usage):
 
-``` bash
-$ parity --chain testnet
+``` bash    
+$ openethereum --chain testnet  
 ```
 
 Instructions on obtaining Ether to transact on the network can be found in the
-`testnet section of the docs <https://docs.web3j.io/transactions/#ethereum-testnets>`_.
+[testnet section of the docs](` https://docs.web3j.io/transactions/#ethereum-testnets`).
 
-``` java
-web3.shutdown()
-```
 
 Start sending requests
 ----------------------
@@ -295,7 +292,7 @@ If you want to make use of Parity's [Personal](https://github.com/paritytech/par
 Publish/Subscribe (pub/sub)
 ---------------------------
 
-Ethereum clients implement the [pub/sub](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) mechanism that provides the capability to subscribe to events from the network, allowing these clients to take custom actions as needed. In doing so it alleviates the need to use polling and is more efficient. This is achieved by using the WebSocket protocol instead of HTTP protocol.
+Ethereum clients implement the [pub/sub](https://geth.ethereum.org/docs/rpc/pubsub) mechanism that provides the capability to subscribe to events from the network, allowing these clients to take custom actions as needed. In doing so it alleviates the need to use polling and is more efficient. This is achieved by using the WebSocket protocol instead of HTTP protocol.
 
 Pub/Sub methods are available via the _WebSocketService_ class, and allows the client to:
 
