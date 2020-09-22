@@ -37,10 +37,11 @@ supported by various clients.
 
 For development, its recommended you use the Rinkeby or Kovan test networks. This is because they use a Proof of Authority (PoA) consensus mechanism, ensuring transactions and blocks are created in a consistent and timely manner. The Ropsten testnet, although closest to the Mainnet as it uses Proof of Work (PoW) consensus, has been subject to attacks in the past and tends to be more problematic for developers.
 
-You can request Ether for the Rinkeby testnet via the Rinkeby Crypto Faucet, available at <https://www.rinkeby.io/>.
+You can request Ether for the Rinkeby testnet via the Rinkeby Crypto Faucet, available at <https://www.rinkeby.io/#faucet>.
 
 Details of how to request Ether for the Kovan testnet are available [here](https://github.com/kovan-testnet/faucet).
 
+(This section needs to be changed)
 If you need some Ether on the Ropsten testnet to get started, please post a message with your wallet address to the [web3j Gitter channel](https://gitter.im/web3j/web3j) and you will be sent some.
 
 ## Mining on testnet/private blockchains
@@ -49,15 +50,15 @@ In the Ethereum test environment (testnet), the mining difficulty is set lower t
 
 Geth
 
-<https://github.com/ethereum/go-ethereum/wiki/Mining>
+<https://geth.ethereum.org/docs/interface/mining>
 
 Besu
 
-<https://github.com/hyperledger/besu>
+<https://besu.hyperledger.org/en/stable/Concepts/Mining/>
 
-Parity
+Parity / OpenEthereum
 
-<https://github.com/paritytech/parity/wiki/Mining>
+<https://openethereum.github.io/wiki/Mining>
 
 Once you have mined some Ether, you can start transacting with the blockchain.
 
@@ -105,9 +106,9 @@ Both mechanisms are supported via web3j.
 In order to transact via an Ethereum client, you first need to ensure that the client you're transacting with knows about your wallet address. You are best off running your own Ethereum client such as Geth/Besu/Parity in order to do this. Once you have a client running, you can
 create a wallet via:
 
-- The [GethWiki](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts) contains a good run down of the different mechanisms Geth supports such as importing private key files, and creating a new account via it's console
+- The [Geth Wiki](https://geth.ethereum.org/docs/interface/managing-your-accounts) contains a good run down of the different mechanisms Geth supports such as importing private key files, and creating a new account via it's console
 - Alternatively you can use a JSON-RPC admin command for your client, such as _personal_newAccount_ for
-  [Parity](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module#personal_newaccount) or [Geth](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_newaccount)
+  [Parity](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module#personal_newaccount) (This needs to be changed) or [Geth](https://geth.ethereum.org/docs/interface/managing-your-accounts)
 
 With your wallet file created, you can unlock your account via web3j by first of all creating an instance of web3j that supports Geth/Besu/Parity admin commands:
 
@@ -193,7 +194,7 @@ In order to create and sign a raw transaction, the sequence of events is as foll
 
 1.  Identify the next available [nonce](#the-transaction-nonce) for the sender account
 2.  Create the RawTransaction object
-3.  Encode the RawTransaction object using [Recursive Length Prefix](#) encoding
+3.  Encode the RawTransaction object using [Recursive Length Prefix](https://docs.web3j.io/recursive_length_prefix/#recursive-length-prefix) encoding
 4.  Sign the RawTransaction object
 5.  Send the RawTransaction object to a node for processing
 
@@ -215,7 +216,7 @@ String hexValue = Numeric.toHexString(signedMessage);
 
 Where the credentials are those loaded as per [Creating and working with wallet files](#creating-and-working-with-wallet-files)
 
-The transaction is then sent using [eth_sendRawTransaction](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendrawtransaction):
+The transaction is then sent using [eth_sendRawTransaction](https://eth.wiki/json-rpc/API):
 
 ```java
 EthSendTransaction ethSendTransaction = web3j.ethSendRawTransaction(hexValue).sendAsync().get();
@@ -229,7 +230,7 @@ Please refer to the integration test [CreateRawTransactionIT](https://github.com
 
 The nonce is an increasing numeric value which is used to uniquely identify transactions. A nonce can only be used once and until a transaction is mined, it is possible to send multiple versions of a transaction with the same nonce, however, once mined, any subsequent submissions will be rejected.
 
-You can obtain the next available nonce via the [eth_getTransactionCount](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactioncount) method:
+You can obtain the next available nonce via the [eth_getTransactionCount](https://eth.wiki/json-rpc/API#eth_gettransactioncount) method:
 
 ```java
 EthGetTransactionCount ethGetTransactionCount = web3j.ethGetTransactionCount(
@@ -248,7 +249,7 @@ RawTransaction rawTransaction  = RawTransaction.createEtherTransaction(
 ## Transaction types
 
 The different types of transaction in web3j work with both Transaction and RawTransaction objects. The key difference is that Transaction objects must always have a from address, so that the Ethereum client
-which processes the [eth_sendTransaction](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendtransaction) request know which wallet to use in order to sign and send the
+which processes the [eth_sendTransaction](https://eth.wiki/json-rpc/API#eth_sendtransaction) request know which wallet to use in order to sign and send the
 transaction on the message senders behalf. As mentioned [above](#offline-transaction-signing), this is not necessary for raw transactions which are signed offline.
 
 The subsequent sections outline the key transaction attributes required for the different transaction types. The following attributes remain constant for all:
@@ -389,7 +390,7 @@ refer to the [Filters and Events](filters_and_events.md) section for details.
 
 ## Querying the state of a smart contract 
 
-This functionality is facilitated by the [eth_call](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_call) JSON-RPC call.
+This functionality is facilitated by the [eth_call](https://eth.wiki/json-rpc/API#eth_call) JSON-RPC call.
 
 eth_call allows you to call a method on a smart contract to query a value. There is no transaction cost associated with this function, this is because it does not change the state of any smart contract method's
 called, it simply returns the value from them:

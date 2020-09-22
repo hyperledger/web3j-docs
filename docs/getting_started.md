@@ -287,7 +287,7 @@ if (personalUnlockAccount.accountUnlocked()) {
 }
 ```
 
-If you want to make use of Parity's [Personal](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module) or [Trace](https://github.com/paritytech/parity/wiki/JSONRPC-trace-module), or Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) client APIs, you can use the *org.web3j:parity* and *org.web3j:geth* modules respectively.
+If you want to make use of Parity's [Personal](https://openethereum.github.io/wiki/JSONRPC-personal-module) or [Trace](https://openethereum.github.io/wiki/JSONRPC-trace-module), or Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) client APIs, you can use the *org.web3j:parity* and *org.web3j:geth* modules respectively.
 
 Publish/Subscribe (pub/sub)
 ---------------------------
@@ -372,7 +372,7 @@ final Disposable disposable = events.subscribe(event -> {
 ```
 
 Notice that we need to provide a name of a method to _WebSocketService_ that needs to be called to unsubscribe from a stream of events. This is because different Ethereum clients may have different methods to unsubscribe from particular events. For example, the Parity client requires use of the
-_parity_unsubscribe_ method to unsubscribe from [pub/sub events](https://wiki.parity.io/JSONRPC-eth_pubsub-module).
+_parity_unsubscribe_ method to unsubscribe from [pub/sub events](https://openethereum.github.io/wiki/JSONRPC-eth_pubsub-module).
 
 To unsubscribe from a stream of events one needs to use a _Flowable_ instance for a particular events stream:
 

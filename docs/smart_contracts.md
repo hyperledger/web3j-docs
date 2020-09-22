@@ -7,9 +7,6 @@ Developers have the choice of three languages for writing smart contracts:
 
 > The flagship language of Ethereum, and most popular language for smart contracts.
 
-[Serpent](https://github.com/ethereum/wiki/wiki/Serpent)
-
-> A Python like language for writing smart contracts.
 
 LISP Like Language (LLL)
 
@@ -24,7 +21,6 @@ Getting started with Solidity
 
 An overview of Solidity is beyond the scope of these docs, however, the following resources are a good place to start:
 
--   [Contract Tutorial](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial) on the Go Ethereum Wiki
 -   [Introduction to Smart Contracts](http://Solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html) in the Solidity project documentation
 -   [Writing a contract](https://ethereum-homestead.readthedocs.io/en/latest/contracts-and-transactions/contracts.html#writing-a-contract) in the Ethereum Homestead Guide
 
@@ -77,7 +73,7 @@ It also provides integration tests for demonstrating the deploying and working w
 EIP-20 Ethereum token standard smart contract 
 ---------------------------------------------
 
-There an Ethereum standard, [EIP-20](https://github.com/ethereum/EIPs/issues/20) which started off as an [Ethereum Improvement Proposal
+There an Ethereum standard, [EIP-20](https://eips.ethereum.org/EIPS/eip-20) which started off as an [Ethereum Improvement Proposal
 (EIP)](https://github.com/ethereum/EIPs), that defines the standard functions that a smart contract providing tokens should implement.
 
 The EIP-20 standard provides function definitions, but does not provide an implementation example. However, there is an implementation provided in
@@ -96,7 +92,7 @@ Solidity smart contract wrappers
 
 Web3j supports the auto-generation of smart contract function wrappers in Java from Solidity ABI files.
 
-The Epirus [Command Line Tools](command_line_tools.md) tools ship with a command line utility for generating the smart contract function wrappers:
+The Epirus [Command Line Tools](https://docs.epirus.io/sdk/cli/) tools ship with a command line utility for generating the smart contract function wrappers:
 
 ``` bash
 $ epirus solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
@@ -137,7 +133,7 @@ The smart contract wrappers support all common operations for working with smart
 Any method calls that requires an underlying JSON-RPC call to take place will return a Future to avoid blocking.
 
 Web3j also supports the generation of Java smart contract function wrappers directly from [Truffle's](http://truffleframework.com/) [Contract
-Schema](https://github.com/trufflesuite/truffle/tree/develop/packages/truffle-contract-schema) via the [Command Line Tools](command_line_tools.md) utility.
+Schema](https://github.com/trufflesuite/truffle-contract-schema) via the [Command Line Tools](https://docs.epirus.io/sdk/cli/#solidity-smart-contract-wrapper-generator) utility.
 
 ``` bash
 $ epirus truffle generate [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
@@ -208,7 +204,7 @@ There is also a [ReadonlyTransactionManager](https://github.com/web3j/web3j/blob
 Specifying the Chain Id on Transactions (EIP-155)
 -------------------------------------------------
 
-The RawTransactionManager takes an optional *chainId* parameter to specify the chain id to be used on transactions as per [EIP-155](https://github.com/ethereum/EIPs/issues/155). This prevents transactions from one chain being re-broadcast onto another chain, such as from Ropsten to Mainnet:
+The RawTransactionManager takes an optional *chainId* parameter to specify the chain id to be used on transactions as per [EIP-155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md). This prevents transactions from one chain being re-broadcast onto another chain, such as from Ropsten to Mainnet:
 
 ```java
 TransactionManager transactionManager = new RawTransactionManager(
@@ -264,7 +260,7 @@ If you require further information, the [FastRawTransactionManagerIT](https://gi
 Invoking transactions and events 
 --------------------------------
 
-All transactional smart contract methods are named identically to their Solidity methods, taking the same parameter values. Transactional calls do not return any values, regardless of the return type specified on the method. Hence, for all transactional methods the [Transaction Receipt](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gettransactionreceipt) associated with the transaction is returned.:
+All transactional smart contract methods are named identically to their Solidity methods, taking the same parameter values. Transactional calls do not return any values, regardless of the return type specified on the method. Hence, for all transactional methods the [Transaction Receipt](https://eth.wiki/json-rpc/API#eth_gettransactionreceipt) associated with the transaction is returned.:
 
 ```java
 TransactionReceipt transactionReceipt = contract.someMethod(

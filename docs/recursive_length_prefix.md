@@ -4,7 +4,7 @@ Recursive Length Prefix
 The Recursive Length Prefix (RLP) encoding scheme is a space efficient object serialization scheme used in Ethereum.
 
 The specification itself is defined in the [Yellow Paper](http://gavwood.com/paper.pdf), and the following page on the
-[Ethereum Wiki](https://github.com/ethereum/wiki/wiki/RLP).
+[Ethereum Wiki](https://eth.wiki/en/fundamentals/rlp).
 
 RLP Types
 ---------
