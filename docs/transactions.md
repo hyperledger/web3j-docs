@@ -42,7 +42,7 @@ You can request Ether for the Rinkeby testnet via the Rinkeby Crypto Faucet, ava
 Details of how to request Ether for the Kovan testnet are available [here](https://github.com/kovan-testnet/faucet).
 
 (This section needs to be changed)
-If you need some Ether on the Ropsten testnet to get started, please post a message with your wallet address to the [web3j Gitter channel](https://gitter.im/web3j/web3j) and you will be sent some.
+If you need some Ether on the Ropsten testnet to get started, please post a message with your wallet address to the [Web3j Community Forum](https://community.web3labs.com/) and you will be sent some.
 
 ## Mining on testnet/private blockchains
 

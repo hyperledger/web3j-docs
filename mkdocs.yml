@@ -12,6 +12,7 @@ copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
 nav:
   - Quickstart: quickstart.md
   - Getting Started: getting_started.md
+  - Samples: samples.md
   - Modules: modules.md
   - Transactions: transactions.md
   - Privacy & Permissioning: privacy.md
@@ -49,11 +50,11 @@ theme:
 extra:
   manifest: "manifest.webmanifest"
   social:
-    - type: "github"
+    - icon: "fontawesome/brands/github-alt"
       link: "https://github.com/web3j"
-    - type: "twitter"
+    - icon: "fontawesome/brands/twitter"
       link: "https://twitter.com/web3labs"
-    - type: "linkedin"
+    - icon: "fontawesome/brands/linkedin"
       link: "https://linkedin.com/in/web3labs"
 extra_css:
   - "stylesheets/extra.css"

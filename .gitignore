@@ -69,3 +69,6 @@ ENV/
 site/
 
 .idea/
+Pipfile
+Pipfile.lock
+get-pip.py
