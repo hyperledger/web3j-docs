@@ -17,7 +17,7 @@ In dependency order, they are as follows:
 The below modules only depend on the core module.
 
 -   geth - Geth specific JSON-RPC module
--   parity - Parity specific JSON-RPC module
+-   parity - OpenEthereum specific JSON-RPC module
 -   infura - Infura specific HTTP header support
 -   contracts - Support for specific EIP's (Ethereum Improvement Proposals)
 -   besu - Support for private transactions on Hyperledger Besu

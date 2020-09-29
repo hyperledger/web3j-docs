@@ -30,7 +30,7 @@ For obtaining ether to use in these networks, you can refer to
 InfuraHttpClient
 ----------------
 
-The web3j infura module provides an Infura HTTP client ([InfuraHttpService](https://github.com/web3j/web3j/blob/master/hosted-providers/src/main/java/org/web3j/protocol/infura/InfuraHttpService.java)) which provides support for the Infura specific *Infura-Ethereum-Preferred-Client* header. This allows you to specify whether you want a Geth or Parity client to respond to your request. You can create the client just like the regular HTTPClient:
+The web3j infura module provides an Infura HTTP client ([InfuraHttpService](https://github.com/web3j/web3j/blob/master/hosted-providers/src/main/java/org/web3j/protocol/infura/InfuraHttpService.java)) which provides support for the Infura specific *Infura-Ethereum-Preferred-Client* header. This allows you to specify whether you want a Geth or OpenEthereum client to respond to your request. You can create the client just like the regular HTTPClient:
 
 ```java
 Web3j web3 = Web3j.build(new HttpService("https://rinkeby.infura.io/<your-token>"));
@@ -49,6 +49,6 @@ For further information, refer to the [Infura docs](https://infura.io/docs).
 Transactions
 ------------
 
-In order to transact with Infura nodes, you will need to create and sign transactions offline before sending them, as Infura nodes have no visibility of your encrypted Ethereum key files, which are required to unlock accounts via the Personal Geth/Parity admin commands.
+In order to transact with Infura nodes, you will need to create and sign transactions offline before sending them, as Infura nodes have no visibility of your encrypted Ethereum key files, which are required to unlock accounts via the Personal Geth/OpenEthereum admin commands.
 
 Refer to the [Offline transaction signing](transactions.md#offline-transaction-signing) and [Management APIs](management_apis.md) sections for further details.

@@ -32,8 +32,8 @@ supported by various clients.
 
 - Goerli (All clients)
 - Rinkeby (Geth only)
-- Kovan (Parity only)
-- Ropsten (Geth and Parity)
+- Kovan (OpenEthereum only)
+- Ropsten (Geth and OpenEthereum)
 
 For development, its recommended you use the Rinkeby or Kovan test networks. This is because they use a Proof of Authority (PoA) consensus mechanism, ensuring transactions and blocks are created in a consistent and timely manner. The Ropsten testnet, although closest to the Mainnet as it uses Proof of Work (PoW) consensus, has been subject to attacks in the past and tends to be more problematic for developers.
 
@@ -46,7 +46,7 @@ If you need some Ether on the Ropsten testnet to get started, please post a mess
 
 ## Mining on testnet/private blockchains
 
-In the Ethereum test environment (testnet), the mining difficulty is set lower then the main environment (mainnet). This means that you can mine new Ether with a regular CPU, such as your laptop. What you'll need to do is run an Ethereum client such as Geth, Besu or Parity to start building up reserves. Further instructions are available on the respective sites.
+In the Ethereum test environment (testnet), the mining difficulty is set lower then the main environment (mainnet). This means that you can mine new Ether with a regular CPU, such as your laptop. What you'll need to do is run an Ethereum client such as Geth, Besu or OpenEthereum to start building up reserves. Further instructions are available on the respective sites.
 
 Geth
 
@@ -56,7 +56,7 @@ Besu
 
 <https://besu.hyperledger.org/en/stable/Concepts/Mining/>
 
-Parity / OpenEthereum
+OpenEthereum
 
 <https://openethereum.github.io/wiki/Mining>
 
@@ -103,14 +103,14 @@ Both mechanisms are supported via web3j.
 
 ## Transaction signing via an Ethereum client
 
-In order to transact via an Ethereum client, you first need to ensure that the client you're transacting with knows about your wallet address. You are best off running your own Ethereum client such as Geth/Besu/Parity in order to do this. Once you have a client running, you can
+In order to transact via an Ethereum client, you first need to ensure that the client you're transacting with knows about your wallet address. You are best off running your own Ethereum client such as Geth/Besu/OpenEthereum in order to do this. Once you have a client running, you can
 create a wallet via:
 
 - The [Geth Wiki](https://geth.ethereum.org/docs/interface/managing-your-accounts) contains a good run down of the different mechanisms Geth supports such as importing private key files, and creating a new account via it's console
 - Alternatively you can use a JSON-RPC admin command for your client, such as _personal_newAccount_ for
-  [Parity](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module#personal_newaccount) (This needs to be changed) or [Geth](https://geth.ethereum.org/docs/interface/managing-your-accounts)
+  [OpenEthereum](https://openethereum.github.io/wiki/JSONRPC-personal-module#personal_newaccount) (This needs to be changed) or [Geth](https://geth.ethereum.org/docs/interface/managing-your-accounts)
 
-With your wallet file created, you can unlock your account via web3j by first of all creating an instance of web3j that supports Geth/Besu/Parity admin commands:
+With your wallet file created, you can unlock your account via web3j by first of all creating an instance of web3j that supports Geth/Besu/OpenEthereum admin commands:
 
 ```java
 Admin web3j = Admin.build(new HttpService());

@@ -17,7 +17,7 @@ Features
 -   Auto-generation of Java smart contract wrappers to create, deploy, transact with and call smart contracts from native Java code ([Solidity](http://solidity.readthedocs.io/en/latest/using-the-compiler.html#using-the-commandline-compiler) and [Truffle](https://github.com/trufflesuite/truffle) definition formats supported)
 -   Reactive-functional API for working with filters
 -   [Ethereum Name Service (ENS)](https://ens.domains/) support
--   Support for Parity's [Personal](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module), and Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) client APIs
+-   Support for OpenEthereum's [Personal](https://openethereum.github.io/wiki/JSONRPC-personal-module), and Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) client APIs
 -   Support for [Infura](https://infura.io/), so you don't have to run an Ethereum client yourself
 -   Support for ERC20 and ERC721 token standards
 -   Comprehensive integration tests demonstrating a number of the above scenarios
