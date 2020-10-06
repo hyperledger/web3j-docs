@@ -1,15 +1,16 @@
 # Web3j-OpenAPI
 
-[Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) is an [OpenAPI](https://swagger.io/specification/)
-compliant service generator for [Solidity](https://solidity.readthedocs.io/) smart contracts.
-It provides a way to interact with the [Ethereum](https://ethereum.org/) blockchain via simple and intuitive HTTP requests. 
-These interactions can be done using plain HTTP requests or via the [Swagger-UI](https://swagger.io/tools/swagger-ui/), 
+[Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) is a [OpenAPI](https://swagger.io/specification/)
+client and server generator from [Solidity](https://solidity.readthedocs.io/) smart contracts.
+It provides a way to interact with the [Ethereum](https://ethereum.org/) smart contracts using a simple RESTful API.
+These interactions can be done using plain HTTP requests 
+or via the [Swagger-UI](https://swagger.io/tools/swagger-ui/), 
 which is generated with every project.
 
 This workflow can be summed in the following steps:
 - Writing a Solidity smart contract
 - Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://docs.epirus.io/quickstart)
-- Running the generated project
+- Running the generated project as a standalone server
 - Sending HTTP requests using the `Swagger-UI`, `Java/Kotlin` client, `Curl` or other.
 
 ## Example
