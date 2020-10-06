@@ -10,7 +10,7 @@ This workflow can be summed in the following steps:
 - Writing a Solidity smart contract
 - Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://docs.epirus.io/quickstart)
 - Running the generated project
-- Sending HTTP requests using the Swagger-UI, Java/Kotlin client, `Curl` or other.
+- Sending HTTP requests using the `Swagger-UI`, `Java/Kotlin` client, `Curl` or other.
 
 ## Example
 The following Hello World contract :
@@ -497,7 +497,7 @@ Among the available ways to interact with a Web3j-OpenAPI server, there is the K
 
 It is easy to use.
 
-- Start by adding dependency to the client:
+Start by adding dependency to the client:
 
 ```groovy
 dependencies {
@@ -522,7 +522,7 @@ println("Deployment receipt: ${receipt.contractAddress}")
 
 ### Handling events
 
-In web3j-OpenAPI, we handle events using Server-Sent Events (SSE) (link: https://docs.huihoo.com/jersey/2.13/sse.html).
+In web3j-OpenAPI, we handle events using Server-Sent Events [SSE](https://docs.huihoo.com/jersey/2.13/sse.html).
 
 In a nutshell, SSE is a one way mechanism that allows a server to asynchronously push data
 from the server to the client once the client-server connection is established by the client.
