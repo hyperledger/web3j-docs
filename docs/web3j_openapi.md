@@ -1,10 +1,14 @@
 # Web3j-OpenAPI
 
-[Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) is an [OpenAPI](https://swagger.io/specification/) compliant service generator for [Solidity](https://solidity.readthedocs.io/) smart contracts. It provides a way to interact with the [Ethereum](https://ethereum.org/) blockchain via simple and intuitive HTTP requests. These interactions can be done using plain HTTP requests or via the [Swagger-UI](https://swagger.io/tools/swagger-ui/), which is generated with every project.
+[Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) is an [OpenAPI](https://swagger.io/specification/)
+compliant service generator for [Solidity](https://solidity.readthedocs.io/) smart contracts.
+It provides a way to interact with the [Ethereum](https://ethereum.org/) blockchain via simple and intuitive HTTP requests. 
+These interactions can be done using plain HTTP requests or via the [Swagger-UI](https://swagger.io/tools/swagger-ui/), 
+which is generated with every project.
 
 This workflow can be summed in the following steps:
-- Writing a solidity smart contract
-- Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://github.com/epirus-io/epirus-cli)
+- Writing a Solidity smart contract
+- Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://docs.epirus.io/quickstart)
 - Running the generated project
 - Sending HTTP requests using the Swagger-UI, `Curl` or other.
 
@@ -103,63 +107,10 @@ The available events are:
 
 ![image](img/Web3j-OpenAPI/SwaggerUI_2_Events.png)
 
-
-## Use cases
-An OpenAPI project can be generated using the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) as follows:
-
-```ssh
-$ epirus openapi import -s path/to/solidity --name helloworld
-```
-
-Then, the generated project can be used in the following ways:
-
-**Creating a Gradle project that can be run using the application plugin:**
-```ssh
-$ cd helloworld
-$ ./gradlew run // Starts the server exposing HelloWorld.sol
-...
-```
-
-**Starting the server using the ShadowJar:**
-```ssh
-$ ./gradlew shadowJar // Create an executable JAR that starts the server
-$ java -jar helloworld-server-all.jar
-...
-```
-
-**Using the CLI:**
-
-```ssh
-$ ./gradlew installDist // Create an executable to start the server
-$ ./helloworld-server
-```
-
-You can also generate an executable JAR using : 
-
-```ssh
-$ epirus openapi jar --abi path/to/abi --bin path/to/bin
-```
-
-Or, only the REST endpoint :
-
-```ssh
-$ epirus openapi generate --abi path/to/abi --bin path/to/bin
-```
-
-Where the ABIs and BINs are compiled Solidity code.
-You can do that, for example, using [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt).
-This lets you handle multiple solidity compiler versions easily:
-
-```
-$ svm install 0.6.0
-$ svm use 0.6.0
-$ solc --abi --bin -o . HelloWorld.sol
-```
-
 # Getting started with Web3j-OpenAPI
 
-## How to generate a project:
-To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) installed on your machine (Note - the Epirus CLI has replaced the Web3j CLI). 
+## Generate a project:
+To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Epirus-CLI](https://docs.epirus.io/quickstart) installed on your machine (Note - the Epirus CLI has replaced the Web3j CLI). 
 It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
 	
 ```
@@ -189,70 +140,32 @@ $ epirus openapi import  \
 You should be seeing logs similar to the following:
 ![image](img/Web3j-OpenAPI/Generator_logs.png)
 
-## How to build
+## Configure the project
 
-You have two possibilities:
+You can run the project easily, without specify any configuration, using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment).
 
-#### Generate the ShadowJAR
-`./gradlew shadowJar` Which you can find in the `server/build/libs` folder.
-
-#### Generate the distributions
-`./gradlew installDist` Which you can find in the `server/build/install/HelloWorldProject-server/bin` folder.
-
-## Configurations
-In all cases, we need to specify the runtime configuration. 
-
-For example, the `private key` or `wallet file` for the signing, the `node endpoint` to connect to, etc.
+If not, you need to specify runtime parameters. for example, the `private key` or `wallet file` for the signing,
+the `node endpoint` to connect to, etc.
 
 To see the available options, try to run the `distributions` or the `JAR` with the `--help` flag. You'll get the following display:
 
 ![image](img/Web3j-OpenAPI/Server_help.png)
 
-To specify these parameters, we have three ways:
+To specify these parameters, you can set the following environment variables:
 
-#### Environment variables
-The rule is to:
-- Replace the `-` with a `_` : `private-key => private_key`
-- Upper case the options' names : `private-key => PRIVATE_KEY`
-
-Then, export them:
-	`Export PRIVATE_KEY={your private key} `
+```shell script
+$ export WEB3J_ENDPOINT=<link to your Ethereum node>
+$ export WEB3J_PRIVATE_KEY=<your private key>
+$ export WEB3J_OPENAPI_HOST=localhost
+$ export WEB3J_OPENAPI_PORT=9090
+```
 
 For more information, check the configuration section below.
-
-#### Configuration file
-We can pass in a configuration file in two ways:
-
-##### Via an environment variable
-```
-Export WEB3J_OPENAPI_CONFIG_FILE={the path to the config file}
-```
-##### Via the CLI
-```
---config--file {path to file}
-```
-Also, there is the possibility to put the config file in the default directory: `~/.epirus/web3j.openapi.properties`
-
-For more information, check the configuration section below.
-
-#### Directly from the CLI
-The usual way:  `--private-key {your private key}`
-
-Then, we are ready to run the project.
 
 ## Run the project
-We can run the project directly : `./gradlew run`
-However, specifying the runtime parameters in this case from the CLI is tricky.
-For this case, either use environment variables or Default Configuration file as stated above.
-
-#### Run the FatJAR
-```ssh
-$ java -jar server/build/libs/HelloWorldProject-server-all.jar [arguments]
+We can run the project directly : 
 ```
-
-#### Run the distributions binary
-```ssh
-$ ./server/build/install/HelloWorldProject-server/bin/HelloWorldProject-server [arguments]
+$ ./gradlew run
 ```
 
 You should be able to run the server and see the following:
@@ -260,7 +173,7 @@ You should be able to run the server and see the following:
 ![image](img/Web3j-OpenAPI/Server_logs.png)
 
 ## Interact with the generated project:
-Interactions can be done using HTTP requests either through `Curls`:
+Interactions can be done using HTTP requests either through `Curl`:
 ```ssh
 $ curl -X POST "http://{host}:{port}/{application name}/contracts/helloworld/{contractAddress}/SayIt" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"greeting\":\"Hello OpenAPI\"}"
 ```
@@ -279,19 +192,36 @@ dependencies {
 Then, within a client application:
 
 ```
-val service = ClientService("http://localhost:8080")
-val helloWorld = ClientFactory.create(HelloWorldApi::class.java, service)
+val service = ClientService("http://localhost:9090")
+val helloWorld = ClientFactory.create(HelloWorldProjectApi::class.java, service)
 
-val receipt = helloWorld.contracts.greeter.deploy(
-    GreeterDeployParameters("Test greeter")
-)
+println("Deploying the HelloWorld contract...")
 
-val greeter = helloWorld.contracts.greeter.load(receipt.contractAddress)
+val receipt = helloWorld.contracts.helloWorld.deploy()
+
+println("Deployment receipt: ${receipt.contractAddress}")
+
+val sayItHash = helloWorld.contracts
+		.helloWorld
+		.load(receipt.contractAddress)
+		.sayIt(SayItParameters("Hello Web3j-OpenAPI"))
+.transactionHash
+
+println("SayIt method execution transaction hash: $sayItHash")
+
+val hello = helloWorld.contracts
+		.helloWorld
+		.load(receipt.contractAddress)
+		.hello()
+		.result
+
+println("Hello method result: $hello")
+
 ```
 
 # Ways to generate an OpenAPI project
 
-First, you need to install the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) on your 
+First, you need to install the [Epirus-CLI](https://docs.epirus.io/quickstart) on your 
 machine (Note - the Epirus CLI has replaced the Web3j CLI). 
 
 It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
@@ -302,7 +232,7 @@ $ curl -L get.epirus.io | sh
 
 ## Generate a hello world project
 
-A Hello World project is a simple project based on a simple solidity contract.
+A Hello World project is a simple project based on a simple Solidity contract.
 It is generated using:
 ```
 $ epirus openapi new
@@ -311,15 +241,33 @@ $ epirus openapi new
 This project can be used as a minimal project to start building your custom application
 upon.
 
-## Generate using custom solidity smart contracts
+## Generate using custom Solidity smart contracts
 
 To generate a project using your desired smart contracts, use the following command:
 
 ```
 $ epirus openapi import \
-    --solidity-path <path_to_solidity_contracts> \
+    --solidity-path <path_to_Solidity_contracts> \
     --project-name <project name> \
     --package-name <package name>
+```
+
+## Generate an executable JAR
+The following command will generate an executable JAR ready to be run: 
+```ssh
+$ epirus openapi jar \
+    --abi <list to your abi files> \
+    --bin <list to your abi files>
+```
+
+Where the ABIs and BINs are compiled Solidity code.
+You can do that, for example, using [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt).
+This lets you handle multiple Solidity compiler versions easily:
+
+```
+$ svm install 0.6.0
+$ svm use 0.6.0
+$ solc --abi --bin -o . HelloWorld.sol
 ```
 
 ## Generate the REST API only
@@ -338,6 +286,7 @@ $ epirus openapi generate \
 This command will not generate the gradle build files. Thus, you will not have a
 runnable application. To have one, check the above sections.
 
+
 ## Generate using the [web3j-openapi-gradle-plugin](https://github.com/web3j/web3j-openapi-gradle-plugin)
 
 # Run the project
@@ -347,12 +296,12 @@ runnable application. To have one, check the above sections.
 Before running the server, there are some parameters that need to
 be set. There are multiple ways of doing so:
 
-- Through environment variables
-- Through a configuration file
-- or, via passing the parameters directly to the JAR or the executable.
+- Environment variables
+- Configuration file
+- Passing the parameters directly to the JAR or the executable.
 
 Also, you can run the project without worrying about any of this
-using the `Epirus-cli` (put link to how to run using the epirus-cli)
+using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment)
 
 ### Supported parameters
 
@@ -399,7 +348,7 @@ The CLI arguments can be passed to the command the usual way.
 
 ##### Example
 
-Check the `Starting the server` section to choose a command.
+Check the Starting the server section below to choose a command.
 
 ```shell script
 $ <command> \
@@ -420,7 +369,11 @@ The configuration file can be :
 
 - Put in the default directory : `~/.epirus/web3j.openapi.<extension>`
 - Set in an environment variable: `WEB3J_OPENAPI_CONFIG_FILE` where the value is the path
-to the file
+to the file.
+eg.
+```
+export WEB3J_OPENAPI_CONFIG_FILE={the path to the config file}
+```
 - Set as an argument when running the JAR or the executable: `--config-file`
 
 The supported extensions are :
@@ -478,6 +431,10 @@ server.port=9090
 
 The easiest way to provide the runtime parameters is through environment variables.
 
+The rule is to:
+- Replace the `-` with a `_` : `private-key => private_key`
+- Upper case the options' names : `private-key => PRIVATE_KEY`
+
 ##### Example
 ```shell script
 $ export WEB3J_ENDPOINT=<link to your Ethereum node>
@@ -521,15 +478,7 @@ check the parameters section above for the supported parameters.
 
 A server executable can be generated using the following:
 
-`$ ./gradlew installShadowDist`
-
-Which can be found in `build/install/AppName-shadow/bin/`
-
-### The distribution executable
-
-A server executable can be generated using the following:
-
-`$ ./gradlew installShadowDist`
+`$ ./gradlew installShadowDist <parameters>`
 
 Which can be found in `build/install/AppName-shadow/bin/`
 
@@ -538,5 +487,7 @@ Which can be found in `build/install/AppName-shadow/bin/`
 To run the project using gradle. Make sure to have set some environment variables or configuration
 file as specified above.
 
-Then, run the following : `./gradlew run`
-
+Then, run the following : 
+```
+$ ./gradlew run
+```
