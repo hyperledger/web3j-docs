@@ -4,7 +4,7 @@
 
 This workflow can be summed in the following steps:
 - Writing a solidity smart contract
-- Generating the corresponding OpenAPI project using Web3j-OpenAPI
+- Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://github.com/epirus-io/epirus-cli)
 - Running the generated project
 - Sending HTTP requests using the Swagger-UI, `Curl` or other.
 
@@ -108,7 +108,7 @@ The available events are:
 An OpenAPI project can be generated using the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) as follows:
 
 ```ssh
-$ epirus import openapi -p com.helloworld -o . --abi helloworld.abi --bin helloworld.bin --name helloworld
+$ epirus openapi import -s path/to/solidity --name helloworld
 ```
 
 Then, the generated project can be used in the following ways:
@@ -116,7 +116,7 @@ Then, the generated project can be used in the following ways:
 **Creating a Gradle project that can be run using the application plugin:**
 ```ssh
 $ cd helloworld
-$ ./gradlew run // Starts the server exposing Helloworld.sol
+$ ./gradlew run // Starts the server exposing HelloWorld.sol
 ...
 ```
 
@@ -134,6 +134,28 @@ $ ./gradlew installDist // Create an executable to start the server
 $ ./helloworld-server
 ```
 
+You can also generate an executable JAR using : 
+
+```ssh
+$ epirus openapi jar --abi path/to/abi --bin path/to/bin
+```
+
+Or, only the REST endpoint :
+
+```ssh
+$ epirus openapi generate --abi path/to/abi --bin path/to/bin
+```
+
+Where the ABIs and BINs are compiled Solidity code.
+You can do that, for example, using [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt).
+This lets you handle multiple solidity compiler versions easily:
+
+```
+$ svm install 0.6.0
+$ svm use 0.6.0
+$ solc --abi --bin -o . HelloWorld.sol
+```
+
 # Getting started with Web3j-OpenAPI
 
 ## How to generate a project:
@@ -144,27 +166,25 @@ It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/q
 $ curl -L get.epirus.io | sh
 ```
 
-And then, you can run the
+Then, you can run the
 ```
-$ epirus import --openapi --help
+$ epirus openapi import --help
 ```
 To check the generator available options. 
 
 ![image](img/Web3j-OpenAPI/Generator_help.png)
 
 In this case, we will be using the above Hello World contract.
+
 Put that contract in a file named `HelloWorld.sol` for starters.
-To compile it, you can use solc via [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt). This lets you handle multiple solidity compiler versions easily:
 
-```
-$ svm install 0.6.0
-$ svm use 0.6.0
-$ solc --abi --bin -o . HelloWorld.sol
-```
-
-Now, you should  see the ABI and Bin files in the directory. You  can use them to generate the OpenAPI:
+Then, execute the following command: 
 ```	
-$ epirus import --openapi --abi HelloWorld.abi --bin HelloWorld.bin --package-name com.tutorial --output . --name HelloWorldProject
+$ epirus openapi import  \
+    -s HelloWorld.sol \
+    --package-name com.tutorial \
+    --name HelloWorldProject \
+    --output . 
 ```
 You should be seeing logs similar to the following:
 ![image](img/Web3j-OpenAPI/Generator_logs.png)
@@ -195,15 +215,17 @@ The rule is to:
 - Replace the `-` with a `_` : `private-key => private_key`
 - Upper case the options' names : `private-key => PRIVATE_KEY`
 
-And export them:
+Then, export them:
 	`Export PRIVATE_KEY={your private key} `
+
+For more information, check the configuration section below.
 
 #### Configuration file
 We can pass in a configuration file in two ways:
 
 ##### Via an environment variable
 ```
-Export CONFIG_FILE={the path to the config file}
+Export WEB3J_OPENAPI_CONFIG_FILE={the path to the config file}
 ```
 ##### Via the CLI
 ```
@@ -211,11 +233,8 @@ Export CONFIG_FILE={the path to the config file}
 ```
 Also, there is the possibility to put the config file in the default directory: `~/.epirus/web3j.openapi.properties`
 
-A configuration file is similar to the following:
-```
-web3j.openapi.private.key={your private key}
-web3j.openapi.port=9090
-```
+For more information, check the configuration section below.
+
 #### Directly from the CLI
 The usual way:  `--private-key {your private key}`
 
@@ -223,7 +242,8 @@ Then, we are ready to run the project.
 
 ## Run the project
 We can run the project directly : `./gradlew run`
-However, specifying the runtime parameters in this case from the CLI is tricky. For this case, either use environment variables or Default Configuration file as stated above.
+However, specifying the runtime parameters in this case from the CLI is tricky.
+For this case, either use environment variables or Default Configuration file as stated above.
 
 #### Run the FatJAR
 ```ssh
@@ -252,11 +272,11 @@ To interact via Java/Kotlin:
 
 ```groovy
 dependencies {
-    implementation "web3j-openapi:web3j-openapi-client:0.1.0"
+    implementation "web3j-openapi:web3j-openapi-client:4.6.4"
 }
 ```
 
-And within a client application:
+Then, within a client application:
 
 ```
 val service = ClientService("http://localhost:8080")
@@ -271,49 +291,54 @@ val greeter = helloWorld.contracts.greeter.load(receipt.contractAddress)
 
 # Ways to generate an OpenAPI project
 
+First, you need to install the [Epirus-CLI](https://github.com/epirus-io/epirus-cli) on your 
+machine (Note - the Epirus CLI has replaced the Web3j CLI). 
+
+It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
+                               	
+```
+$ curl -L get.epirus.io | sh
+```
+
 ## Generate a hello world project
 
 A Hello World project is a simple project based on a simple solidity contract.
 It is generated using:
 ```
-$ epirus new --openapi
+$ epirus openapi new
 ```
-Then, follow the interactive process.
 
 This project can be used as a minimal project to start building your custom application
 upon.
 
 ## Generate using custom solidity smart contracts
 
-To generate a project using your favorites smart contracts, use the following command:
+To generate a project using your desired smart contracts, use the following command:
 
 ```
-$ epirus import --openapi \
-    --abi <list to your abi files> \
-    --bin <list to your binary files> \
-    -- project-name <project name> \
+$ epirus openapi import \
+    --solidity-path <path_to_solidity_contracts> \
+    --project-name <project name> \
     --package-name <package name>
 ```
 
-## Generate the API only
+## Generate the REST API only
 
-To generate only the API, which is the defined endpoints with their  implementations,
+To generate only the API, which is the defined endpoints with their implementations,
 use the following:
 
 ```
 $ epirus openapi generate \
     --abi <list to your abi files> \
     --bin <list to your binary files> \
-    -- project-name <project name> \
+    --project-name <project name> \
     --package-name <package name>
 ```
 
 This command will not generate the gradle build files. Thus, you will not have a
-runnable application. To have one, check `Generate a hello world project` (link)
-and `Generate using custom solidity smart contracts` (link).
+runnable application. To have one, check the above sections.
 
-
-# Generation options
+## Generate using the [web3j-openapi-gradle-plugin](https://github.com/web3j/web3j-openapi-gradle-plugin)
 
 # Run the project
 
@@ -334,7 +359,7 @@ using the `Epirus-cli` (put link to how to run using the epirus-cli)
 |  Name                   | Default value                       | Description |
 |-------------------------|:-----------------------------------:|-------------|
 | `name`                  | `Generation project name`           | The project name |         
-| `config file`           | `none`                              | A custom configuration file to import extra parameters |     
+| `config file`           | `~/.epirus/web3j.openapi.<extension>`| A custom configuration file to import extra parameters |     
 | `endpoint`              | `none`                              | Ethereum node endpoint to target when interacting with the blockchain |
 | `privateKey`            | `none`                              | User private key in hex format prefixed by `0x` |
 | `wallet path`           | `none`                              | The path to the wallet file (can be absolute or relative) |
@@ -346,7 +371,7 @@ using the `Epirus-cli` (put link to how to run using the epirus-cli)
 The necessary parameters are:
 
 - The Ethereum node endpoint to target when 
-interacting with the blockchain `endpoint`.
+interacting with the Ethereum network `endpoint`.
 
 - Credentials : which can be either `privateKey`, or `wallet path` and `wallet password`
 
@@ -484,15 +509,13 @@ A `JAR` can be generated using the following command:
 
 `$ ./gradlew shadowJar`
 
-It will be found in the `build/libs` directory `server/build/libs/ProjectName-server-all.jar`
-or `build/libs/ProjectName-all.jar` depending on the project.
-(To be checked again)
+It will be found under the `build/libs` directory.
 
 The generated `JAR` can be run using the following:
 
 `$ java -jar build/libs/ProjectName-all.jar <parameters>`
 
-check the parameters section (link) for the supported parameters.
+check the parameters section above for the supported parameters.
 
 ### The distribution executable
 
@@ -500,8 +523,20 @@ A server executable can be generated using the following:
 
 `$ ./gradlew installShadowDist`
 
-Which can be found in `build/install/`
+Which can be found in `build/install/AppName-shadow/bin/`
 
+### The distribution executable
 
+A server executable can be generated using the following:
 
-### 
+`$ ./gradlew installShadowDist`
+
+Which can be found in `build/install/AppName-shadow/bin/`
+
+### Using gradle
+
+To run the project using gradle. Make sure to have set some environment variables or configuration
+file as specified above.
+
+Then, run the following : `./gradlew run`
+
