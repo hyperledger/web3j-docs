@@ -46,7 +46,7 @@ contract HelloWorld is Mortal {
     string greet;
 
     /* this runs when the contract is executed */
-    constructor (string memory _greet) public {
+    constructor (string memory _greet) {
         greet = _greet;
     }
 
@@ -497,13 +497,17 @@ Starting the server can be done in the following ways:
 
 A `JAR` can be generated using the following command:
 
-`$ ./gradlew shadowJar`
+```shell script
+$ ./gradlew shadowJar
+```
 
 It will be found under the `build/libs` directory.
 
 The generated `JAR` can be run using the following:
 
-`$ java -jar build/libs/<project name>-all.jar <parameters>`
+```shell script
+$ java -jar build/libs/<project name>-all.jar <parameters>
+```
 
 check the parameters section above for the supported parameters.
 
@@ -511,7 +515,9 @@ check the parameters section above for the supported parameters.
 
 A server executable can be generated using the following:
 
-`$ ./gradlew installShadowDist <parameters>`
+```shell script
+$ ./gradlew installShadowDist <parameters>
+```
 
 Which can be found in `build/install/<app name>-shadow/bin/`
 
@@ -526,7 +532,7 @@ $ ./gradlew run
 ```
 
 ## The Web3j-OpenAPI client
-Among the available ways to interact with a Web3j-OpenAPI server, there is the Kotlin client.
+Among the available ways to interact with a Web3j-OpenAPI server, there is the `Kotlin` client.
 
 It is easy to use.
 
@@ -560,7 +566,7 @@ In web3j-OpenAPI, we handle events using Server-Sent Events [SSE](https://docs.h
 In a nutshell, SSE is a one way mechanism that allows a server to asynchronously push data
 from the server to the client once the client-server connection is established by the client.
 
-To query events from Kotlin/Java. Add the Web3j-OpenAPI-client dependency as done above.
+To query events from `Kotlin/Java`. Add the `web3j-openapi-client` dependency as done above.
 Then, use the following code:
 
 ```kotlin
