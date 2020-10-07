@@ -593,16 +593,16 @@ val service = ClientService("http://localhost:9090")
 val app = ClientFactory.create(AppNameApi::class.java, service)
 
 // Start listening for events
-val event = app.contracts.contractName.load(contractAddress)
+val event = app.contracts.<contract_name>.load(<contract_Address>)
         .events
-        .eventName
+        .<event_name>
         .onEvent { println("Received event: $it") }
 
-// Trigger an event. The SayIt method emits and event.
+// Trigger an event
 app.contracts
-    .contractName
-    .load(receipt.contractAddress)
-    .sayIt(SayItParameters("Hello Web3j-OpenAPI Events"))
+    .<contract_name>
+    .load(<contract_Address>)
+    .<method_triggering_event>(<method_parameters>)
 ```
 
 Then run this code. You should be able to see events printing on the screen.
