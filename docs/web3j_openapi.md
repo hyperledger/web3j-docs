@@ -17,20 +17,52 @@ This workflow can be summed in the following steps:
 The following Hello World contract :
 
 ```
-pragma solidity ^0.6.0;
+// SPDX-License-Identifier: Apache-2.0
+pragma solidity ^0.7.0;
 
-contract HelloWorld {
+// Modified Greeter contract. Based on example at https://www.ethereum.org/greeter.
 
- event Greeting(string greet);
- 
- function hello() public pure returns (string memory) {
-   return 'Hello Web3j-OpenAPI';
- }
- 
- function sayIt(string memory greeting) public returns (string memory) {
-   emit Greeting(greeting);
-   return greeting;
- }
+contract Mortal {
+    /* Define variable owner of the type address*/
+    address owner;
+
+    /* this function is executed at initialization and sets the owner of the contract */
+    constructor () {owner = msg.sender;}
+
+    modifier onlyOwner {
+        require(
+            msg.sender == owner,
+            "Only owner can call this function."
+        );
+        _;
+    }
+
+    /* Function to recover the funds on the contract */
+    function kill() onlyOwner public {selfdestruct(msg.sender);}
+}
+
+contract HelloWorld is Mortal {
+    /* define variable greeting of the type string */
+    string greet;
+
+    /* this runs when the contract is executed */
+    constructor (string memory _greet) public {
+        greet = _greet;
+    }
+
+    function newGreeting(string memory _greet) onlyOwner public {
+        emit Modified(greet, _greet, greet, _greet);
+        greet = _greet;
+    }
+
+    /* main function */
+    function greeting() public view returns (string memory)  {
+        return greet;
+    }
+
+    event Modified(
+        string indexed oldGreetingIdx, string indexed newGreetingIdx,
+        string oldGreeting, string newGreeting);
 }
 ```
 
@@ -38,62 +70,62 @@ generates the following `OpenAPI` specs :
 
 ```
 {
-  "openapi": "3.0.1",
-  "info": {
-    "title": "Web3j OpenApi",
-    "contact": {
-      "name": "Web3 Labs",
-      "url": "http://web3labs.com",
-      "email": "hi@web3labs.com"
-    },
-    "version": "0.0.3.1"
-  },
-  "tags": [
-    {
-      "name": "default",
-      "description": "Lists existing contracts and events"
-    },
-    {
-      "name": "HelloWorld Methods",
-      "description": "List HelloWorld method&#39;s calls"
-    },
-    {
-      "name": "HelloWorld Events",
-      "description": "List HelloWorld event&#39;s calls"
-    }
-  ],
-  "paths": {
-    "/SimpleJavaProject/contracts/helloworld/{contractAddress}/Hello": {
-      "get": {
-        "tags": [
-          "HelloWorld Methods"
-        ],
-        "summary": "Execute the Hello method",
-        "operationId": "hello",
-        "parameters": [
-          {
-            "name": "contractAddress",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "default": {
-            "description": "default response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResultModelString"
-                }
-              }
-            }
-          }
-        }
+   "openapi":"3.0.1",
+   "info":{
+      "title":"Web3j OpenApi",
+      "contact":{
+         "name":"Web3 Labs",
+         "url":"http://web3labs.com",
+         "email":"hi@web3labs.com"
+      },
+      "version":"4.6.5"
+   },
+   "tags":[
+      {
+         "name":"default",
+         "description":"Lists existing contracts and events"
+      },
+      {
+         "name":"HelloWorld Methods",
+         "description":"List HelloWorld method&#39;s calls"
+      },
+      {
+         "name":"HelloWorld Events",
+         "description":"List HelloWorld event&#39;s calls"
       }
-    },
+   ],
+   "paths":{
+      "/Web3App/contracts/helloworld/{contractAddress}/Kill":{
+         "get":{
+            "tags":[
+               "HelloWorld Methods"
+            ],
+            "summary":"Execute the Kill method",
+            "operationId":"kill",
+            "parameters":[
+               {
+                  "name":"contractAddress",
+                  "in":"path",
+                  "required":true,
+                  "schema":{
+                     "type":"string"
+                  }
+               }
+            ],
+            "responses":{
+               "default":{
+                  "description":"default response",
+                  "content":{
+                     "application/json":{
+                        "schema":{
+                           "$ref":"#/components/schemas/TransactionReceiptModel"
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
 ...
 ```
 
@@ -133,10 +165,10 @@ Put that contract in a file named `HelloWorld.sol` for starters.
 Then, execute the following command: 
 ```	
 $ epirus openapi import  \
-    -s HelloWorld.sol \
-    --package-name com.tutorial \
-    --name HelloWorldProject \
-    --output . 
+    -s=HelloWorld.sol \
+    --package=com.tutorial \
+    --project-name=HelloWorldProject \
+    --output-dir=. 
 ```
 You should be seeing logs similar to the following:
 ![image](img/Web3j-OpenAPI/Generator_logs.png)
@@ -176,7 +208,7 @@ You should be able to run the server and see the following:
 ## Interact with the generated project:
 Interactions can be done using HTTP requests either through `Curl`:
 ```ssh
-$ curl -X POST "http://{host}:{port}/{application name}/contracts/helloworld/{contractAddress}/SayIt" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"greeting\":\"Hello OpenAPI\"}"
+$ curl -X POST "http://{host}:{port}/HelloWorldProject/contracts/helloworld/{contract address}/NewGreeting" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"_greet\":\"Hello Web3j-OpenAPI\"}"
 ```
 Or, the `SwaggerUI`, on the link `{host}:{port}/swagger-ui`:
 
@@ -186,7 +218,7 @@ To interact via Java/Kotlin:
 
 ```groovy
 dependencies {
-    implementation "web3j-openapi:web3j-openapi-client:4.6.4"
+    implementation "org.web3j.openapi:web3j-openapi-client:4.6.5"
 }
 ```
 
@@ -250,7 +282,7 @@ To generate a project using your desired smart contracts, use the following comm
 $ epirus openapi import \
     --solidity-path <path_to_Solidity_contracts> \
     --project-name <project name> \
-    --package-name <package name>
+    --package <package name>
 ```
 
 ## Generate an executable JAR
@@ -281,7 +313,7 @@ $ epirus openapi generate \
     --abi <list to your abi files> \
     --bin <list to your binary files> \
     --project-name <project name> \
-    --package-name <package name>
+    --package <package name>
 ```
 
 This command will not generate the gradle build files. Thus, you will not have a
@@ -471,7 +503,7 @@ It will be found under the `build/libs` directory.
 
 The generated `JAR` can be run using the following:
 
-`$ java -jar build/libs/ProjectName-all.jar <parameters>`
+`$ java -jar build/libs/<project name>-all.jar <parameters>`
 
 check the parameters section above for the supported parameters.
 
@@ -481,7 +513,7 @@ A server executable can be generated using the following:
 
 `$ ./gradlew installShadowDist <parameters>`
 
-Which can be found in `build/install/AppName-shadow/bin/`
+Which can be found in `build/install/<app name>-shadow/bin/`
 
 ### Using gradle
 
@@ -502,7 +534,7 @@ Start by adding dependency to the client:
 
 ```groovy
 dependencies {
-    implementation "web3j-openapi:web3j-openapi-client:4.6.4"
+    implementation "org.web3j.openapi:web3j-openapi-client:4.6.5"
 }
 ```
 
