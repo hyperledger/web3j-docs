@@ -230,26 +230,25 @@ val helloWorldProject = ClientFactory.create(HelloWorldProjectApi::class.java, s
 
 println("Deploying the HelloWorld contract...")
 
-val receipt = helloWorldProject.contracts.helloWorld.deploy()
+val receipt = helloWorldProject.contracts.helloWorld.deploy(HelloWorldDeployParameters("Hello"))
 
 println("Deployed contract address: ${receipt.contractAddress}")
 
-val sayItHash = helloWorldProject.contracts
-		.helloWorld
-		.load(receipt.contractAddress)
-		.sayIt(SayItParameters("Hello Web3j-OpenAPI"))
-        .transactionHash
+val newGreetingHash = helloWorldProject.contracts
+    .helloWorld
+    .load(receipt.contractAddress)
+    .newGreeting(NewGreetingParameters("Hello Web3j-OpenAPI"))
+    .transactionHash
 
-println("SayIt method execution transaction hash: $sayItHash")
+println("NewGreeting method execution transaction hash: $newGreetingHash")
 
-val hello = helloWorldProject.contracts
-		.helloWorld
-		.load(receipt.contractAddress)
-		.hello()
-		.result
+val greeting = helloWorldProject.contracts
+    .helloWorld
+    .load(receipt.contractAddress)
+    .greeting()
+    .result
 
-println("Hello method result: $hello")
-
+println("Greeting method result: $greeting")
 ```
 
 # Ways to generate an OpenAPI project
@@ -570,20 +569,20 @@ To query events from `Kotlin/Java`. Add the `web3j-openapi-client` dependency as
 Then, use the following code:
 
 ```kotlin
-	val service = ClientService("http://localhost:9090")
-	val app = ClientFactory.create(AppNameApi::class.java, service)
+val service = ClientService("http://localhost:9090")
+val app = ClientFactory.create(AppNameApi::class.java, service)
 
-    // Start listening for events
-	val event = app.contracts.contractName.load(contractAddress)
-			.events
-			.eventName
-			.onEvent { println("Received event: $it") }
+// Start listening for events
+val event = app.contracts.contractName.load(contractAddress)
+        .events
+        .eventName
+        .onEvent { println("Received event: $it") }
 
-    // Trigger an event. The SayIt method emits and event.
-	app.contracts
-		.contractName
-		.load(receipt.contractAddress)
-		.sayIt(SayItParameters("Hello Web3j-OpenAPI Events"))
+// Trigger an event. The SayIt method emits and event.
+app.contracts
+    .contractName
+    .load(receipt.contractAddress)
+    .sayIt(SayItParameters("Hello Web3j-OpenAPI Events"))
 ```
 
 Then run this code. You should be able to see events printing on the screen.
