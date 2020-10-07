@@ -194,23 +194,23 @@ Then, within a client application:
 
 ```
 val service = ClientService("http://localhost:9090")
-val helloWorld = ClientFactory.create(HelloWorldProjectApi::class.java, service)
+val helloWorldProject = ClientFactory.create(HelloWorldProjectApi::class.java, service)
 
 println("Deploying the HelloWorld contract...")
 
-val receipt = helloWorld.contracts.helloWorld.deploy()
+val receipt = helloWorldProject.contracts.helloWorld.deploy()
 
-println("Deployment receipt: ${receipt.contractAddress}")
+println("Deployed contract address: ${receipt.contractAddress}")
 
-val sayItHash = helloWorld.contracts
+val sayItHash = helloWorldProject.contracts
 		.helloWorld
 		.load(receipt.contractAddress)
 		.sayIt(SayItParameters("Hello Web3j-OpenAPI"))
-.transactionHash
+        .transactionHash
 
 println("SayIt method execution transaction hash: $sayItHash")
 
-val hello = helloWorld.contracts
+val hello = helloWorldProject.contracts
 		.helloWorld
 		.load(receipt.contractAddress)
 		.hello()
@@ -231,7 +231,7 @@ It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/q
 $ curl -L get.epirus.io | sh
 ```
 
-## Generate a hello world project
+## Generate a Hello World project
 
 A Hello World project is a simple project based on a simple Solidity contract.
 It is generated using:
@@ -262,7 +262,7 @@ $ epirus openapi jar \
 ```
 
 Where the ABIs and BINs are compiled Solidity code.
-You can do that, for example, using [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt).
+You can do that, for example, using `solc` via [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt).
 This lets you handle multiple Solidity compiler versions easily:
 
 ```
@@ -327,7 +327,7 @@ interacting with the Ethereum network `endpoint`.
 
 The remaining options are optional.
 
-#### the order of precedence
+#### Order of precedence
 
 The parameters can be specified interchangeably between different sources.
 ie, you can have some defined in a default configuration file and others in environment
