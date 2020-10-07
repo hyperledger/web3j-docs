@@ -180,7 +180,7 @@ You can run the project easily, without specify any configuration, using the [Ep
 If not, you need to specify runtime parameters. for example, the `private key` or `wallet file` for the signing,
 the `node endpoint` to connect to, etc.
 
-To see the available options, try to run the `distributions` or the `JAR` with the `--help` flag. You'll get the following display:
+To see the available options, try to run the distributions `executable` or the `JAR` with the `--help` flag. You'll get the following display:
 
 ![image](img/Web3j-OpenAPI/Server_help.png)
 
@@ -193,7 +193,7 @@ $ export WEB3J_OPENAPI_HOST=localhost
 $ export WEB3J_OPENAPI_PORT=9090
 ```
 
-For more information, check the configuration section below.
+For more ways to pass these parameters, check the configuration section below.
 
 ## Run the project
 We can run the project directly : 
@@ -206,15 +206,26 @@ You should be able to run the server and see the following:
 ![image](img/Web3j-OpenAPI/Server_logs.png)
 
 ## Interact with the generated project:
-Interactions can be done using HTTP requests either through `Curl`:
-```ssh
-$ curl -X POST "http://{host}:{port}/HelloWorldProject/contracts/helloworld/{contract address}/NewGreeting" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"_greet\":\"Hello Web3j-OpenAPI\"}"
-```
-Or, the `SwaggerUI`, on the link `{host}:{port}/swagger-ui`:
+Interactions can be done in multiple ways : 
+
+#### SwaggerUI
+The generated `SwaggerUI` is located on `{host}:{port}/swagger-ui` and can be used
+to do all possible interactions with the API. eg:
 
 ![image](img/Web3j-OpenAPI/SwaggerUI_3.png)
 
-To interact via Java/Kotlin:
+#### HTTP requests
+Sending HTTP requests via tools like `Curl`:
+
+```ssh
+$ curl -X POST "http://{host}:{port}/HelloWorldProject/contracts/helloworld/{contract address}/NewGreeting" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"_greet\":\"Hello Web3j-OpenAPI\"}"
+```
+
+#### Client application
+It is also possible to interact using a Java/Kotlin client application. 
+This latter can be done using our client implementation.
+
+Make sure to add the client dependency to your project.
 
 ```groovy
 dependencies {
@@ -222,7 +233,7 @@ dependencies {
 }
 ```
 
-Then, within a client application:
+Then, you will be able to interact with the API as follows:
 
 ```
 val service = ClientService("http://localhost:9090")
@@ -304,7 +315,7 @@ $ solc --abi --bin -o . HelloWorld.sol
 
 ## Generate the REST API only
 
-To generate only the API, which is the defined endpoints with their implementations,
+To generate only the API, ie the defined endpoints with their implementations,
 use the following:
 
 ```
@@ -312,12 +323,21 @@ $ epirus openapi generate \
     --abi <list to your abi files> \
     --bin <list to your binary files> \
     --project-name <project name> \
-    --package <package name>
+    --package <package name> \
+    --with-implementations 
 ```
 
-This command will not generate the gradle build files. Thus, you will not have a
+This command will not generate a whole project structure. Thus, you will not have a
 runnable application. To have one, check the above sections.
 
+The `with-implementations` flag is set to `true` by default. This means that 
+the RESTful endpoints will be generated along their implementations. 
+
+If you prefer to generate only the interfaces. Set that flag to `false`: 
+
+```
+--with-implementations=false
+```
 
 ## Generate using the [web3j-openapi-gradle-plugin](https://github.com/web3j/web3j-openapi-gradle-plugin)
 
