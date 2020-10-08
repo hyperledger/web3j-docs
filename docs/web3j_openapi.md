@@ -8,9 +8,13 @@ or via the [Swagger-UI](https://swagger.io/tools/swagger-ui/),
 which is generated with every project.
 
 This workflow can be summed in the following steps:
+
 - Writing a Solidity smart contract
+
 - Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://docs.epirus.io/quickstart)
+
 - Running the generated project as a standalone server
+
 - Sending HTTP requests using the `Swagger-UI`, `Java/Kotlin` client, `Curl` or other.
 
 ## Example
@@ -142,7 +146,7 @@ The available events are:
 
 ## Getting started with Web3j-OpenAPI
 
-### Generate a project:
+### Generate a project
 To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Epirus-CLI](https://docs.epirus.io/quickstart) installed on your machine (Note - the Epirus CLI has replaced the Web3j CLI). 
 It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
 	
@@ -205,23 +209,23 @@ You should be able to run the server and see the following:
 
 ![image](img/Web3j-OpenAPI/Server_logs.png)
 
-### Interact with the generated project:
+### Interact with the generated project
 Interactions can be done in multiple ways : 
 
-#### SwaggerUI
+### SwaggerUI
 The generated `SwaggerUI` is located on `{host}:{port}/swagger-ui` and can be used
 to do all possible interactions with the API. eg:
 
 ![image](img/Web3j-OpenAPI/SwaggerUI_3.png)
 
-#### HTTP requests
+### HTTP requests
 Sending HTTP requests via tools like `Curl`:
 
 ```
 $ curl -X POST "http://{host}:{port}/HelloWorldProject/contracts/helloworld/{contract address}/NewGreeting" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"_greet\":\"Hello Web3j-OpenAPI\"}"
 ```
 
-#### Client application
+### Client application
 It is also possible to interact using a Java/Kotlin client application. 
 This latter can be done using our client implementation.
 
@@ -341,6 +345,9 @@ If you prefer to generate only the interfaces. Set that flag to `false`:
 
 ### Generate using the [web3j-openapi-gradle-plugin](https://github.com/web3j/web3j-openapi-gradle-plugin)
 
+It is possible to generate a Web3j-OpenAPI project directly from your `gradle` project using the `web3j-openapi-gradle-plugin`. 
+Check the [documentation](https://github.com/web3j/web3j-openapi-gradle-plugin) for more information.
+
 ## Run the project
 
 ### Runtime parameters
@@ -355,7 +362,7 @@ be set. There are multiple ways of doing so:
 Also, you can run the project without worrying about any of this
 using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment)
 
-#### Supported parameters
+### Supported parameters
 
 |  Name                   | Default value                       | Description |
 |-------------------------|:-----------------------------------:|-------------|
@@ -378,7 +385,7 @@ interacting with the Ethereum network `endpoint`.
 
 The remaining options are optional.
 
-#### Order of precedence
+### Order of precedence
 
 The parameters can be specified interchangeably between different sources.
 ie, you can have some defined in a default configuration file and others in environment
@@ -394,7 +401,7 @@ However, for duplicated values, we enforce the following order :
 
 Check the following sections for more information.
 
-#### CLI arguments
+### CLI arguments
 
 The CLI arguments can be passed to the command the usual way.
 
@@ -412,7 +419,7 @@ $ <command> \
     --contract-addresses contract1=0x1234,contract2=0x123
 ```
 
-#### Configuration file
+### Configuration file
 
 You can put the parameters in a **configuration file**. This latter, can be 
 `YAML`, `Json` or `Java properties` type of files.
@@ -479,7 +486,7 @@ server.port=9090
 ```
 
 
-#### Environment variables
+### Environment variables
 
 The easiest way to provide the runtime parameters is through environment variables.
 
@@ -487,7 +494,7 @@ The rule is to:
 - Replace the `-` with a `_` : `private-key => private_key`
 - Upper case the options' names : `private-key => PRIVATE_KEY`
 
-##### Example
+#### Example
 ```
 $ export WEB3J_ENDPOINT=<link to your Ethereum node>
 $ export WEB3J_OPENAPI_HOST=localhost
@@ -499,11 +506,11 @@ $ export WEB3J_OEPNAPI_CONFIG_FILE=~/myConfig.yaml
 And one of the following:
 
 - A raw private key :
-```shell script
+```
 $ export WEB3J_PRIVATE_KEY=0x1234
 ```
 - A wallet :
-```shell script
+```
 $ export WEB3J_WALLET_PATH=~/myWallet.json
 $ export WEB3J_WALLET_PASSWORD=myStrongPassword
 ```
