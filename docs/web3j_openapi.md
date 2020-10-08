@@ -168,7 +168,7 @@ Put that contract in a file named `HelloWorld.sol` for starters.
 
 Then, execute the following command: 
 ```	
-$ epirus openapi import  \
+$ epirus openapi import \
     -s=HelloWorld.sol \
     --package=com.tutorial \
     --project-name=HelloWorldProject \
@@ -184,15 +184,15 @@ You can run the project easily, without specify any configuration, using the [Ep
 If not, you need to specify runtime parameters. for example, the `private key` or `wallet file` for the signing,
 the `node endpoint` to connect to, etc.
 
-To see the available options, try to run the distributions `executable` or the `JAR` with the `--help` flag. You'll get the following display:
+To see the available options, run the distributions `executable` or the `JAR` with the `--help` flag. You'll get the following display:
 
 ![image](img/Web3j-OpenAPI/Server_help.png)
 
 To specify these parameters, you can set the following environment variables:
 
 ```
-$ export WEB3J_ENDPOINT=<link to your Ethereum node>
-$ export WEB3J_PRIVATE_KEY=<your private key>
+$ export WEB3J_ENDPOINT=<link_to_your_Ethereum_node>
+$ export WEB3J_PRIVATE_KEY=<your_private_key>
 $ export WEB3J_OPENAPI_HOST=localhost
 $ export WEB3J_OPENAPI_PORT=9090
 ```
@@ -369,7 +369,7 @@ using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment)
 | `name`                  | `Generation project name`           | The project name |         
 | `config file`           | `~/.epirus/web3j.openapi.<extension>`| A custom configuration file to import extra parameters |     
 | `endpoint`              | `none`                              | Ethereum node endpoint to target when interacting with the blockchain |
-| `privateKey`            | `none`                              | User private key in hex format prefixed by `0x` |
+| `private key`           | `none`                              | User private key in hex format prefixed by `0x` |
 | `wallet path`           | `none`                              | The path to the wallet file (can be absolute or relative) |
 | `wallet password`       | `none`                              | The password of the specified wallet file in plain text |
 | `host`                  | `localhost`                         | The server host (can be an IP address or a hostname) |
@@ -379,11 +379,11 @@ using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment)
 The necessary parameters are:
 
 - The Ethereum node endpoint to target when 
-interacting with the Ethereum network `endpoint`.
+interacting with the Ethereum network `endpoint`
 
-- Credentials : which can be either `privateKey`, or `wallet path` and `wallet password`
+- Credentials : which can be either `private key`, or `wallet path` and `wallet password`
 
-The remaining options are optional.
+The remaining parameters are optional.
 
 ### Order of precedence
 
@@ -431,7 +431,7 @@ The configuration file can be :
 to the file.
 eg.
 ```
-export WEB3J_OPENAPI_CONFIG_FILE={the path to the config file}
+export WEB3J_OPENAPI_CONFIG_FILE=<path_to_the_config_file}
 ```
 - Set as an argument when running the JAR or the executable: `--config-file`
 
@@ -445,11 +445,11 @@ contractAddresses:
 credentials: 
   privateKey: "0x1234"
 network: 
-  endpoint: "your node endpoint address"
+  endpoint: "<your_node_endpoint_address>"
 project: 
-  name: OpenApiProject
+  name: "OpenApiProject"
 server: 
-  host: localhost
+  host: "localhost"
   port: 9090
 ```
 
@@ -491,12 +491,14 @@ server.port=9090
 The easiest way to provide the runtime parameters is through environment variables.
 
 The rule is to:
+
 - Replace the `-` with a `_` : `private-key => private_key`
+
 - Upper case the options' names : `private-key => PRIVATE_KEY`
 
 #### Example
 ```
-$ export WEB3J_ENDPOINT=<link to your Ethereum node>
+$ export WEB3J_ENDPOINT=<link_to_your_Ethereum_node>
 $ export WEB3J_OPENAPI_HOST=localhost
 $ export WEB3J_OPENAPI_PORT=9090
 $ export WEB3J_OPENAPI_NAME=Web3jOpenAPI
