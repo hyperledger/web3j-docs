@@ -82,7 +82,7 @@ generates the following `OpenAPI` specs :
          "url":"http://web3labs.com",
          "email":"hi@web3labs.com"
       },
-      "version":"4.6.5"
+      "version":"4.7.0"
    },
    "tags":[
       {
@@ -233,7 +233,7 @@ Make sure to add the client dependency to your project.
 
 ```groovy
 dependencies {
-    implementation "org.web3j.openapi:web3j-openapi-client:4.6.5"
+    implementation "org.web3j.openapi:web3j-openapi-client:4.7.0"
 }
 ```
 
@@ -312,8 +312,8 @@ You can do that, for example, using `solc` via [SVM](https://blog.web3labs.com/a
 This lets you handle multiple Solidity compiler versions easily:
 
 ```
-$ svm install 0.6.0
-$ svm use 0.6.0
+$ svm install 0.7.0
+$ svm use 0.7.0
 $ solc --abi --bin -o . HelloWorld.sol
 ```
 
@@ -568,7 +568,7 @@ Start by adding dependency to the client:
 
 ```groovy
 dependencies {
-    implementation "org.web3j.openapi:web3j-openapi-client:4.6.5"
+    implementation "org.web3j.openapi:web3j-openapi-client:4.7.0"
 }
 ```
 
