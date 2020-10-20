@@ -173,7 +173,7 @@ To call a smart contract:
 Type result = contract.someMethod(<param1>, ...).send();
 ```
 
-For more information refer to [Solidity smart contract wrappers](smart_contracts.md#solidity-smart-contract-wrappers).
+For more information refer to [Solidity smart contract wrappers](smart_contracts/smart_contracts.md#solidity-smart-contract-wrappers).
 
 Filters
 -------

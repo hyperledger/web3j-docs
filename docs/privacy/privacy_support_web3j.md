@@ -1,31 +1,6 @@
 # Privacy
 
-## Privacy with Hyperledger Besu
 
-The Besu module in Web3j provides support for creating private transactions and privacy groups on Hyperledger Besu. For information as to how privacy is implemented in Besu, please see the [Besu privacy documentation](https://besu.hyperledger.org/en/stable/HowTo/Use-Privacy/EEA-Compliant/). 
-
-Privacy in Besu refers to the ability to keep transactions private between the involved participants. Other participants cannot access the transaction content or list of participants. Besu uses Orion, a separate software component, to manage private transactions. Orion is able to maintain public/private keypairs, store privacy group details, and discover other Orion nodes on a network. A privacy group is a group of nodes identified by a unique privacy group ID in Orion. Each private transaction is stored in Orion and is associated with the privacy group ID.
-
-The Besu nodes maintain the public world state for the blockchain and a private state for each privacy group. The private states contain data that is not shared in the globally replicated public world state. 
-
-Private transactions have additional attributes to public Ethereum transactions:
-
-- `privateFrom` - Orion public key of transaction sender
-- `privacyGroupId` - Privacy group to receive transaction
-- `restriction` - Private transactions are restricted or unrestricted:
-    - In restricted private transactions the payload of the private transaction is received and stored only by the nodes participating in the transaction.
-    - In unrestricted private transactions the payload of the private transaction is transmitted to all nodes in the network but is readable only by nodes participating in the transaction.
-
-
-## Besu Quickstart
-In order to get off the group quickly with Web3j and privacy on Besu, Besu Quickstart should be used. Besu quickstart is a collection of dockerfiles and associated configuration files which allows you to start up a local private-transaction-enabled Ethereum network. In order to get started, ensure you have Docker and Docker Compose installed on your system. Then clone the Besu Quickstart repository likeso:
-```bash
-git clone https://github.com/PegaSysEng/besu-quickstart.git
-```
-  
-In order to start an Ethereum network with privacy enabled, invoke the `run-privacy.sh` shell script. This should result in a number of containers being started, including 3 Besu nodes which will communicate using the ports `localhost:20000-20004`. It should be noted that starting the full network generally uses 12GB+ of RAM.
-
-Once the network has been started, the output of the `netstat` command should indicate that ports 20000-20004 are in use.
 
 ## Privacy Support in Web3j
 As mentioned earlier, the Besu module in Web3j can be used to create privacy groups and send private transactions in Besu. The Besu privacy quickstart starts up three nodes with their associated Orion instances, which will henceforth be called Alice, Bob and Charlie for ease of use. The keys associated with each are predetermined, and can be represented in Java as follows:
