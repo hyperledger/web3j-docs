@@ -11,20 +11,37 @@ copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
 
 nav:
   - Quickstart: quickstart.md
-  - Getting Started: getting_started.md
-  - Samples: samples.md
-  - Modules: modules.md
+  - Getting Started:
+      - Project Build Configuration: getting_started/getting_started.md
+      - Deploy a Node Locally: getting_started/start_a_client.md
+      - Interacting with a Node: getting_started/sending_requests.md
+      - Deploy and Interact with Smart Contracts: getting_started/smart_contracts.md
+      - Filters and Pub/Sub: getting_started/pub_sub.md
+      - TLS over Websockets: getting_started/tls_websockets.md
+      - Command Line Tools: getting_started/command_line_tools.md
+      - Examples: samples.md
+  - Modules:
+      - Modules: modules/modules.md
   - Transactions: transactions.md
-  - Privacy & Permissioning: privacy.md
-  - Smart Contracts: smart_contracts.md
-  - Application Binary Interface: application_binary_interface.md
+  - Privacy & Permissioning:
+      - Privacy with Hyperledger Besu:   privacy/privacy_with_besu.md
+      - Besu Quickstart:   privacy/besu_quickstart.md
+      - Privacy Support in Web3j:   privacy/privacy_support_web3j.md
+  - Smart Contracts:
+      - Smart Contract Overview: smart_contracts/smart_contracts.md
+      - Getting Started with Solidity: smart_contracts/getting_started_solidity.md
+      - Compiling Solidity source code: smart_contracts/compiling_solidity.md
+      - Construction and Deployment: smart_contracts/construction_and_deployment.md
+      - Interacting with Smart Contracts: smart_contracts/interacting_with_smart_contract.md
+      - Contract Validity: smart_contracts/contract_validity.md
+      - Application Binary Interface: smart_contracts/application_binary_interface.md
+      - Contracts Supported by Web3j: smart_contracts/contracts_supported_by_web3j.md
   - Recursive Length Prefix: recursive_length_prefix.md
   - Filters and Events: filters_and_events.md
   - Command Line Tools: command_line_tools.md
   - Management Apis: management_apis.md
   - Using Infura with Web3j: using_infura_with_web3j.md
   - Ethereum Name Service: ethereum_name_service.md
-  - Contracts Supported by Web3j: contracts_supported_by_web3j.md
   - Embedded EVM: embedded_ethereum.md
   - Debugging: debugging.md
   - Troubleshooting: troubleshooting.md
@@ -46,6 +63,9 @@ theme:
   palette:
     primary: "white"
     accent: "deep-orange"
+
+
+
 # Customization
 extra:
   manifest: "manifest.webmanifest"
@@ -56,8 +76,10 @@ extra:
       link: "https://twitter.com/web3labs"
     - icon: "fontawesome/brands/linkedin"
       link: "https://linkedin.com/in/web3labs"
+
 extra_css:
   - "stylesheets/extra.css"
+
 
 # Google Analytics
 google_analytics:
@@ -73,4 +95,4 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
-      toc_depth: 3
+      toc_depth: 6

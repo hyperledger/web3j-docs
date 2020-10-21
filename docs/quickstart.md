@@ -1,9 +1,6 @@
 Quickstart
 ==========
 
-Epirus CLI
----------
-
 Install the Epirus binary.
 
 To get the latest version on Mac OS or Linux, type the following in your terminal:

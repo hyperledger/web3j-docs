@@ -27,7 +27,7 @@ Deploying and interacting with smart contracts
 
 If you want to avoid the underlying implementation detail for working with smart contracts, web3j provides [Solidity smart contract wrappers](#solidity-smart-contract-wrappers) which enable you to interact directly with all of a smart contract's methods via a generated wrapper object.
 
-Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections [Solidity smart contract wrappers](#solidity-smart-contract-wrappers), [Transacting with a smart contract](transactions.md#transacting-with-a-smart-contract) and [Querying the state of a smart contract](transactions.md#querying-the-state-of-a-smart-contract) for details.
+Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections [Solidity smart contract wrappers](#solidity-smart-contract-wrappers), [Transacting with a smart contract](../transactions.md#transacting-with-a-smart-contract) and [Querying the state of a smart contract](../transactions.md#querying-the-state-of-a-smart-contract) for details.
 
 
 Solidity smart contract wrappers

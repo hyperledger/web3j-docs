@@ -57,7 +57,7 @@ Please refer to the [Ethereum testnets](transactions.md#ethereum-testnets) for h
 How do I obtain the return value from a smart contract method invoked by a transaction?
 ---------------------------------------------------------------------------------------
 
-You can't. It is not possible to return values from methods on smart contracts that are called as part of a transaction. If you wish to read a value during a transaction, you must use [Events](http://solidity.readthedocs.io/en/develop/contracts.html#events). To query values from smart contracts you must use a call, which is separate to a transaction. These methods should be marked as [constant](http://solidity.readthedocs.io/en/develop/contracts.html?highlight=constant#constant-functions) functions. [Solidity smart contract wrappers](smart_contracts.md#solidity-smart-contract-wrappers) created by web3j handle these differences for you.
+You can't. It is not possible to return values from methods on smart contracts that are called as part of a transaction. If you wish to read a value during a transaction, you must use [Events](http://solidity.readthedocs.io/en/develop/contracts.html#events). To query values from smart contracts you must use a call, which is separate to a transaction. These methods should be marked as [constant](http://solidity.readthedocs.io/en/develop/contracts.html?highlight=constant#constant-functions) functions. [Solidity smart contract wrappers](smart_contracts/smart_contracts.md#solidity-smart-contract-wrappers) created by web3j handle these differences for you.
 
 The following StackExchange [post](http://ethereum.stackexchange.com/questions/765/what-is-the-difference-between-a-transaction-and-a-call) is useful for background.
 
@@ -117,17 +117,6 @@ Are you sure that you are connecting to the correct network to perform the looku
 
 If web3j is telling you that the node is not in sync, you may need to change the *syncThreshold* in the
 [ENS resolver](ethereum_name_service.md#web3j-implementation).
-
-Do you have a project donation address?
----------------------------------------
-
-Absolutely, you can contribute Bitcoin or Ether to help fund the development of web3j.
-
----------- --------------------------------------------
-  Ethereum   0x2dfBf35bb7c3c0A466A6C48BEBf3eF7576d3C420
-
-  Bitcoin    	1DfUeRWUy4VjekPmmZUNqCjcJBMwsyp61G
----------- --------------------------------------------
 
 Where can I get commercial support for web3j?
 ---------------------------------------------

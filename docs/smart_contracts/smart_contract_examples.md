@@ -5,7 +5,7 @@ Web3j provides a number of smart contract examples in the project directory [cod
 
 It also provides integration tests for demonstrating the deploying and working with those smart contracts in the [integration-tests/src/test/java/org/web3j/protocol/scenarios](https://github.com/web3j/web3j/tree/master/integration-tests/src/test/java/org/web3j/protocol/scenarios) module.
 
-![image](img/smart_contract.png)
+![image](../img/smart_contract.png)
 
 EIP-20 Ethereum token standard smart contract 
 ---------------------------------------------

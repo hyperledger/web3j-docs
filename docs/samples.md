@@ -83,7 +83,24 @@ You can also use the `WalletUtils` class to load your credentials from various f
 - `WalletUtils.loadBip39Credentials(String password,String mnemonic)`
 - `WalletUtils.loadJsonCredentials(String password,String content)`
 
-## Picking GasProviders
+## Loading a Smart Contract 
+
+If you have already deployed a contract and would like to interact with it through web3j then the Java Wrappers or your smart contract have a load method.
+
+```java
+ Web3j web3j = Web3j.build(new HttpService("https://rinkeby.infura.io/v3/<your_name>"));
+ String greeting;
+ HelloWorld helloWorld = HelloWorld.load("your_contract_address", web3j, Credentials.create("your_private_key"), new DefaultGasProvider());
+ if (helloWorld.isValid()) {
+    greeting = helloWorld.greeting().send();
+    }
+ web3j.shutdown();
+```
+It is important that the loaded contract is checked using the `isValid()` method. This method will return false if the contract's bytecode does not match with the deployed one.
+
+
+
+## Picking Gas Providers
 
 The public Interface `ContractGasProvider` has two implementations that can be used in order to pass in a gas provider to the deploy method of the contract.
 
@@ -94,6 +111,9 @@ The `DefaultGasProvider` is pre-defined implementation of the `ContractGasProvid
 
 If a more flexible approach is required then the `StaticGasProvider` can take custom gas price and gas limit values as BigIntegers.
 
+## Querying the blockchain for transactions
+
+In this scenario we will query Rinkeby for transactions made by a specific address between block number `7250516` and the latest block.
 
 
 

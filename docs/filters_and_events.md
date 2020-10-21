@@ -114,7 +114,7 @@ Subscription subscription = web3j.replayPastAndFutureTransactionsFlowable(
 
 All of the above filters are exported via the [Web3jRx](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/protocol/rx/Web3jRx.java) interface.
 
-Topic filters and EVM events {#filters-and-events}
+Topic filters and EVM events
 ----------------------------
 
 Topic filters capture details of Ethereum Virtual Machine (EVM) events taking place in the network. These events are created by smart contracts and stored in the transaction log associated with a smart contract.

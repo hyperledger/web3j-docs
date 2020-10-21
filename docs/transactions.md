@@ -293,7 +293,7 @@ TransactionReceipt transactionReceipt = Transfer.sendFunds(
 ## Recommended approach for working with smart contracts
 
 When working with smart contract wrappers as outlined below, you will have to perform all of the conversions from Solidity to native Java types manually. It is far more effective to use web3j's
-[Solidity smart contract wrappers](smart_contracts.md#solidity-smart-contract-wrappers) which take care of all code generation and this conversion for you.
+[Solidity smart contract wrappers](smart_contracts/smart_contracts.md#solidity-smart-contract-wrappers) which take care of all code generation and this conversion for you.
 
 ## Creation of a smart contract
 
@@ -365,7 +365,7 @@ To transact with an existing smart contract, the following attributes will need 
 
  the encoded function selector and parameter arguments
 
-web3j takes care of the function encoding for you, for further details on the implementation refer to the [Application Binary Interface](application_binary_interface.md) section.
+web3j takes care of the function encoding for you, for further details on the implementation refer to the [Application Binary Interface](smart_contracts/application_binary_interface.md) section.
 
 ```java
 Function function = new Function<>(
