@@ -9,6 +9,12 @@ To get the latest version on Mac OS or Linux, type the following in your termina
 curl -L get.epirus.io | sh && source ~/.epirus/source.sh
 ```
 
+For Windows, open PowerShell and execute the following:
+
+```bash
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/epirus-io/epirus-installer/master/installer.ps1'))
+```
+
 Then to create a new project, simply run:
 
 ```bash

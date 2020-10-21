@@ -46,6 +46,7 @@ nav:
   - Debugging: debugging.md
   - Troubleshooting: troubleshooting.md
   - Testing: testing_with_web3j_unit.md
+  - Web3j OpenAPI: web3j_openapi.md
   - Projects using Web3j: projects_using_web3j.md
   - Companies using Web3j: companies_using_web3j.md
   - Developer Guide: developer_guide.md
