@@ -1,4 +1,4 @@
-Modules
+Modules Included With Web3j
 =======
 
 To provide greater flexibility for developers wishing to work with web3j, the project is made up of a number of modules.

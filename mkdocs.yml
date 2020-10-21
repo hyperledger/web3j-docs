@@ -21,12 +21,16 @@ nav:
       - Command Line Tools: getting_started/command_line_tools.md
       - Examples: samples.md
   - Modules:
-      - Modules: modules/modules.md
+      - Web3j Internal Modules: modules/modules.md
+      - Web3j OpenAPI: modules/web3j_openapi.md
+      - Web3j Unit: modules/testing_with_web3j_unit.md
+      - Web3j EVM: modules/web3j_evm.md
+
   - Transactions: transactions.md
   - Privacy & Permissioning:
-      - Privacy with Hyperledger Besu:   privacy/privacy_with_besu.md
-      - Besu Quickstart:   privacy/besu_quickstart.md
-      - Privacy Support in Web3j:   privacy/privacy_support_web3j.md
+      - Privacy with Hyperledger Besu: privacy/privacy_with_besu.md
+      - Besu Quickstart: privacy/besu_quickstart.md
+      - Privacy Support in Web3j: privacy/privacy_support_web3j.md
   - Smart Contracts:
       - Smart Contract Overview: smart_contracts/smart_contracts.md
       - Getting Started with Solidity: smart_contracts/getting_started_solidity.md
@@ -42,11 +46,7 @@ nav:
   - Management Apis: management_apis.md
   - Using Infura with Web3j: using_infura_with_web3j.md
   - Ethereum Name Service: ethereum_name_service.md
-  - Embedded EVM: embedded_ethereum.md
-  - Debugging: debugging.md
   - Troubleshooting: troubleshooting.md
-  - Testing: testing_with_web3j_unit.md
-  - Web3j OpenAPI: web3j_openapi.md
   - Projects using Web3j: projects_using_web3j.md
   - Companies using Web3j: companies_using_web3j.md
   - Developer Guide: developer_guide.md
