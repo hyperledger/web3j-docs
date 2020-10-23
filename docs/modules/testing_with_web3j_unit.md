@@ -4,7 +4,7 @@ Web3j Unit
 Web3j-unit is an extension to [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) which enables you to test solidity contracts like any other Java code.
 It allows you to test with both an embedded and dockerized Ethereum nodes, with out-of-the box support for Geth, Besu, and OpenEthereum nodes. A docker-compose network can also be configured easily for more complex setups.
 
-# Usage
+## Usage
 
 First, let's add the gradle dependency.
 

@@ -46,8 +46,8 @@ This demo is available on the [example project](https://github.com/web3j/web3j-e
 
 ![](https://raw.githubusercontent.com/web3j/evm/master/resources/web3j-evm-demo.gif)
 
-Debugging smart contracts and transactions
-==========================================
+## Debugging smart contracts and transactions
+
 
 While running locally with the embedded EVM it is possible to debug the internal state when deploying and invoking functions on a contract.
 
@@ -90,8 +90,8 @@ If I want to have the debugger stop at a specific line in that file I'd add a br
 Likewise, if I only want to see the Solidity source code and don't care to see opcodes and the stack, I'd execute the ```hide opcodes``` and ```hide stack``` commands.
 
 
-Embedded Ethereum
-=================
+## Embedded Ethereum
+
 
 Usually when interacting with Ethereum you do so by connecting to an Ethereum node. This node can either be hosted externally, or it might be one you've started locally.
 
