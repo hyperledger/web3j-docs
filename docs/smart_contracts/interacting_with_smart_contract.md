@@ -101,7 +101,7 @@ contract.someEventFlowable(startBlock, endBlock).
         .subscribe(event -> ...);
 ```
 
-For more information on working with Flowable filters, refer to [Filters and Events](filters_and_events.md).
+For more information on working with Flowable filters, refer to [Filters and Events](../advanced/filters_and_events.md).
 
 **Remember** that for any indexed array, bytes and string Solidity parameter types, a Keccak-256 hash of their values will be returned, see the [documentation](http://Solidity.readthedocs.io/en/latest/contracts.html#events) for further information.
 

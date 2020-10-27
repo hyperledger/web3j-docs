@@ -25,7 +25,7 @@ Test Ethereum Network (Ropsten):
   <https://ropsten.infura.io/><your-token\>
 
 For obtaining ether to use in these networks, you can refer to
-[Ethereum testnets](transactions.md#ethereum-testnets)
+[Ethereum testnets](transactions/transactions.md#ethereum-testnets)
 
 InfuraHttpClient
 ----------------
@@ -51,4 +51,4 @@ Transactions
 
 In order to transact with Infura nodes, you will need to create and sign transactions offline before sending them, as Infura nodes have no visibility of your encrypted Ethereum key files, which are required to unlock accounts via the Personal Geth/OpenEthereum admin commands.
 
-Refer to the [Offline transaction signing](transactions.md#offline-transaction-signing) and [Management APIs](management_apis.md) sections for further details.
+Refer to the [Offline transaction signing](transactions/transactions.md#offline-transaction-signing) and [Management APIs](advanced/management_apis.md) sections for further details.

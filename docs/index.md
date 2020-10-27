@@ -33,7 +33,7 @@ It has five runtime dependencies:
 
 -   [RxJava](https://github.com/ReactiveX/RxJava) for its reactive-functional API
 -   [OKHttp](https://hc.apache.org/httpcomponents-client-ga/index.html) for HTTP connections
--   [Jackson Core](https://github.com/FasterXML/jackson-core) for fast JSON serialisation/deserialisation
+-   [Jackson Core](https://github.com/FasterXML/jackson-core) for fast JSON serialisation/deserialization
 -   [Bouncy Castle](https://www.bouncycastle.org/) for crypto
 -   [Jnr-unixsocket](https://github.com/jnr/jnr-unixsocket) for \*nix IPC (not available on Android)
 

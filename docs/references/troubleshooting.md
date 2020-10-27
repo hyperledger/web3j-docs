@@ -4,7 +4,7 @@ Troubleshooting
 Do you have a sample web3j project
 ----------------------------------
 
-Yes, refer to the web3j sample project outlined in the [Quickstart](quickstart.md).
+Yes, refer to the web3j sample project outlined in the [Quickstart](../quickstart.md).
 
 I'm submitting a transaction, but it's not being mined
 --------------------------------------------------------
@@ -33,11 +33,11 @@ I1025 18:13:32.817691 eth/api.go:1185] Tx(0xeaac9aab7f9aeab189acd8714c5a60c7424f
 
 The easiest way to see if the submission is waiting to mined is to refer to Etherscan and search for the address the transaction was sent using <https://testnet.etherscan.io/address/0x>\... If the submission has been successful it should be visible in Etherscan within seconds of you performing the transaction submission. The wait is for the mining to take place.
 
-![image](img/pending_transaction.png)
+![image](../img/pending_transaction.png)
 
 
 
-If there is no sign of it then the transaction has vanished into the ether (sorry). The likely cause of this is likely to be to do with the transaction's nonce either not being set, or being too low. Please refer to the section [Transaction nonce](transactions.md#the-transaction-nonce) for more information.
+If there is no sign of it then the transaction has vanished into the ether (sorry). The likely cause of this is likely to be to do with the transaction's nonce either not being set, or being too low. Please refer to the section [Transaction nonce](../transactions/transactions.md#the-transaction-nonce) for more information.
 
 I want to see details of the JSON-RPC requests and responses
 ------------------------------------------------------------
@@ -52,12 +52,12 @@ located in *src/main/resources/logback.xml*.
 I want to obtain some Ether on Testnet, but don't want to have to mine it myself
 ---------------------------------------------------------------------------------
 
-Please refer to the [Ethereum testnets](transactions.md#ethereum-testnets) for how to obtain some Ether.
+Please refer to the [Ethereum testnets](../transactions/ethereum_testnets.md) for how to obtain some Ether.
 
 How do I obtain the return value from a smart contract method invoked by a transaction?
 ---------------------------------------------------------------------------------------
 
-You can't. It is not possible to return values from methods on smart contracts that are called as part of a transaction. If you wish to read a value during a transaction, you must use [Events](http://solidity.readthedocs.io/en/develop/contracts.html#events). To query values from smart contracts you must use a call, which is separate to a transaction. These methods should be marked as [constant](http://solidity.readthedocs.io/en/develop/contracts.html?highlight=constant#constant-functions) functions. [Solidity smart contract wrappers](smart_contracts/smart_contracts.md#solidity-smart-contract-wrappers) created by web3j handle these differences for you.
+You can't. It is not possible to return values from methods on smart contracts that are called as part of a transaction. If you wish to read a value during a transaction, you must use [Events](http://solidity.readthedocs.io/en/develop/contracts.html#events). To query values from smart contracts you must use a call, which is separate to a transaction. These methods should be marked as [constant](http://solidity.readthedocs.io/en/develop/contracts.html?highlight=constant#constant-functions) functions. [Solidity smart contract wrappers](../smart_contracts/construction_and_deployment.md#solidity-smart-contract-wrappers) created by web3j handle these differences for you.
 
 The following StackExchange [post](http://ethereum.stackexchange.com/questions/765/what-is-the-difference-between-a-transaction-and-a-call) is useful for background.
 
@@ -116,7 +116,7 @@ My ENS lookups are failing
 Are you sure that you are connecting to the correct network to perform the lookup?
 
 If web3j is telling you that the node is not in sync, you may need to change the *syncThreshold* in the
-[ENS resolver](ethereum_name_service.md#web3j-implementation).
+[ENS resolver](../advanced/ethereum_name_service.md#web3j-implementation).
 
 Where can I get commercial support for web3j?
 ---------------------------------------------

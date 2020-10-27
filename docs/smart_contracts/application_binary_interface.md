@@ -28,7 +28,7 @@ BigInteger types have to be used for numeric types, as numeric types in Ethereum
 
 Solidity structs will have a corresponding class generated for them. Currently only contract compiled with Solidity compiler version 0.6.x. The names of the corresponding classes will be the same as the name of the struct in the Solidity contract i.e. `struct Foo` in your smart contract will be called `Foo` in the smart contract wrapper.
 
-For more information on using ABI types in Java, refer to [Solidity smart contract wrappers](smart_contracts.md#solidity-smart-contract-wrappers).
+For more information on using ABI types in Java, refer to [Solidity smart contract wrappers](construction_and_deployment.md#solidity-smart-contract-wrappers).
 
 Further details
 ---------------

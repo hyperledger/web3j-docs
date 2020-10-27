@@ -12,20 +12,29 @@ copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
 nav:
   - Quickstart: quickstart.md
   - Getting Started:
-      - Project Build Configuration: getting_started/getting_started.md
-      - Deploy a Node Locally: getting_started/start_a_client.md
-      - Interacting with a Node: getting_started/sending_requests.md
-      - Deploy and Interact with Smart Contracts: getting_started/smart_contracts.md
+      - Project Build Configuration: getting_started/project_build_configuration.md
+      - Deploy a Node Locally: getting_started/deploy_node_locally.md
+      - Interacting with a Node: getting_started/interacting_with_node.md
+      - Deploy and Interact with Smart Contracts: getting_started/deploy_interact_smart_contracts.md
       - Filters and Pub/Sub: getting_started/pub_sub.md
       - TLS over Websockets: getting_started/tls_websockets.md
-      - Command Line Tools: getting_started/command_line_tools.md
-      - Examples: samples.md
+      - Examples: getting_started/examples.md
   - Modules:
       - Web3j Internal Modules: modules/modules.md
       - Web3j OpenAPI: modules/web3j_openapi.md
       - Web3j Unit: modules/testing_with_web3j_unit.md
       - Web3j EVM: modules/web3j_evm.md
-  - Transactions: transactions.md
+  - Transactions:
+      - Ethereum Transactions: transactions/transactions.md
+      - Obtaining Ether: transactions/obtaining_ether.md
+      - Ethereum Test Networks: transactions/ethereum_testnets.md
+      - Gas: transactions/gas.md
+      - Transfer Eth: transactions/transfer_eth.md
+      - Transction Mechanisms: transactions/transaction_mechanisms.md
+      - Transction Nonce: transactions/transaction_nonce.md
+      - Transction Types: transactions/transaction_types.md
+      - Transctions and Smart Contracts : transactions/transactions_and_smart_contracts.md
+      - Wallet Files: transactions/wallet_files.md
   - Privacy & Permissioning:
       - Besu Quickstart: privacy/besu_quickstart.md
       - Privacy with Hyperledger Besu: privacy/privacy_with_besu.md
@@ -39,21 +48,22 @@ nav:
       - Contract Validity: smart_contracts/contract_validity.md
       - Application Binary Interface: smart_contracts/application_binary_interface.md
       - Contracts Supported by Web3j: smart_contracts/contracts_supported_by_web3j.md
-  - Recursive Length Prefix: recursive_length_prefix.md
-  - Filters and Events: filters_and_events.md
-  - Command Line Tools: command_line_tools.md
-  - Management Apis: management_apis.md
-  - Using Infura with Web3j: using_infura_with_web3j.md
-  - Ethereum Name Service: ethereum_name_service.md
-  - Troubleshooting: troubleshooting.md
-  - References: references.md
-  - Projects using Web3j: projects_using_web3j.md
-  - Companies using Web3j: companies_using_web3j.md
-  - Developer Guide: developer_guide.md
-  - Links and Useful Resources: links_and_useful_resources.md
-  - Thanks and Credits: thanks_and_credits.md
+      - Smart Contract Example: smart_contracts/smart_contract_examples.md
+  - Advanced:
+      - Recursive Length Prefix: advanced/recursive_length_prefix.md
+      - Filters and Events: advanced/filters_and_events.md
+      - Management Apis: advanced/management_apis.md
+      - Ethereum Name Service: advanced/ethereum_name_service.md
+  - Command Line Tools: https://docs.epirus.io/sdk/cli/
+  - References:
+      - Troubleshooting: references/troubleshooting.md
+      - Projects using Web3j: references/projects_using_web3j.md
+      - Companies using Web3j: references/companies_using_web3j.md
+      - Developer Guide: references/developer_guide.md
+      - Links and Useful Resources: references/links_and_useful_resources.md
+      - Thanks and Credits: references/thanks_and_credits.md
 
-# Configuration
+      # Configuration
 theme:
   name: "material"
   language: "en"
@@ -64,7 +74,6 @@ theme:
   palette:
     primary: "white"
     accent: "deep-orange"
-
 
 
 # Customization
@@ -97,3 +106,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 6
+
+plugins:
+  - search:
+      lang: en

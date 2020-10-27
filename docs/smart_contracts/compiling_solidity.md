@@ -13,13 +13,13 @@ The *--bin* and *--abi* compiler arguments are both required to take full advant
 
 *--bin*
 
- Outputs a Solidity binary file containing the hex-encoded binary to provide with the transaction request. This is required only for *deploy* and *isValid* [Solidity smart contract wrappers](#solidity-smart-contract-wrappers) methods.
+ Outputs a Solidity binary file containing the hex-encoded binary to provide with the transaction request. This is required only for *deploy* and *isValid* [Solidity smart contract wrappers](construction_and_deployment.md#solidity-smart-contract-wrappers) methods.
 
 *--abi*
 
- Outputs a Solidity [Application Binary Interface](application_binary_interface.md) file which details all of the publicly accessible contract methods and their associated parameters. These details along with the contract address are crucial for interacting with smart contracts. The ABI file is also used for the generation of [Solidity smart contract wrappers](#solidity-smart-contract-wrappers)
+ Outputs a Solidity [Application Binary Interface](application_binary_interface.md) file which details all of the publicly accessible contract methods and their associated parameters. These details along with the contract address are crucial for interacting with smart contracts. The ABI file is also used for the generation of [Solidity smart contract wrappers](construction_and_deployment.md#solidity-smart-contract-wrappers)
 
-There is also a *--gas* argument for providing estimates of the [Gas](../transactions.md#gas) required to create a contract and transact with its methods.
+There is also a *--gas* argument for providing estimates of the [Gas](../transactions/gas.md) required to create a contract and transact with its methods.
 
 Alternatively, you can write and compile Solidity code in your browser via the [browser-solidity](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.5.1+commit.c8a2cb62.js) project. browser-solidity is great for smaller smart contracts, but you may run into issues working with larger contracts.
 

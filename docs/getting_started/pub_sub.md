@@ -37,7 +37,7 @@ Subscription subscription = replayPastAndFutureBlocksFlowable(
 });
 ```
 
-There are a number of other transaction and block replay Flowables described in [Filters and Events](../filters_and_events.md).
+There are a number of other transaction and block replay Flowables described in [Filters and Events](../advanced/filters_and_events.md).
 
 Topic filters are also supported:
 
@@ -58,7 +58,7 @@ subscription.unsubscribe();
 
 **Note:** filters are not supported on Infura.
 
-For further information refer to [Filters and Events](../filters_and_events.md) and the [Web3jRx](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/protocol/rx/Web3jRx.java) interface.
+For further information refer to [Filters and Events](../advanced/filters_and_events.md) and the [Web3jRx](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/protocol/rx/Web3jRx.java) interface.
 
 
 Publish/Subscribe

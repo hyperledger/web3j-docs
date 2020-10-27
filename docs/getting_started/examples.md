@@ -52,7 +52,7 @@ plugins {
 
 Once the plugin is downloaded you should see a new set of tasks under the web3j label:
 
-![](./general_media/web3j_plugin.png)
+![](../general_media/web3j_plugin.png)
 
 The simplest way is to create a new folder called solidity in `src/main/solidity` and place your smart contracts there.
 To generate the Java wrappers simply run generateContractWrappers or `./gradlew/generateContractWrappers`.

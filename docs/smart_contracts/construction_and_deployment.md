@@ -27,7 +27,7 @@ Deploying and interacting with smart contracts
 
 If you want to avoid the underlying implementation detail for working with smart contracts, web3j provides [Solidity smart contract wrappers](#solidity-smart-contract-wrappers) which enable you to interact directly with all of a smart contract's methods via a generated wrapper object.
 
-Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections [Solidity smart contract wrappers](#solidity-smart-contract-wrappers), [Transacting with a smart contract](../transactions.md#transacting-with-a-smart-contract) and [Querying the state of a smart contract](../transactions.md#querying-the-state-of-a-smart-contract) for details.
+Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections [Solidity smart contract wrappers](#solidity-smart-contract-wrappers), [Transacting with a smart contract](../transactions/transactions.md#transacting-with-a-smart-contract) and [Querying the state of a smart contract](../transactions/transactions.md#querying-the-state-of-a-smart-contract) for details.
 
 
 Solidity smart contract wrappers
@@ -50,7 +50,7 @@ $ epirus solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<des
    -p, --package=<packageName>       base package name.
 ```
 
-`<binfile>` is required for [Contract validity](#contract-validity)
+`<binfile>` is required for [Contract validity](contract_validity.md)
 
 In versions prior to 3.x of Web3j, the generated smart contract wrappers used native Solidity types. From Web3j 3.x onwards, Java types are created by default. You can create Solidity types using the *--solidityTypes* command line argument.
 
@@ -62,16 +62,16 @@ You can also generate the wrappers by calling the Java class directly:
 org.web3j.codegen.SolidityFunctionWrapperGenerator -b /path/to/<smart-contract>.bin -a /path/to/<smart-contract>.abi -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
-Where the *bin* and *abi* are obtained as per [Compiling Solidity sourse code](#compiling-solidity-source-code)
+Where the *bin* and *abi* are obtained as per [Compiling Solidity sourse code](compiling_solidity.md#compiling-solidity-source-code)
 
 The native Java to Solidity type conversions used are detailed in the [Application Binary Interface](application_binary_interface.md) section.
 
 The smart contract wrappers support all common operations for working with smart contracts:
 
--   [Construction and deployment](#construction-and-deployment)
--   [Invoking transactions and events](#invoking-transactions-and-events)
--   [Calling constant methods](#calling-constant-methods)
--   [Contract validity](#contract-validity)
+-   [Construction and deployment](construction_and_deployment.md)
+-   [Invoking transactions and events](interacting_with_smart_contract.md#invoking-transactions-and-events)
+-   [Calling constant methods](interacting_with_smart_contract.md#calling-constant-methods)
+-   [Contract validity](contract_validity.md)
 
 Any method calls that requires an underlying JSON-RPC call to take place will return a Future to avoid blocking.
 
