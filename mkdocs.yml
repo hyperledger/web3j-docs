@@ -24,6 +24,11 @@ nav:
       - Web3j OpenAPI: modules/web3j_openapi.md
       - Web3j Unit: modules/testing_with_web3j_unit.md
       - Web3j EVM: modules/web3j_evm.md
+      - Web3j Sokt: modules/web3j_sokt.md
+  - Plugins:
+      - Solidity Gradle Plugin: plugins/solidity_gradle_plugin.md
+      - Web3j Gradle Plugin: plugins/web3j_gradle_plugin.md
+      - Web3j Maven Plugin: plugins/web3j_maven_plugin.md
   - Transactions:
       - Ethereum Transactions: transactions/transactions.md
       - Obtaining Ether: transactions/obtaining_ether.md
@@ -33,7 +38,7 @@ nav:
       - Transction Mechanisms: transactions/transaction_mechanisms.md
       - Transction Nonce: transactions/transaction_nonce.md
       - Transction Types: transactions/transaction_types.md
-      - Transctions and Smart Contracts : transactions/transactions_and_smart_contracts.md
+      - Transctions and Smart Contracts: transactions/transactions_and_smart_contracts.md
       - Wallet Files: transactions/wallet_files.md
   - Privacy & Permissioning:
       - Besu Quickstart: privacy/besu_quickstart.md
