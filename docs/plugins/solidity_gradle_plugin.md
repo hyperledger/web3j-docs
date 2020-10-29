@@ -45,22 +45,24 @@ The properties accepted by the DSL are listed in the following table:
 | `prettyJson`               | `Boolean`                   | `false`                                           | Output JSON in pretty format. Enables the combined JSON output. |
 | `ignoreMissing`            | `Boolean`                   | `false`                                           | Ignore missing files.                                           |
 | `allowPaths`               | `List<String>`              | `['src/main/solidity', 'src/test/solidity', ...]` | Allow a given path for imports.                                 |
+| `pathRemappings`           | `Map<String,String>`        | `[ : ]`                                           | Remaps contract imports to target path.                         |
 | `evmVersion`               | `EVMVersion`                | `BYZANTIUM`                                       | Select desired EVM version.                                     |
 | `outputComponents`         | `OutputComponent[]`         | `[BIN, ABI]`                                      | List of output components to produce.                           |
 | `combinedOutputComponents` | `CombinedOutputComponent[]` | `[BIN, BIN_RUNTIME, SRCMAP, SRCMAP_RUNTIME]`      | List of output components in combined JSON output.              |
 
-**Notes:** 
-  - Setting the `executable` property will disable the bundled `solc` and use your local or containerized executable:
-  ```groovy
+**Notes:**
+
+  * Setting the `executable` property will disable the bundled `solc` and use your local or containerized executable:
+    ```groovy
     solidity {
         executable = "docker run --rm -v $projectDir/src:/src -v $projectDir/build:/build ethereum/solc:0.6.4-alpine"
         version = '0.4.15'
     }
-  ```
-  - Use `version` to change the bundled Solidity version. 
+    ```
+  * Use `version` to change the bundled Solidity version. 
     Check the [Solidity releases](https://github.com/ethereum/solidity/releases) 
     for all available versions.
-  - `allowPaths` contains all project's Solidity source sets by default.
+  * `allowPaths` contains all project's Solidity source sets by default.
 
 ## Source sets
 
@@ -85,8 +87,9 @@ sourceSets {
 
 The plugin makes use of the [Node plugin](https://github.com/node-gradle/gradle-node-plugin) to resolve third-party contract dependencies. 
 It currently supports:
-* [Open Zeppelin](https://www.npmjs.com/package/@openzeppelin/contracts) 
-* [Uniswap](https://www.npmjs.com/package/@uniswap/lib) 
+
+  * [Open Zeppelin](https://www.npmjs.com/package/@openzeppelin/contracts) 
+  * [Uniswap](https://www.npmjs.com/package/@uniswap/lib) 
 
 When importing libraries from `@openzeppeling/contracts` in your Solidity contract the plugin will use the task `resolveSolidity` to generate 
 a `package.json` file in order to be used by the [Node plugin](https://github.com/node-gradle/gradle-node-plugin). By default, `package.json` will be generated under the `build/` directory.
