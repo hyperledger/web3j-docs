@@ -53,12 +53,14 @@ The properties accepted by the DSL are listed in the following table:
 **Notes:**
 
   * Setting the `executable` property will disable the bundled `solc` and use your local or containerized executable:
-    ```groovy
-    solidity {
-        executable = "docker run --rm -v $projectDir/src:/src -v $projectDir/build:/build ethereum/solc:0.6.4-alpine"
-        version = '0.4.15'
-    }
-    ```
+  
+```groovy
+solidity {
+    executable = "docker run --rm -v $projectDir/src:/src -v $projectDir/build:/build ethereum/solc:0.6.4-alpine"
+    version = '0.4.15'
+}
+```
+
   * Use `version` to change the bundled Solidity version. 
     Check the [Solidity releases](https://github.com/ethereum/solidity/releases) 
     for all available versions.
