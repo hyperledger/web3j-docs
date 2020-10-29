@@ -37,7 +37,7 @@ The easiest way to see if the submission is waiting to mined is to refer to Ethe
 
 
 
-If there is no sign of it then the transaction has vanished into the ether (sorry). The likely cause of this is likely to be to do with the transaction's nonce either not being set, or being too low. Please refer to the section [Transaction nonce](../transactions/transactions.md#the-transaction-nonce) for more information.
+If there is no sign of it then the transaction has vanished into the ether (sorry). The likely cause of this is likely to be to do with the transaction's nonce either not being set, or being too low. Please refer to the section [Transaction nonce](../transactions/transaction_nonce.md) for more information.
 
 I want to see details of the JSON-RPC requests and responses
 ------------------------------------------------------------

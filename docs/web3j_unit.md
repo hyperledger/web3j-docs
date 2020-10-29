@@ -21,42 +21,35 @@ testCompile "org.web3j:web3j-unit:4.5.11"
 ### Using EVMTest annotation
 
 Create a new test with the `@EVMTest` annotation. An embedded EVM is used by default. To use Geth or Besu pass the node type into the annotation: `@EVMTest(NodeType.GETH)` or `@EVMTest(NodeType.BESU)`
-```kotlin
+```java
 @EVMTest
-class GreeterTest {
+public class GreeterTest {
 
 }
 ```
 
 Inject instance of `Web3j`, `TransactionManager` and `ContractGasProvider` in your test method.
-```kotlin
+```java
 @EVMTest
-class GreeterTest {
+public class GreeterTest {
 
     @Test
-    fun greeterDeploys(
-        web3j: Web3j,
-        transactionManager: TransactionManager,
-        gasProvider: ContractGasProvider
-    ) {}
+    public void greeterDeploys(Web3j web3j, TransactionManager transactionManager, ContractGasProvider gasProvider ) {
+    }
 
 }
 ```
 
 Deploy your contract in the test.
-```kotlin
+```java
 @EVMTest
-class GreeterTest {
+public class GreeterTest {
 
     @Test
-    fun greeterDeploys(
-        web3j: Web3j,
-        transactionManager: TransactionManager,
-        gasProvider: ContractGasProvider
-    ) {
-        val greeter = Greeter.deploy(web3j, transactionManager, gasProvider, "Hello EVM").send()
-        val greeting = greeter.greet().send()
-        assertEquals("Hello EVM", greeting)
+    public void greeterDeploys(Web3j web3j, TransactionManager transactionManager, ContractGasProvider gasProvider) {
+        Greeter greeter = Greeter.deploy(web3j, transactionManager, gasProvider, "Hello EVM").send();
+        String greeting = greeter.greet().send();
+        assertEquals("Hello EVM", greeting);
     }
 
 }
@@ -72,44 +65,37 @@ By default, it uses `test.yml` file in the project home, and runs web3j on servi
 
 Can be customised to use specific docker-compose file, service name and port by `@EVMComposeTest("src/test/resources/geth.yml", "ethnode1", 8080)` Here, we connect to the service named `ethnode1` in the `src/test/resources/geth.yml` docker-compose file which exposes the port `8080` for web3j to connect to.
 
-```kotlin
+```java
 @EVMComposeTest("src/test/resources/geth.yml", "ethnode1", 8080)
-class GreeterTest {
+public class GreeterTest {
 
 }
 ```
 
 Inject instance of `Web3j`, `TransactionManager` and `ContractGasProvider` in your test method.
 
-```kotlin
+```java
 @EVMComposeTest("src/test/resources/geth.yml", "ethnode1", 8080)
-class GreeterTest {
+public class GreeterTest {
 
     @Test
-    fun greeterDeploys(
-        web3j: Web3j,
-        transactionManager: TransactionManager,
-        gasProvider: ContractGasProvider
-    ) {}
+    public void greeterDeploys(Web3j web3j, TransactionManager transactionManager, ContractGasProvider gasProvider) {
+    }
 
 }
 ```
 
 Deploy your contract in the test.
 
-```kotlin
+```java
 @EVMComposeTest("src/test/resources/geth.yml", "ethnode1", 8080)
-class GreeterTest {
+public class GreeterTest {
 
     @Test
-    fun greeterDeploys(
-        web3j: Web3j,
-        transactionManager: TransactionManager,
-        gasProvider: ContractGasProvider
-    ) {
-        val greeter = Greeter.deploy(web3j, transactionManager, gasProvider, "Hello EVM").send()
-        val greeting = greeter.greet().send()
-        assertEquals("Hello EVM", greeting)
+    public void greeterDeploys(Web3j web3j, TransactionManager transactionManager, ContractGasProvider gasProvider) {
+        Greeter greeter = Greeter.deploy(web3j, transactionManager, gasProvider, "Hello EVM").send();
+        String greeting = greeter.greet().send();
+        assertEquals("Hello EVM", greeting);
     }
 
 }

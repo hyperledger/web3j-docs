@@ -1,4 +1,4 @@
-Projects using web3j
+Projects using Web3j
 ====================
 
 -   [AlphaWallet Android Wallet](https://github.com/AlphaWallet/alpha-wallet-android.git)

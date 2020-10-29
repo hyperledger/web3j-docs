@@ -12,25 +12,24 @@ dependencies {
 For other build systems, see [here](https://mvnrepository.com/artifact/org.web3j/web3j-sokt/0.2.1).
 
 Example usage:
-```kotlin
-val fileName = filePath.substringAfterLast("/")
-println("sokt Processing $fileName")
-val solidityFile = SolidityFile(filePath)
+```java
+  String fileName = filePath.substringAfterLast("/");
+  System.out.println("sokt Processing " + fileName);
+  SolidityFile solidityFile = new SolidityFile(filePath);
+  System.out.println("Resolving compiler version for " + fileName);
+  SolcInstance compilerInstance = solidityFile.getCompilerInstance();
 
-println("Resolving compiler version for $fileName")
-val compilerInstance = solidityFile.getCompilerInstance()
+  System.out.println("Resolved" + compilerInstance.getSolcRelease().getVersion() + " for " + fileName);
 
-println("Resolved ${compilerInstance.solcRelease.version} for $fileName")
-
-val result = compilerInstance.execute(
-    SolcArguments.OUTPUT_DIR.param { "/tmp" },
+  SolcOutput result = compilerInstance.execute(
+    SolcArguments.OUTPUT_DIR.param(() -> "/tmp"),
     SolcArguments.AST,
     SolcArguments.BIN,
     SolcArguments.OVERWRITE
-)
+    );
 
-println("Solc exited with code: ${result.exitCode}")
-println("Solc standard output:\n${result.stdOut}")
-println("Solc standard error:\n${result.stdErr}")
+  System.out.println("Solc exited with code: " + result.getExitCode());
+  System.out.println("Solc standard output: " + result.getStdOut());
+  System.out.println("Solc standard error: " + result.getStdErr());
 
 ```

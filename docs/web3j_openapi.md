@@ -134,15 +134,15 @@ generates the following `OpenAPI` specs :
 ```
 
 With a corresponding `Swagger-UI` : 
-![image](../img/Web3j-OpenAPI/SwaggerUI_1.png)
+![image](img/Web3j-OpenAPI/SwaggerUI_1.png)
 
 The available methods are:
 
-![image](../img/Web3j-OpenAPI/SwaggerUI_2.png)
+![image](img/Web3j-OpenAPI/SwaggerUI_2.png)
 
 The available events are:
 
-![image](../img/Web3j-OpenAPI/SwaggerUI_2_Events.png)
+![image](img/Web3j-OpenAPI/SwaggerUI_2_Events.png)
 
 ## Getting started with Web3j-OpenAPI
 
@@ -160,7 +160,7 @@ $ epirus openapi import --help
 ```
 To check the generator available options. 
 
-![image](../img/Web3j-OpenAPI/Generator_help.png)
+![image](img/Web3j-OpenAPI/Generator_help.png)
 
 In this case, we will be using the above Hello World contract.
 
@@ -175,7 +175,7 @@ $ epirus openapi import \
     --output-dir=. 
 ```
 You should be seeing logs similar to the following:
-![image](../img/Web3j-OpenAPI/Generator_logs.png)
+![image](img/Web3j-OpenAPI/Generator_logs.png)
 
 ### Configure the project
 
@@ -186,7 +186,7 @@ the `node endpoint` to connect to, etc.
 
 To see the available options, run the distributions `executable` or the `JAR` with the `--help` flag. You'll get the following display:
 
-![image](../img/Web3j-OpenAPI/Server_help.png)
+![image](img/Web3j-OpenAPI/Server_help.png)
 
 To specify these parameters, you can set the following environment variables:
 
@@ -207,7 +207,7 @@ $ ./gradlew run
 
 You should be able to run the server and see the following:
 
-![image](../img/Web3j-OpenAPI/Server_logs.png)
+![image](img/Web3j-OpenAPI/Server_logs.png)
 
 ### Interact with the generated project
 Interactions can be done in multiple ways : 
@@ -216,7 +216,7 @@ Interactions can be done in multiple ways :
 The generated `SwaggerUI` is located on `{host}:{port}/swagger-ui` and can be used
 to do all possible interactions with the API. eg:
 
-![image](../img/Web3j-OpenAPI/SwaggerUI_3.png)
+![image](img/Web3j-OpenAPI/SwaggerUI_3.png)
 
 ### HTTP requests
 Sending HTTP requests via tools like `Curl`:

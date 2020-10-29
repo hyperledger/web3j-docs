@@ -27,7 +27,7 @@ Deploying and interacting with smart contracts
 
 If you want to avoid the underlying implementation detail for working with smart contracts, web3j provides [Solidity smart contract wrappers](#solidity-smart-contract-wrappers) which enable you to interact directly with all of a smart contract's methods via a generated wrapper object.
 
-Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections [Solidity smart contract wrappers](#solidity-smart-contract-wrappers), [Transacting with a smart contract](../transactions/transactions.md#transacting-with-a-smart-contract) and [Querying the state of a smart contract](../transactions/transactions.md#querying-the-state-of-a-smart-contract) for details.
+Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections [Solidity smart contract wrappers](#solidity-smart-contract-wrappers), [Transacting with a smart contract](../transactions/transactions_and_smart_contracts.md#Transacting with a smart contract) and [Querying the state of a smart contract](../transactions/transactions_and_smart_contracts.md#Querying the state of a smart contract ) for details.
 
 
 Solidity smart contract wrappers
@@ -88,5 +88,5 @@ And this also can be invoked by calling the Java class:
 org.web3j.codegen.TruffleJsonFunctionWrapperGenerator /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
-A wrapper generated this way is "enhanced" to expose the per-network deployed address of the contract. These addresses are from the truffle deployment at the time the wrapper is generared.
+A wrapper generated this way is "enhanced" to expose the per-network deployed address of the contract. These addresses are from the truffle deployment at the time the wrapper is generated.
 

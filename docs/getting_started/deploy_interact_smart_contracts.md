@@ -50,45 +50,6 @@ Type result = contract.someMethod(<param1>, ...).send();
 
 For more information refer to [Solidity smart contract wrappers](../smart_contracts/construction_and_deployment.md#solidity-smart-contract-wrappers).
 
-## Testing Smart Contracts
-
-You can test your web3 app with Web3j-Unit
-
-#### Usage
-
-Add the gradle dependency.
-
-```groovy
-repositories {
-  mavenCentral()
-  jcenter()
-}
-implementation "org.web3j:core:4.5.11"
-testCompile "org.web3j:web3j-unit:4.5.11"
-```
-
-Deploy your contract in the test.
-
-```kotlin
-@EVMTest
-class GreeterTest {
-
-    @Test
-    fun greeterDeploys(
-        web3j: Web3j,
-        transactionManager: TransactionManager,
-        gasProvider: ContractGasProvider
-    ) {
-        val greeter = Greeter.deploy(web3j, transactionManager, gasProvider, "Hello EVM").send()
-        val greeting = greeter.greet().send()
-        assertEquals("Hello EVM", greeting)
-    }
-
-}
-```
-
-For more details information check the [testing](../modules/testing_with_web3j_unit.md) section
-
 
 Smart contract examples
 -----------------------

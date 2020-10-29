@@ -44,7 +44,7 @@ If you need to change the threshold parameter of what constitutes being synced t
 Unicode Technical Standard (UTS) \#46
 -------------------------------------
 
-UTS #46 is the standard used to sanitise input on domain names. The web3j ENS implementation peforms this santisation on all inputs before attempting resolution. For details of the implementation, refer to the [NameHash](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/ens/NameHash.java) class.
+UTS #46 is the standard used to sanitise input on domain names. The web3j ENS implementation performs this sanitation on all inputs before attempting resolution. For details of the implementation, refer to the [NameHash](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/ens/NameHash.java) class.
 
 Registering domain names
 ------------------------
