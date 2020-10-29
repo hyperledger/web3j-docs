@@ -1,7 +1,8 @@
-Run a client
---------------
+Web3j interacts with Ethereum client nodes.
+If you don't want to connect to one of the existing networks,
+you have different options to start a local node.
 
-Start up an Ethereum client if you don't already have one running.
+## Use Geth, Besu or OpenEthereum
 
 [Geth](https://geth.ethereum.org/docs/getting-started):
 
@@ -11,13 +12,11 @@ $ geth --rpcapi personal,db,eth,net,web3 --rpc --testnet
 
 [Hyperledger Besu](https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Starting-node/#run-a-node-for-testing):
 
-
 ``` bash
 $ besu ----network=dev
 ```
 
 The `dev` network uses has [some handy default parameters](https://besu.hyperledger.org/en/stable/Reference/Accounts-for-Testing/#development-mode).
-
 
 [OpenEthereum](https://openethereum.github.io/wiki/Basic-Usage):
 
@@ -28,31 +27,31 @@ $ openethereum --chain testnet
 Instructions on obtaining Ether to transact on the network can be found in the
 [testnet section of the docs](` https://docs.web3j.io/transactions/#ethereum-testnets`).
 
-
-## Epirus Local
+## Use Epirus Local
 
 Epirus-local is a local ethereum client, similar to what [Ganache](https://github.com/trufflesuite/ganache) provides, written in Kotlin.
 
 This project relies on [web3-evm](https://github.com/web3j/web3j-evm) to execute user requests.
 
-## Features
+### Features
 - Allows json-rpc interactions with a local ethereum blockchain.
 - Generates a default genesis file containing 10 ethereum accounts or lets you use your own genesis.
 - Provides a CLI to run the client.
 - Handles these operations:
-    - eth_blockNumber
-    - eth_getTransactionCount
-    - eth_getBalance
-    - eth_sendTransaction
-    - eth_sendRawTransaction
-    - eth_estimateGas
-    - eth_getBlockTransactionCountByHash
-    - eth_getBlockTransactionCountByNumber
-    - eth_getTransactionReceipt
-    - eth_getCode
-    - eth_call
+    - `eth_blockNumber`
+    - `eth_getTransactionCount`
+    - `eth_getBalance`
+    - `eth_sendTransaction`
+    - `eth_sendRawTransaction`
+    - `eth_estimateGas`
+    - `eth_getBlockTransactionCountByHash`
+    - `eth_getBlockTransactionCountByNumber`
+    - `eth_getTransactionReceipt`
+    - `eth_getCode`
+    - `eth_call`
     
-    ## Getting started
+### Getting started
+
 `git clone https://github.com/epirus-io/epirus-local && cd epirus-local`
     
 `./gradlew installDist`
@@ -62,7 +61,6 @@ This project relies on [web3-evm](https://github.com/web3j/web3j-evm) to execute
     
 #### Run in Windows
 `build\install\epirus-local\bin\epirus-local.bat [command]`
-
 
 ### Start the client
 

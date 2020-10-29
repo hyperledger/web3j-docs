@@ -25,3 +25,14 @@ _Gas limit_
 These parameters taken together dictate the maximum amount of Ether you are willing to spend on transaction costs. i.e. you can spend no more then gas price \* gas limit. The gas price can also affect how quickly a transaction takes place depending on what other transactions are available with a more profitable gas price for miners.
 
 You may need to adjust these parameters to ensure that transactions take place in a timely manner.
+
+### Picking Gas Providers
+
+The public Interface `ContractGasProvider` has two implementations that can be used in order to pass in a gas provider to the deploy method of the contract.
+
+The `DefaultGasProvider` is pre-defined implementation of the `ContractGasProvider` that has set values for gas price and gas limit.
+
+- `GAS_LIMIT = BigInteger.valueOf(9_000_000);`
+- `GAS_PRICE = BigInteger.valueOf(4_100_000_000L));`
+
+If a more flexible approach is required then the `StaticGasProvider` can take custom gas price and gas limit values as BigIntegers.

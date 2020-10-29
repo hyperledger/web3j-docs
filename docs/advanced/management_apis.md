@@ -12,7 +12,7 @@ Support for the personal modules is available in web3j. Those methods that are c
 
 You can initialise a new web3j connector that supports this module using the factory method:
 
-```Java
+```java
 Admin web3j = Admin.build(new HttpService());  // defaults to http://localhost:8545/
 PersonalUnlockAccount personalUnlockAccount = admin.personalUnlockAccount("0x000...", "a password").send();
 if (personalUnlockAccount.accountUnlocked()) {
@@ -21,6 +21,6 @@ if (personalUnlockAccount.accountUnlocked()) {
 ```
 
 For Geth specific methods, you can use the [Geth](https://github.com/web3j/web3j/blob/master/geth/src/main/java/org/web3j/protocol/geth/Geth.java) connector, and for OpenEthereum you can use the associated
-[OpenEthereum](https://github.com/web3j/web3j/blob/master/parity/src/main/java/org/web3j/protocol/parity/Parity.java) connector. The *Parity* connector also provides support for OpenEthereum's [Trace](https://openethereum.github.io/wiki/JSONRPC-trace-module) module. These connectors are available in the web3j *geth* and *parity* modules respectively.
+[OpenEthereum](https://github.com/web3j/web3j/blob/master/parity/src/main/java/org/web3j/protocol/parity/Parity.java) connector. The `Parity` connector also provides support for OpenEthereum's [Trace](https://openethereum.github.io/wiki/JSONRPC-trace-module) module. These connectors are available in the web3j *geth* and *parity* modules respectively.
 
 You can refer to the integration test [ParityIT](https://github.com/web3j/web3j/blob/master/integration-tests/src/test/java/org/web3j/protocol/parity/ParityIT.java) for further examples of working with these APIs.

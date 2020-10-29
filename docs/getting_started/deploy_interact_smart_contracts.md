@@ -1,7 +1,7 @@
-Working with smart contracts with Java smart contract wrappers 
+Working with smart contracts and Java smart contract wrappers 
 --------------------------------------------------------------
 
-web3j can auto-generate smart contract wrapper code to deploy and interact with smart contracts without leaving the JVM.
+Web3j can auto-generate smart contract wrapper code to deploy and interact with smart contracts without leaving the JVM.
 
 To generate the wrapper code, compile your smart contract:
 

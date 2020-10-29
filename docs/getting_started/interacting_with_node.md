@@ -30,7 +30,7 @@ web3.web3ClientVersion().flowable().subscribe(x -> {
 IPC
 ---
 
-web3j also supports fast inter-process communication (IPC) via file sockets to clients running on the same host as web3j. To connect simply use the relevant *IpcService* implementation instead of *HttpService*
+Web3j also supports fast inter-process communication (IPC) via file sockets to clients running on the same host as web3j. To connect simply use the relevant `IpcService` implementation instead of `HttpService`
 when you create your service:
 
 ``` java
@@ -102,4 +102,7 @@ if (personalUnlockAccount.accountUnlocked()) {
 }
 ```
 
-If you want to make use of OpenEthereum's [Personal](https://openethereum.github.io/wiki/JSONRPC-personal-module) or [Trace](https://openethereum.github.io/wiki/JSONRPC-trace-module), or Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) client APIs, you can use the *org.web3j:parity* and *org.web3j:geth* modules respectively.
+If you want to make use of OpenEthereum's [Personal](https://openethereum.github.io/wiki/JSONRPC-personal-module) 
+or [Trace](https://openethereum.github.io/wiki/JSONRPC-trace-module), or 
+Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) 
+client APIs, you can use the `org.web3j:parity` and `org.web3j:geth` modules respectively.

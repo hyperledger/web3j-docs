@@ -1,59 +1,73 @@
-Quickstart
------------
+## Install Web3j
 
-- Use Epirus CLI (recommended for full project creation)
-    - Install Epirus CLI (include Windows installation instructions too)
-    - Run ```$ epirus new```
-        - This will create a sample project to get you started. 
-        It includes a `HelloWorld` smart contract and boilerplate code that is easy to follow.
-    - Run app:
-        - Create [Epirus account](https://docs.epirus.io/sdk/cli/#account-creation).
-        - Provide parameters to run project locally.
-            - eg: `epirus run <network>`
+To start using Web3j you have two options:
 
-- Use [Maven](plugins/web3j_maven_plugin.md) / [Gradle](plugins/web3j_gradle_plugin.md) plugin.
-    -  To add the Gradle plugin to your project:
-        ```
-            plugins {
-               id "org.web3j" version "4.7.0"
-            }
-        ``` 
-       
-    - To add the Maven plugin to your project:
+### Use Epirus CLI
+
+This is the recommended option for full project creation.
     
-        ```
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.web3j</groupId>
-                    <artifactId>web3j-maven-plugin</artifactId>
-                    <version>4.6.5</version>
-                    <configuration>
-                        <soliditySourceFiles/>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </build>
-        ```
-  
-## Generating Java Wrappers for Solidity Contracts
+#### Install Epirus CLI
 
-To generate Java Wrappers for Solidity Contracts you need to add the `Web3j Gradle Plugin` to Gradle
-```
+To install the command line tools you can follow these [instruction](https://docs.epirus.io/sdk/cli/#installation).
+
+#### Create a new project     
+
+`$ epirus new `
+
+This will create a sample project to get you started. 
+
+It includes a `HelloWorld` smart contract and boilerplate code that is easy to follow.
+
+#### Run your project
+
+If you don't have an Epirus account yet, you can create one [here](https://docs.epirus.io/sdk/cli/#account-creation).
+Then run the project with the command `epirus run <network>` where network is `rinkeby` or `ropsten`.
+You can also provide [custom parameters](https://docs.epirus.io/sdk/cli/#running-your-application-without-an-epirus-account) to run your project locally.
+
+### Use Web3j plugins
+
+To generate Java Wrappers for Solidity Contracts in your project, you need to add one of the Web3j's plugins available for Maven and Gradle.
+
+#### Gradle plugin
+    
+To add the [Gradle](plugins/web3j_gradle_plugin.md) plugin to your project:
+
+``` 
 plugins {
-     id "org.web3j" version "4.7.0"
+    id "org.web3j" version "4.7.0"
 }
-```
+``` 
 
-Once the plugin is downloaded you should see a new set of tasks under the web3j label:
+Once the plugin is downloaded you should see a new set of tasks under the Web3j label:
 
 ![](./general_media/web3j_plugin.png)
 
-The simplest way is to create a new folder called solidity in `src/main/solidity` and place your smart contracts there.
+The simplest way is to create a new folder `src/main/solidity` and place your smart contracts there.
 To generate the Java wrappers simply run generateContractWrappers or `./gradlew/generateContractWrappers`.
 The wrappers will generate under `build/generated/source/web3j/main/java`. 
 
-## Deploying a Smart Contract
+#### Maven plugin        
+
+To add the [Maven](plugins/web3j_maven_plugin.md) plugin to your project:
+    
+```
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.web3j</groupId>
+            <artifactId>web3j-maven-plugin</artifactId>
+            <version>4.6.5</version>
+            <configuration>
+                <soliditySourceFiles/>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+  
+## Use Web3j
+
+### Deploying a Smart Contract
 
 To deploy the HelloWorld contract from the previous example:
 
@@ -64,21 +78,9 @@ To deploy the HelloWorld contract from the previous example:
   web3j.shutdown();
 ```
 
-There are many ways to create `Credentials` in web3j, in the above example I decided to use a private key.
+There are many ways to create `Credentials` in Web3j, for more information go to the [credentials](./transactions/credentials.md) section.
 
-You can also use:
-
-- `Credentials.create(ECKeyPair ecKeyPair)`
-- `Credentials.create(String privateKey, String publicKey)`
-
-You can also use the `WalletUtils` class to load your credentials from various formats:
-
-- `WalletUtils.loadCredentials(String password,String source)`
-- `WalletUtils.loadBip39Credentials(String password,String mnemonic)`
-- `WalletUtils.loadBip39Credentials(String password,String mnemonic)`
-- `WalletUtils.loadJsonCredentials(String password,String content)`
-
-## Loading a Smart Contract 
+### Loading a Smart Contract 
 
 If you have already deployed a contract and would like to interact with it through web3j then the Java Wrappers or your smart contract have a load method.
 
@@ -92,17 +94,4 @@ If you have already deployed a contract and would like to interact with it throu
  web3j.shutdown();
 ```
 It is important that the loaded contract is checked using the `isValid()` method. This method will return false if the contract's bytecode does not match with the deployed one.
-
-
-
-## Picking Gas Providers
-
-The public Interface `ContractGasProvider` has two implementations that can be used in order to pass in a gas provider to the deploy method of the contract.
-
-The `DefaultGasProvider` is pre-defined implementation of the `ContractGasProvider` that has set values for gas price and gas limit.
-
-- `GAS_LIMIT = BigInteger.valueOf(9_000_000);`
-- `GAS_PRICE = BigInteger.valueOf(4_100_000_000L));`
-
-If a more flexible approach is required then the `StaticGasProvider` can take custom gas price and gas limit values as BigIntegers.
     

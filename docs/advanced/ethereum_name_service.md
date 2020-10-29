@@ -5,7 +5,7 @@ The [Ethereum Name Service (ENS)](https://ens.domains) provides a human readable
 
 In the case of ENS, the addresses are either wallet or smart contract addresses.
 
-E.g. instead of using the wallet address *0x19e03255f667bdfd50a32722df860b1eeaf4d635*, you can use *web3j.eth*.
+E.g. instead of using the wallet address `0x19e03255f667bdfd50a32722df860b1eeaf4d635`, you can use `web3j.eth`.
 
 Usage in web3j
 --------------
@@ -39,7 +39,7 @@ The resolution process is as follows:
     - If it's more than 3 minutes old, fail.
     - Otherwise perform the lookup
 
-If you need to change the threshold parameter of what constitutes being synced to something other then 3 minutes, this can be done via the *setSyncThreshold* method in the [ManagedTransaction](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/tx/ManagedTransaction.java) class.
+If you need to change the threshold parameter of what constitutes being synced to something other then 3 minutes, this can be done via the `setSyncThreshold` method in the [ManagedTransaction](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/tx/ManagedTransaction.java) class.
 
 Unicode Technical Standard (UTS) \#46
 -------------------------------------

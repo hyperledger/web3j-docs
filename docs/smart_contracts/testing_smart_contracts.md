@@ -1,6 +1,6 @@
 ## Testing Smart Contracts
 
-You can test your web3 app with Web3j-Unit
+You can test your Web3j app with [Web3j-Unit](../web3j_unit.md).
 
 #### Usage
 
@@ -31,5 +31,5 @@ public class GreeterTest {
 }
 ```
 
-For more details information check the [testing](../web3j_unit.md) section
+For more detailed information check the [testing](../web3j_unit.md) section
 

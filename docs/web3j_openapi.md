@@ -421,7 +421,7 @@ $ <command> \
 
 ### Configuration file
 
-You can put the parameters in a **configuration file**. This latter, can be 
+You can put the parameters in a `configuration file`. This latter, can be 
 `YAML`, `Json` or `Java properties` type of files.
 
 The configuration file can be :

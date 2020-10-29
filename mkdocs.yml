@@ -12,13 +12,13 @@ copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
 nav:
   - Quickstart: quickstart.md
   - Getting Started:
-      - Deploy a Node Locally: getting_started/run_node_locally.md
+      - Run a Node locally: getting_started/run_node_locally.md
       - Interacting with a Node: getting_started/interacting_with_node.md
       - Deploy and Interact with Smart Contracts: getting_started/deploy_interact_smart_contracts.md
-      - Filters and Pub/Sub: getting_started/pub_sub.md
+      - Filters and Flowables: getting_started/pub_sub.md
       - Manual Configuration: getting_started/manual_configuration.md
   - Smart Contracts:
-      - Smart Contract Overview: smart_contracts/smart_contracts.md
+      - Smart Contract Overview: smart_contracts/smart_contracts_overview.md
       - Getting Started with Solidity: smart_contracts/getting_started_solidity.md
       - Compiling Solidity source code: smart_contracts/compiling_solidity.md
       - Construction and Deployment: smart_contracts/construction_and_deployment.md
@@ -27,12 +27,12 @@ nav:
       - Testing Smart Contracts: smart_contracts/testing_smart_contracts.md
       - Application Binary Interface: smart_contracts/application_binary_interface.md
       - Contracts Supported by Web3j: smart_contracts/contracts_supported_by_web3j.md
-      - Smart Contract Example: smart_contracts/smart_contract_examples.md
   - Transactions:
       - Ethereum Transactions: transactions/transactions.md
       - Obtaining Ether: transactions/obtaining_ether.md
       - Ethereum Test Networks: transactions/ethereum_testnets.md
       - Gas: transactions/gas.md
+      - Credentials: transactions/credentials.md
       - Transfer Eth: transactions/transfer_eth.md
       - Transction Mechanisms: transactions/transaction_mechanisms.md
       - Transction Nonce: transactions/transaction_nonce.md
