@@ -109,7 +109,7 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
-      toc_depth: 6
+      toc_depth: 3
 
 plugins:
   - search:
