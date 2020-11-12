@@ -303,18 +303,7 @@ $ epirus openapi import \
 The following command will generate an executable JAR ready to be run: 
 ```
 $ epirus openapi jar \
-    --abi <list to your abi files> \
-    --bin <list to your abi files>
-```
-
-Where the ABIs and BINs are compiled Solidity code.
-You can do that, for example, using `solc` via [SVM](https://blog.web3labs.com/a-solidity-version-manager-using-sokt).
-This lets you handle multiple Solidity compiler versions easily:
-
-```
-$ svm install 0.7.0
-$ svm use 0.7.0
-$ solc --abi --bin -o . HelloWorld.sol
+    --solidity-path <path_to_Solidity_contracts>
 ```
 
 ### Generate the REST API only
@@ -324,11 +313,8 @@ use the following:
 
 ```
 $ epirus openapi generate \
-    --abi <list to your abi files> \
-    --bin <list to your binary files> \
-    --project-name <project name> \
-    --package <package name> \
-    --with-implementations 
+    --solidity-path <path_to_Solidity_contracts> \
+    --with-implementations=true
 ```
 
 This command will not generate a whole project structure. Thus, you will not have a
