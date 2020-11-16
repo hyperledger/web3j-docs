@@ -34,7 +34,7 @@ To add the [Gradle](plugins/web3j_gradle_plugin.md) plugin to your project:
 
 ``` 
 plugins {
-    id "org.web3j" version "4.7.0"
+    id "org.web3j" version "4.8.1"
 }
 ``` 
 

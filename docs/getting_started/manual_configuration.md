@@ -15,7 +15,7 @@ Java:
 <dependency>
   <groupId>org.web3j</groupId>
   <artifactId>core</artifactId>
-  <version>4.7.0</version>
+  <version>4.8.1</version>
 </dependency>
 ```
 
@@ -34,7 +34,7 @@ Android:
 Java:
 
 ``` groovy
-compile ('org.web3j:core:4.7.0')
+compile ('org.web3j:core:4.8.1')
 ```
 
 Android:
