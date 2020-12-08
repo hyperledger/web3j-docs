@@ -66,6 +66,7 @@ nav:
       - Developer Guide: references/developer_guide.md
       - Links and Useful Resources: references/links_and_useful_resources.md
       - Thanks and Credits: references/thanks_and_credits.md
+  - Javadoc: https://docs.web3j.io/javadoc-api
 
       # Configuration
 theme:
