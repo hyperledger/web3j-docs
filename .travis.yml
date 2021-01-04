@@ -1,10 +1,15 @@
 language: python
+
+
 install:
   - pip install mkdocs-material
   - pip install mike
+
+before_deploy:
   - mike install-extras
+  - mike deploy ${TRAVIS_BRANCH#'release/'}
+
 deploy:
-  script: mike deploy ${TRAVIS_BRANCH#'release/'}
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
