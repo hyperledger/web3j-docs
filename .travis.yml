@@ -8,7 +8,7 @@ install:
 
 script:
   - mike install-extras
-  - mike deploy 4.8.2 -p
+  - mike deploy 4.8.2
 deploy:
   provider: pages
   skip_cleanup: true
