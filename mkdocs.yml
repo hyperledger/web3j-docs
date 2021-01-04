@@ -95,6 +95,7 @@ extra:
 
 extra_css:
   - "stylesheets/extra.css"
+  - "css/version-select.css"
 
 
 # Google Analytics

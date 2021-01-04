@@ -8,14 +8,12 @@ install:
 
 script:
   - mike install-extras
-
+  - mike deploy 4.8.2
 deploy:
-  provider: script
+  provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
   local_dir: site
-  script: mike deploy ${TRAVIS_BRANCH#'release/'}
   on:
-    branch: ${TRAVIS_BRANCH#'release/'}
-
+    branch: master
 
