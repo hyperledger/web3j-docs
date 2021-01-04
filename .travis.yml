@@ -2,11 +2,6 @@ language: python
 install:
   - pip install mkdocs-material
   - pip install mike
-script:
-  - mike install-extras
-  - mike deploy
-  - mkdocs build --verbose --clean --strict
-
 jobs:
   include:
     - stage: build main
