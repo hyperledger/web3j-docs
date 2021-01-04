@@ -1,11 +1,14 @@
 language: python
 
+python: 3.8
+
+branches: master
 
 install:
   - pip install mkdocs-material
   - pip install mike
 
-before_deploy:
+script:
   - mike install-extras
   - mike deploy ${TRAVIS_BRANCH#'release/'}
 
