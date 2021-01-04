@@ -4,7 +4,7 @@ install:
   - pip install mike
 script:
   - mike install-extras
-  - mike deploy ${TRAVIS_BRANCH#'release/'}
+  - mike deploy ${TRAVIS_PULL_REQUEST_BRANCH}
 deploy:
   provider: pages
   skip_cleanup: true
