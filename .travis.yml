@@ -4,9 +4,9 @@ install:
   - pip install mike
 jobs:
   include:
-    - stage: build main
+    - stage: build master
       script: mike deploy
-    if: branch = main OR type = pull_request
+    if: branch = master OR type = pull_request
     - stage: release docs
       if: branch =~ /release/
       script: mike deploy ${TRAVIS_BRANCH#'release/'} --push
