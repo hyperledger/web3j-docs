@@ -9,6 +9,7 @@ repo_url: "https://github.com/web3j/web3j"
 # Copyright
 copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
 
+
 nav:
   - Quickstart: quickstart.md
   - Getting Started:
@@ -68,35 +69,36 @@ nav:
       - Thanks and Credits: references/thanks_and_credits.md
   - Javadoc: https://docs.web3j.io/javadoc-api/
 
-      # Configuration
+# Configuration
 theme:
-  name: "material"
-  language: "en"
-  logo: "img/logo.png"
-  favicon: "img/favicon.ico"
-  feature:
-    tabs: true
-  palette:
-    primary: "white"
-    accent: "deep-orange"
+    name: "material"
+    language: "en"
+    logo: "img/logo.png"
+    favicon: "img/favicon.ico"
+    palette:
+        primary: "white"
+        accent: "deep-orange"
 
 
 # Customization
 extra:
-  manifest: "manifest.webmanifest"
-  social:
-    - icon: "fontawesome/brands/github-alt"
-      link: "https://github.com/web3j"
-    - icon: "fontawesome/brands/twitter"
-      link: "https://twitter.com/web3labs"
-    - icon: "fontawesome/brands/linkedin"
-      link: "https://linkedin.com/in/web3labs"
+    version:
+        method: mike
+    manifest: "manifest.webmanifest"
+    social:
+      - icon: "fontawesome/brands/github-alt"
+        link: "https://github.com/web3j"
+      - icon: "fontawesome/brands/twitter"
+        link: "https://twitter.com/web3labs"
+      - icon: "fontawesome/brands/linkedin"
+        link: "https://linkedin.com/in/web3labs"
 
 extra_css:
   - "stylesheets/extra.css"
 
 
 # Google Analytics
+  - css/version-select.css
 google_analytics:
   - 'UA-85710619-1'
   - 'auto'
@@ -106,8 +108,10 @@ google_analytics:
 markdown_extensions:
   - admonition
   - codehilite:
-      guess_lang: false
+        guess_lang: false
   - pymdownx.details
   - toc:
-      permalink: true
-      toc_depth: 3
+        permalink: true
+        toc_depth: 3
+extra_javascript:
+  - js/version-select.js

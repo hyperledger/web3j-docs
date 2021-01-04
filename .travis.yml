@@ -1,12 +1,17 @@
 language: python
 install:
   - pip install mkdocs-material
+  - pip install mike
 script:
+  - mike install-extras
+  - mike deploy
   - mkdocs build --verbose --clean --strict
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GH_TOKEN
-  local_dir: site
-  on:
-    branch: master
+
+jobs:
+  include:
+    - stage: build master
+      script: mike deploy
+    if: branch = master OR type = pull_request
+    - stage: release docs
+      if: branch =~ /release/
+      script: mike deploy ${TRAVIS_BRANCH#'release/'} --push
