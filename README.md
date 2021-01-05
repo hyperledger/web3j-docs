@@ -24,16 +24,26 @@ Install mkdocs material theme:
 ```bash
 pip install mkdocs-material
 ```
+Install [mike](https://github.com/jimporter/mike)
+```bash
+pip install mike
+```
 Run locally using:
 
 ```bash
-mkdocs serve
+mike serve
 ```
 
 To build and push to web3j-docs:
 
 ```bash
-mkdocs gh-deploy
+mike deploy VERSION ALIAS -p
+```
+
+Set default version to latest
+
+```bash
+mike set-default VERSION or ALIAS -p
 ```
 
 
