@@ -3,10 +3,6 @@ Web3j Documentation repository.
 
 [docs.web3j.io](http://docs.web3j.io)
 
-To modify the documentation simply submit a pull request agains the master branch.
-
-Once the pull request has been merged the website will reflect the changes.
-
 ## Project setup
 
 Make sure you have [Pipenv](https://docs.pipenv.org/en/latest/) installed.
