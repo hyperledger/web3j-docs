@@ -8,11 +8,14 @@ install:
 
 script:
   - mike install-extras
-  - mike deploy 4.8.2
+  - echo $TRAVIS_PULL_REQUEST_BRANCH
+  - mike deploy $TRAVIS_PULL_REQUEST_BRANCH
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GH_TOKEN
+  keep_history: true
   local_dir: site
   on:
     branch: master
