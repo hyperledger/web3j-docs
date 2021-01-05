@@ -9,7 +9,7 @@ install:
 script:
   - mike install-extras
   - echo $TRAVIS_PULL_REQUEST_BRANCH
-  - mike deploy $TRAVIS_PULL_REQUEST_BRANCH
+  - mike deploy $TRAVIS_PULL_REQUEST_BRANCH latest
 
 deploy:
   provider: pages
