@@ -37,12 +37,12 @@ window.addEventListener("DOMContentLoaded", function() {
       window.location.href = ABS_BASE_URL + "/../" + this.value;
     });
 
-    var container = document.getElementsByClassName("md-header-nav__title")
+    var container = document.createElement("div");
     container.id = "version-selector";
     container.className = "md-nav__item";
     container.appendChild(select);
 
-    var sidebar = document.querySelector(".md-nav--primary > .md-nav__list");
+    var sidebar = document.querySelector(".md-header-nav__title");
     sidebar.parentNode.insertBefore(container, sidebar);
   };
   xhr.send();
