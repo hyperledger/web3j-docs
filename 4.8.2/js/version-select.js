@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
     container.className = "md-nav__item";
     container.appendChild(select);
 
-    var sidebar = document.querySelector(".md-header-nav__title");
+    var sidebar = document.querySelector(".md-nav__link");
     sidebar.parentNode.insertBefore(container, sidebar);
   };
   xhr.send();
