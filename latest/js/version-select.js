@@ -37,11 +37,13 @@ window.addEventListener("DOMContentLoaded", function() {
       window.location.href = ABS_BASE_URL + "/../" + this.value;
     });
 
-    var container = document.getElementsByClassName("md-header-nav__topic")
+    var container = document.getElementsByClassName("md-header-nav__title")
     container.id = "version-selector";
     container.className = "md-nav__item";
     container.appendChild(select);
 
+    var sidebar = document.querySelector(".md-nav--primary > .md-nav__list");
+    sidebar.parentNode.insertBefore(container, sidebar);
   };
   xhr.send();
 });
