@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
       window.location.href = ABS_BASE_URL + "/../" + this.value;
     });
 
-    var container = document.createElement("div");
+    var container = document.getElementsByClassName("md-header-nav__topic md-ellipsis")
     container.id = "version-selector";
     container.className = "md-nav__item";
     container.appendChild(select);
