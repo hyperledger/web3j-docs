@@ -39,10 +39,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
     var container = document.createElement("div");
     container.id = "version-selector";
-    container.className = "md-nav__item";
+    container.className = "md-header-nav__topic md-ellipsis";
     container.appendChild(select);
 
-    var sidebar = document.querySelector(".md-nav__link");
+    var sidebar = document.querySelector(".md-header-nav__title");
     sidebar.parentNode.insertBefore(container, sidebar);
   };
   xhr.send();
