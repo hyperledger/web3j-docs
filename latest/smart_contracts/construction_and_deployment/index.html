@@ -1112,8 +1112,8 @@ simply pass in it's address:</p>
 <p>Alternatively, if you wish to send regular transactions or have more control over your interactions with your smart contracts, please refer to the sections <a href="#solidity-smart-contract-wrappers">Solidity smart contract wrappers</a>, <a href="../../transactions/transactions_and_smart_contracts/#Transacting with a smart contract">Transacting with a smart contract</a> and <a href="../../transactions/transactions_and_smart_contracts/#Querying the state of a smart contract">Querying the state of a smart contract</a> for details.</p>
 <h2 id="solidity-smart-contract-wrappers">Solidity smart contract wrappers<a class="headerlink" href="#solidity-smart-contract-wrappers" title="Permanent link">&para;</a></h2>
 <p>Web3j supports the auto-generation of smart contract function wrappers in Java from Solidity ABI files.</p>
-<p>The Epirus <a href="https://docs.epirus.io/sdk/cli/">Command Line Tools</a> tools ship with a command line utility for generating the smart contract function wrappers:</p>
-<div class="codehilite"><pre><span></span><code>$ epirus solidity generate <span class="o">[</span>-hV<span class="o">]</span> <span class="o">[</span>-jt<span class="o">]</span> <span class="o">[</span>-st<span class="o">]</span> -a<span class="o">=</span>&lt;abiFile&gt; <span class="o">[</span>-b<span class="o">=</span>&lt;binFile&gt;<span class="o">]</span> -o<span class="o">=</span>&lt;destinationFileDir&gt; -p<span class="o">=</span>&lt;packageName&gt;
+<p>The Web3j <a href="http://docs.web3j.io/latest/command_line_tools/">Command Line Tools</a> tools ship with a command line utility for generating the smart contract function wrappers:</p>
+<div class="codehilite"><pre><span></span><code>$ web3j solidity generate <span class="o">[</span>-hV<span class="o">]</span> <span class="o">[</span>-jt<span class="o">]</span> <span class="o">[</span>-st<span class="o">]</span> -a<span class="o">=</span>&lt;abiFile&gt; <span class="o">[</span>-b<span class="o">=</span>&lt;binFile&gt;<span class="o">]</span> -o<span class="o">=</span>&lt;destinationFileDir&gt; -p<span class="o">=</span>&lt;packageName&gt;
 
    -h, --help                        Show this <span class="nb">help</span> message and exit.
    -V, --version                     Print version information and exit.
@@ -1145,8 +1145,8 @@ simply pass in it's address:</p>
 </ul>
 <p>Any method calls that requires an underlying JSON-RPC call to take place will return a Future to avoid blocking.</p>
 <p>Web3j also supports the generation of Java smart contract function wrappers directly from <a href="http://truffleframework.com/">Truffle's</a> <a href="https://github.com/trufflesuite/truffle-contract-schema">Contract
-Schema</a> via the <a href="https://docs.epirus.io/sdk/cli/#solidity-smart-contract-wrapper-generator">Command Line Tools</a> utility.</p>
-<div class="codehilite"><pre><span></span><code>$ epirus truffle generate <span class="o">[</span>--javaTypes<span class="p">|</span>--solidityTypes<span class="o">]</span> /path/to/&lt;truffle-smart-contract-output&gt;.json -o /path/to/src/main/java -p com.your.organisation.name
+Schema</a> via the <a href="http://docs.web3j.io/latest/command_line_tools/#solidity-smart-contract-wrapper-generator">Command Line Tools</a> utility.</p>
+<div class="codehilite"><pre><span></span><code>$ web3j truffle generate <span class="o">[</span>--javaTypes<span class="p">|</span>--solidityTypes<span class="o">]</span> /path/to/&lt;truffle-smart-contract-output&gt;.json -o /path/to/src/main/java -p com.your.organisation.name
 </code></pre></div>
 
 

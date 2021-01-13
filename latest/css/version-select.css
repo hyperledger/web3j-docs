@@ -1,5 +1,9 @@
-@media only screen and (max-width:76.1875em) {
+@media only screen and (max-width:96.1875em) {
   #version-selector {
-    padding: .6rem .8rem;
+    margin-left: 3rem;
+  }
+  .md-header-nav__topic{
+    width: auto;
   }
 }
+
