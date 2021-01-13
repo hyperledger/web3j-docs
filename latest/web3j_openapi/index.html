@@ -1514,7 +1514,7 @@ which is generated with every project.</p>
 <p>Writing a Solidity smart contract</p>
 </li>
 <li>
-<p>Generating the corresponding <a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> project using <a href="https://docs.epirus.io/quickstart">Epirus-CLI</a></p>
+<p>Generating the corresponding <a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> project using <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-CLI</a></p>
 </li>
 <li>
 <p>Running the generated project as a standalone server</p>
@@ -1645,14 +1645,14 @@ contract HelloWorld is Mortal {
 <p><img alt="image" src="../img/Web3j-OpenAPI/SwaggerUI_2_Events.png" /></p>
 <h2 id="getting-started-with-web3j-openapi">Getting started with Web3j-OpenAPI<a class="headerlink" href="#getting-started-with-web3j-openapi" title="Permanent link">&para;</a></h2>
 <h3 id="generate-a-project">Generate a project<a class="headerlink" href="#generate-a-project" title="Permanent link">&para;</a></h3>
-<p>To generate an OpenAPI project using the <a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> generator, you need to have the <a href="https://docs.epirus.io/quickstart">Epirus-CLI</a> installed on your machine (Note - the Epirus CLI has replaced the Web3j CLI). 
-It’s easy to do (for Windows instructions head <a href="https://docs.epirus.io/quickstart/#installation">here</a>):</p>
-<div class="codehilite"><pre><span></span><code>$ curl -L get.epirus.io | sh
+<p>To generate an OpenAPI project using the <a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> generator, you need to have the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-CLI</a> installed on your machine. 
+It’s easy to do (for Windows instructions head <a href="http://docs.web3j.io/latest/command_line_tools/">here</a>):</p>
+<div class="codehilite"><pre><span></span><code>$ curl -L get.web3j.io | sh
 </code></pre></div>
 
 
 <p>Then, you can run the</p>
-<div class="codehilite"><pre><span></span><code>$ epirus openapi import --help
+<div class="codehilite"><pre><span></span><code>$ web3j openapi import --help
 </code></pre></div>
 
 
@@ -1661,7 +1661,7 @@ It’s easy to do (for Windows instructions head <a href="https://docs.epirus.io
 <p>In this case, we will be using the above Hello World contract.</p>
 <p>Put that contract in a file named <code>HelloWorld.sol</code> for starters.</p>
 <p>Then, execute the following command: </p>
-<div class="codehilite"><pre><span></span><code>$ epirus openapi import \
+<div class="codehilite"><pre><span></span><code>$ web3j openapi import \
     -s=HelloWorld.sol \
     --package=com.tutorial \
     --project-name=HelloWorldProject \
@@ -1672,7 +1672,7 @@ It’s easy to do (for Windows instructions head <a href="https://docs.epirus.io
 <p>You should be seeing logs similar to the following:
 <img alt="image" src="../img/Web3j-OpenAPI/Generator_logs.png" /></p>
 <h3 id="configure-the-project">Configure the project<a class="headerlink" href="#configure-the-project" title="Permanent link">&para;</a></h3>
-<p>You can run the project easily, without specify any configuration, using the <a href="https://docs.epirus.io/quickstart/#deployment">Epirus-cli</a>.</p>
+<p>You can run the project easily, without specify any configuration, using the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-cli</a>.</p>
 <p>If not, you need to specify runtime parameters. for example, the <code>private key</code> or <code>wallet file</code> for the signing,
 the <code>node endpoint</code> to connect to, etc.</p>
 <p>To see the available options, run the distributions <code>executable</code> or the <code>JAR</code> with the <code>--help</code> flag. You'll get the following display:</p>
@@ -1745,17 +1745,17 @@ println(&quot;Greeting method result: $greeting&quot;)
 
 
 <h2 id="ways-to-generate-an-openapi-project">Ways to generate an OpenAPI project<a class="headerlink" href="#ways-to-generate-an-openapi-project" title="Permanent link">&para;</a></h2>
-<p>First, you need to install the <a href="https://docs.epirus.io/quickstart">Epirus-CLI</a> on your 
-machine (Note - the Epirus CLI has replaced the Web3j CLI). </p>
-<p>It’s easy to do (for Windows instructions head <a href="https://docs.epirus.io/quickstart/#installation">here</a>):</p>
-<div class="codehilite"><pre><span></span><code>$ curl -L get.epirus.io | sh
+<p>First, you need to install the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-CLI</a> on your 
+machine. </p>
+<p>It’s easy to do (for Windows instructions head <a href="http://docs.web3j.io/latest/command_line_tools/">here</a>):</p>
+<div class="codehilite"><pre><span></span><code>$ curl -L get.web3j.io | sh
 </code></pre></div>
 
 
 <h3 id="generate-a-hello-world-project">Generate a Hello World project<a class="headerlink" href="#generate-a-hello-world-project" title="Permanent link">&para;</a></h3>
 <p>A Hello World project is a simple project based on a simple Solidity contract.
 It is generated using:</p>
-<div class="codehilite"><pre><span></span><code>$ epirus openapi new
+<div class="codehilite"><pre><span></span><code>$ web3j openapi new
 </code></pre></div>
 
 
@@ -1763,7 +1763,7 @@ It is generated using:</p>
 upon.</p>
 <h3 id="generate-using-custom-solidity-smart-contracts">Generate using custom Solidity smart contracts<a class="headerlink" href="#generate-using-custom-solidity-smart-contracts" title="Permanent link">&para;</a></h3>
 <p>To generate a project using your desired smart contracts, use the following command:</p>
-<div class="codehilite"><pre><span></span><code>$ epirus openapi import \
+<div class="codehilite"><pre><span></span><code>$ web3j openapi import \
     --solidity-path &lt;path_to_Solidity_contracts&gt; \
     --project-name &lt;project name&gt; \
     --package &lt;package name&gt;
@@ -1772,7 +1772,7 @@ upon.</p>
 
 <h3 id="generate-an-executable-jar">Generate an executable JAR<a class="headerlink" href="#generate-an-executable-jar" title="Permanent link">&para;</a></h3>
 <p>The following command will generate an executable JAR ready to be run: </p>
-<div class="codehilite"><pre><span></span><code>$ epirus openapi jar \
+<div class="codehilite"><pre><span></span><code>$ web3j openapi jar \
     --solidity-path &lt;path_to_Solidity_contracts&gt;
 </code></pre></div>
 
@@ -1780,7 +1780,7 @@ upon.</p>
 <h3 id="generate-the-rest-api-only">Generate the REST API only<a class="headerlink" href="#generate-the-rest-api-only" title="Permanent link">&para;</a></h3>
 <p>To generate only the API, ie the defined endpoints with their implementations,
 use the following:</p>
-<div class="codehilite"><pre><span></span><code>$ epirus openapi generate \
+<div class="codehilite"><pre><span></span><code>$ web3j openapi generate \
     --solidity-path &lt;path_to_Solidity_contracts&gt; \
     --with-implementations=true
 </code></pre></div>
@@ -1808,7 +1808,7 @@ be set. There are multiple ways of doing so:</p>
 <li>Passing the parameters directly to the JAR or the executable.</li>
 </ul>
 <p>Also, you can run the project without worrying about any of this
-using the <a href="https://docs.epirus.io/quickstart/#deployment">Epirus-cli</a></p>
+using the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-cli</a></p>
 <h3 id="supported-parameters">Supported parameters<a class="headerlink" href="#supported-parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1826,7 +1826,7 @@ using the <a href="https://docs.epirus.io/quickstart/#deployment">Epirus-cli</a>
 </tr>
 <tr>
 <td><code>config file</code></td>
-<td align="center"><code>~/.epirus/web3j.openapi.&lt;extension&gt;</code></td>
+<td align="center"><code>~/.web3j/web3j.openapi.&lt;extension&gt;</code></td>
 <td>A custom configuration file to import extra parameters</td>
 </tr>
 <tr>
@@ -1909,7 +1909,7 @@ variables etc.</p>
 <code>YAML</code>, <code>Json</code> or <code>Java properties</code> type of files.</p>
 <p>The configuration file can be :</p>
 <ul>
-<li>Put in the default directory : <code>~/.epirus/web3j.openapi.&lt;extension&gt;</code></li>
+<li>Put in the default directory : <code>~/.web3j/web3j.openapi.&lt;extension&gt;</code></li>
 <li>Set in an environment variable: <code>WEB3J_OPENAPI_CONFIG_FILE</code> where the value is the path
 to the file.
 eg.</li>
