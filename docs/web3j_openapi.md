@@ -11,7 +11,7 @@ This workflow can be summed in the following steps:
 
 - Writing a Solidity smart contract
 
-- Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Epirus-CLI](https://docs.epirus.io/quickstart)
+- Generating the corresponding [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) project using [Web3j-CLI](http://docs.web3j.io/latest/command_line_tools/)
 
 - Running the generated project as a standalone server
 
@@ -147,16 +147,16 @@ The available events are:
 ## Getting started with Web3j-OpenAPI
 
 ### Generate a project
-To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Epirus-CLI](https://docs.epirus.io/quickstart) installed on your machine (Note - the Epirus CLI has replaced the Web3j CLI). 
-It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
+To generate an OpenAPI project using the [Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) generator, you need to have the [Web3j-CLI](http://docs.web3j.io/latest/command_line_tools/) installed on your machine. 
+It’s easy to do (for Windows instructions head [here](http://docs.web3j.io/latest/command_line_tools/)):
 	
 ```
-$ curl -L get.epirus.io | sh
+$ curl -L get.web3j.io | sh
 ```
 
 Then, you can run the
 ```
-$ epirus openapi import --help
+$ web3j openapi import --help
 ```
 To check the generator available options. 
 
@@ -168,7 +168,7 @@ Put that contract in a file named `HelloWorld.sol` for starters.
 
 Then, execute the following command: 
 ```	
-$ epirus openapi import \
+$ web3j openapi import \
     -s=HelloWorld.sol \
     --package=com.tutorial \
     --project-name=HelloWorldProject \
@@ -179,7 +179,7 @@ You should be seeing logs similar to the following:
 
 ### Configure the project
 
-You can run the project easily, without specify any configuration, using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment).
+You can run the project easily, without specify any configuration, using the [Web3j-cli](http://docs.web3j.io/latest/command_line_tools/).
 
 If not, you need to specify runtime parameters. for example, the `private key` or `wallet file` for the signing,
 the `node endpoint` to connect to, etc.
@@ -268,13 +268,13 @@ println("Greeting method result: $greeting")
 
 ## Ways to generate an OpenAPI project
 
-First, you need to install the [Epirus-CLI](https://docs.epirus.io/quickstart) on your 
-machine (Note - the Epirus CLI has replaced the Web3j CLI). 
+First, you need to install the [Web3j-CLI](http://docs.web3j.io/latest/command_line_tools/) on your 
+machine. 
 
-It’s easy to do (for Windows instructions head [here](https://docs.epirus.io/quickstart/#installation)):
+It’s easy to do (for Windows instructions head [here](http://docs.web3j.io/latest/command_line_tools/)):
                                	
 ```
-$ curl -L get.epirus.io | sh
+$ curl -L get.web3j.io | sh
 ```
 
 ### Generate a Hello World project
@@ -282,7 +282,7 @@ $ curl -L get.epirus.io | sh
 A Hello World project is a simple project based on a simple Solidity contract.
 It is generated using:
 ```
-$ epirus openapi new
+$ web3j openapi new
 ```
 
 This project can be used as a minimal project to start building your custom application
@@ -293,7 +293,7 @@ upon.
 To generate a project using your desired smart contracts, use the following command:
 
 ```
-$ epirus openapi import \
+$ web3j openapi import \
     --solidity-path <path_to_Solidity_contracts> \
     --project-name <project name> \
     --package <package name>
@@ -302,7 +302,7 @@ $ epirus openapi import \
 ### Generate an executable JAR
 The following command will generate an executable JAR ready to be run: 
 ```
-$ epirus openapi jar \
+$ web3j openapi jar \
     --solidity-path <path_to_Solidity_contracts>
 ```
 
@@ -312,7 +312,7 @@ To generate only the API, ie the defined endpoints with their implementations,
 use the following:
 
 ```
-$ epirus openapi generate \
+$ web3j openapi generate \
     --solidity-path <path_to_Solidity_contracts> \
     --with-implementations=true
 ```
@@ -346,14 +346,14 @@ be set. There are multiple ways of doing so:
 - Passing the parameters directly to the JAR or the executable.
 
 Also, you can run the project without worrying about any of this
-using the [Epirus-cli](https://docs.epirus.io/quickstart/#deployment)
+using the [Web3j-cli](http://docs.web3j.io/latest/command_line_tools/)
 
 ### Supported parameters
 
 |  Name                   | Default value                       | Description |
 |-------------------------|:-----------------------------------:|-------------|
 | `name`                  | `Generation project name`           | The project name |         
-| `config file`           | `~/.epirus/web3j.openapi.<extension>`| A custom configuration file to import extra parameters |     
+| `config file`           | `~/.web3j/web3j.openapi.<extension>`| A custom configuration file to import extra parameters |     
 | `endpoint`              | `none`                              | Ethereum node endpoint to target when interacting with the blockchain |
 | `private key`           | `none`                              | User private key in hex format prefixed by `0x` |
 | `wallet path`           | `none`                              | The path to the wallet file (can be absolute or relative) |
@@ -412,7 +412,7 @@ You can put the parameters in a `configuration file`. This latter, can be
 
 The configuration file can be :
 
-- Put in the default directory : `~/.epirus/web3j.openapi.<extension>`
+- Put in the default directory : `~/.web3j/web3j.openapi.<extension>`
 - Set in an environment variable: `WEB3J_OPENAPI_CONFIG_FILE` where the value is the path
 to the file.
 eg.

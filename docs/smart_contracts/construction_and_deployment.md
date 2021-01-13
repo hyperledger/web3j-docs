@@ -35,10 +35,10 @@ Solidity smart contract wrappers
 
 Web3j supports the auto-generation of smart contract function wrappers in Java from Solidity ABI files.
 
-The Epirus [Command Line Tools](https://docs.epirus.io/sdk/cli/) tools ship with a command line utility for generating the smart contract function wrappers:
+The Web3j [Command Line Tools](http://docs.web3j.io/latest/command_line_tools/) tools ship with a command line utility for generating the smart contract function wrappers:
 
 ``` bash
-$ epirus solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
+$ web3j solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
 
    -h, --help                        Show this help message and exit.
    -V, --version                     Print version information and exit.
@@ -76,10 +76,10 @@ The smart contract wrappers support all common operations for working with smart
 Any method calls that requires an underlying JSON-RPC call to take place will return a Future to avoid blocking.
 
 Web3j also supports the generation of Java smart contract function wrappers directly from [Truffle's](http://truffleframework.com/) [Contract
-Schema](https://github.com/trufflesuite/truffle-contract-schema) via the [Command Line Tools](https://docs.epirus.io/sdk/cli/#solidity-smart-contract-wrapper-generator) utility.
+Schema](https://github.com/trufflesuite/truffle-contract-schema) via the [Command Line Tools](http://docs.web3j.io/latest/command_line_tools/#solidity-smart-contract-wrapper-generator) utility.
 
 ``` bash
-$ epirus truffle generate [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
+$ web3j truffle generate [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
 And this also can be invoked by calling the Java class:

@@ -1,7 +1,7 @@
 Manual Configuration
 ===============
 
-The simplest way to get started with Web3j is via the powerful [Epirus CLI](https://docs.epirus.io/sdk/cli/). 
+The simplest way to get started with Web3j is via the powerful [Web3j CLI](http://docs.web3j.io/latest/command_line_tools/). 
 
 However, if you wish to configure your project manually, you can follow the steps outlined here.
 

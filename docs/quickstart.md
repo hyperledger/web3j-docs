@@ -2,17 +2,17 @@
 
 To start using Web3j you have two options:
 
-### Use Epirus CLI
+### Use Web3j CLI
 
 This is the recommended option for full project creation.
     
-#### Install Epirus CLI
+#### Install Web3j CLI
 
-To install the command line tools you can follow these [instruction](https://docs.epirus.io/sdk/cli/#installation).
+To install the command line tools you can follow these [instruction](http://docs.web3j.io/latest/command_line_tools/).
 
 #### Create a new project     
 
-`$ epirus new `
+`$ web3j new `
 
 This will create a sample project to get you started. 
 
@@ -20,9 +20,8 @@ It includes a `HelloWorld` smart contract and boilerplate code that is easy to f
 
 #### Run your project
 
-If you don't have an Epirus account yet, you can create one [here](https://docs.epirus.io/sdk/cli/#account-creation).
-Then run the project with the command `epirus run <network>` where network is `rinkeby` or `ropsten`.
-You can also provide [custom parameters](https://docs.epirus.io/sdk/cli/#running-your-application-without-an-epirus-account) to run your project locally.
+Then run the project with the command `web3j run <network_url> <wallet_path> <wallet_password>`.
+You can also provide [custom parameters](http://docs.web3j.io/latest/command_line_tools/) to run your project locally.
 
 ### Use Web3j plugins
 
