@@ -36,14 +36,15 @@ window.addEventListener("DOMContentLoaded", function() {
     select.addEventListener("change", function(event) {
       window.location.href = ABS_BASE_URL + "/../" + this.value;
     });
-
     var container = document.createElement("div");
     container.id = "version-selector";
     container.className = "md-nav__item";
     container.appendChild(select);
-
-    var sidebar = document.querySelector(".md-header-nav__title");
-    sidebar.parentNode.insertBefore(container, sidebar);
+    var sidebar = document.querySelector(".md-header-nav__ellipsis");
+    var web3jSpan = sidebar.firstElementChild;
+    web3jSpan.style.width=null;
+    sidebar.removeChild(sidebar.lastElementChild);
+    sidebar.insertBefore(container, web3jSpan.nextSibling.nextSibling);
   };
   xhr.send();
 });
