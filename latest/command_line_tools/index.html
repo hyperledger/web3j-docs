@@ -9,13 +9,14 @@
         <meta name="description" content="Documentation portal for the web3j Blockchain Library">
       
       
-        <link rel="canonical" href="https://web3j.io/command_line_tools/">
-      
       
         <meta name="author" content="Web3 Labs">
       
+      
+        <link rel="canonical" href="https://web3j.io/command_line_tools/">
+      
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -23,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -38,7 +39,7 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -72,6 +73,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="deep-orange">
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -87,7 +89,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://web3j.io/" title="Web3j" class="md-header-nav__button md-logo" aria-label="Web3j">
       
@@ -98,18 +102,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             Web3j
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Command Line Tools
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -120,7 +126,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -168,10 +174,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://web3j.io/" title="Web3j" class="md-nav__button md-logo" aria-label="Web3j">
       
@@ -201,8 +213,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../quickstart/" title="Quickstart" class="md-nav__link">
+    <a href="../quickstart/" class="md-nav__link">
       Quickstart
     </a>
   </li>
@@ -213,9 +226,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     
     <label class="md-nav__link" for="nav-2">
       Getting Started
@@ -234,8 +250,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../getting_started/run_node_locally/" title="Run a Node locally" class="md-nav__link">
+    <a href="../getting_started/run_node_locally/" class="md-nav__link">
       Run a Node locally
     </a>
   </li>
@@ -246,8 +263,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../getting_started/interacting_with_node/" title="Interacting with a Node" class="md-nav__link">
+    <a href="../getting_started/interacting_with_node/" class="md-nav__link">
       Interacting with a Node
     </a>
   </li>
@@ -258,8 +276,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../getting_started/deploy_interact_smart_contracts/" title="Deploy and Interact with Smart Contracts" class="md-nav__link">
+    <a href="../getting_started/deploy_interact_smart_contracts/" class="md-nav__link">
       Deploy and Interact with Smart Contracts
     </a>
   </li>
@@ -270,8 +289,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../getting_started/pub_sub/" title="Filters and Flowables" class="md-nav__link">
+    <a href="../getting_started/pub_sub/" class="md-nav__link">
       Filters and Flowables
     </a>
   </li>
@@ -282,8 +302,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../getting_started/manual_configuration/" title="Manual Configuration" class="md-nav__link">
+    <a href="../getting_started/manual_configuration/" class="md-nav__link">
       Manual Configuration
     </a>
   </li>
@@ -299,9 +320,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
       Smart Contracts
@@ -320,8 +344,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/smart_contracts_overview/" title="Smart Contract Overview" class="md-nav__link">
+    <a href="../smart_contracts/smart_contracts_overview/" class="md-nav__link">
       Smart Contract Overview
     </a>
   </li>
@@ -332,8 +357,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/getting_started_solidity/" title="Getting Started with Solidity" class="md-nav__link">
+    <a href="../smart_contracts/getting_started_solidity/" class="md-nav__link">
       Getting Started with Solidity
     </a>
   </li>
@@ -344,8 +370,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/compiling_solidity/" title="Compiling Solidity source code" class="md-nav__link">
+    <a href="../smart_contracts/compiling_solidity/" class="md-nav__link">
       Compiling Solidity source code
     </a>
   </li>
@@ -356,8 +383,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/construction_and_deployment/" title="Construction and Deployment" class="md-nav__link">
+    <a href="../smart_contracts/construction_and_deployment/" class="md-nav__link">
       Construction and Deployment
     </a>
   </li>
@@ -368,8 +396,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/interacting_with_smart_contract/" title="Interacting with Smart Contracts" class="md-nav__link">
+    <a href="../smart_contracts/interacting_with_smart_contract/" class="md-nav__link">
       Interacting with Smart Contracts
     </a>
   </li>
@@ -380,8 +409,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/contract_validity/" title="Contract Validity" class="md-nav__link">
+    <a href="../smart_contracts/contract_validity/" class="md-nav__link">
       Contract Validity
     </a>
   </li>
@@ -392,8 +422,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/testing_smart_contracts/" title="Testing Smart Contracts" class="md-nav__link">
+    <a href="../smart_contracts/testing_smart_contracts/" class="md-nav__link">
       Testing Smart Contracts
     </a>
   </li>
@@ -404,8 +435,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/application_binary_interface/" title="Application Binary Interface" class="md-nav__link">
+    <a href="../smart_contracts/application_binary_interface/" class="md-nav__link">
       Application Binary Interface
     </a>
   </li>
@@ -416,8 +448,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../smart_contracts/contracts_supported_by_web3j/" title="Contracts Supported by Web3j" class="md-nav__link">
+    <a href="../smart_contracts/contracts_supported_by_web3j/" class="md-nav__link">
       Contracts Supported by Web3j
     </a>
   </li>
@@ -433,9 +466,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     
     <label class="md-nav__link" for="nav-4">
       Transactions
@@ -454,8 +490,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/transactions/" title="Ethereum Transactions" class="md-nav__link">
+    <a href="../transactions/transactions/" class="md-nav__link">
       Ethereum Transactions
     </a>
   </li>
@@ -466,8 +503,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/obtaining_ether/" title="Obtaining Ether" class="md-nav__link">
+    <a href="../transactions/obtaining_ether/" class="md-nav__link">
       Obtaining Ether
     </a>
   </li>
@@ -478,8 +516,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/ethereum_testnets/" title="Ethereum Test Networks" class="md-nav__link">
+    <a href="../transactions/ethereum_testnets/" class="md-nav__link">
       Ethereum Test Networks
     </a>
   </li>
@@ -490,8 +529,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/gas/" title="Gas" class="md-nav__link">
+    <a href="../transactions/gas/" class="md-nav__link">
       Gas
     </a>
   </li>
@@ -502,8 +542,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/credentials/" title="Credentials" class="md-nav__link">
+    <a href="../transactions/credentials/" class="md-nav__link">
       Credentials
     </a>
   </li>
@@ -514,8 +555,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/transfer_eth/" title="Transfer Eth" class="md-nav__link">
+    <a href="../transactions/transfer_eth/" class="md-nav__link">
       Transfer Eth
     </a>
   </li>
@@ -526,8 +568,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/transaction_mechanisms/" title="Transction Mechanisms" class="md-nav__link">
+    <a href="../transactions/transaction_mechanisms/" class="md-nav__link">
       Transction Mechanisms
     </a>
   </li>
@@ -538,8 +581,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/transaction_nonce/" title="Transction Nonce" class="md-nav__link">
+    <a href="../transactions/transaction_nonce/" class="md-nav__link">
       Transction Nonce
     </a>
   </li>
@@ -550,8 +594,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/transaction_types/" title="Transction Types" class="md-nav__link">
+    <a href="../transactions/transaction_types/" class="md-nav__link">
       Transction Types
     </a>
   </li>
@@ -562,8 +607,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/transactions_and_smart_contracts/" title="Transctions and Smart Contracts" class="md-nav__link">
+    <a href="../transactions/transactions_and_smart_contracts/" class="md-nav__link">
       Transctions and Smart Contracts
     </a>
   </li>
@@ -574,8 +620,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../transactions/wallet_files/" title="Wallet Files" class="md-nav__link">
+    <a href="../transactions/wallet_files/" class="md-nav__link">
       Wallet Files
     </a>
   </li>
@@ -591,8 +638,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../web3j_openapi/" title="Web3j OpenAPI" class="md-nav__link">
+    <a href="../web3j_openapi/" class="md-nav__link">
       Web3j OpenAPI
     </a>
   </li>
@@ -603,8 +651,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../web3j_unit/" title="Web3j Unit" class="md-nav__link">
+    <a href="../web3j_unit/" class="md-nav__link">
       Web3j Unit
     </a>
   </li>
@@ -615,8 +664,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../web3j_evm/" title="Web3j EVM" class="md-nav__link">
+    <a href="../web3j_evm/" class="md-nav__link">
       Web3j EVM
     </a>
   </li>
@@ -627,8 +677,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="../web3j_sokt/" title="Web3j Sokt" class="md-nav__link">
+    <a href="../web3j_sokt/" class="md-nav__link">
       Web3j Sokt
     </a>
   </li>
@@ -639,9 +690,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
     
     <label class="md-nav__link" for="nav-9">
       Build Plugins
@@ -660,8 +714,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../plugins/solidity_gradle_plugin/" title="Solidity Gradle Plugin" class="md-nav__link">
+    <a href="../plugins/solidity_gradle_plugin/" class="md-nav__link">
       Solidity Gradle Plugin
     </a>
   </li>
@@ -672,8 +727,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../plugins/web3j_gradle_plugin/" title="Web3j Gradle Plugin" class="md-nav__link">
+    <a href="../plugins/web3j_gradle_plugin/" class="md-nav__link">
       Web3j Gradle Plugin
     </a>
   </li>
@@ -684,8 +740,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../plugins/web3j_maven_plugin/" title="Web3j Maven Plugin" class="md-nav__link">
+    <a href="../plugins/web3j_maven_plugin/" class="md-nav__link">
       Web3j Maven Plugin
     </a>
   </li>
@@ -701,9 +758,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" >
     
     <label class="md-nav__link" for="nav-10">
       Privacy & Permissioning
@@ -722,8 +782,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../privacy/besu_quickstart/" title="Besu Quickstart" class="md-nav__link">
+    <a href="../privacy/besu_quickstart/" class="md-nav__link">
       Besu Quickstart
     </a>
   </li>
@@ -734,8 +795,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../privacy/privacy_with_besu/" title="Privacy with Hyperledger Besu" class="md-nav__link">
+    <a href="../privacy/privacy_with_besu/" class="md-nav__link">
       Privacy with Hyperledger Besu
     </a>
   </li>
@@ -746,8 +808,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../privacy/privacy_support_web3j/" title="Privacy Support in Web3j" class="md-nav__link">
+    <a href="../privacy/privacy_support_web3j/" class="md-nav__link">
       Privacy Support in Web3j
     </a>
   </li>
@@ -763,9 +826,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
     
     <label class="md-nav__link" for="nav-11">
       Advanced
@@ -784,8 +850,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../advanced/recursive_length_prefix/" title="Recursive Length Prefix" class="md-nav__link">
+    <a href="../advanced/recursive_length_prefix/" class="md-nav__link">
       Recursive Length Prefix
     </a>
   </li>
@@ -796,8 +863,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../advanced/filters_and_events/" title="Filters and Events" class="md-nav__link">
+    <a href="../advanced/filters_and_events/" class="md-nav__link">
       Filters and Events
     </a>
   </li>
@@ -808,8 +876,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../advanced/management_apis/" title="Management Apis" class="md-nav__link">
+    <a href="../advanced/management_apis/" class="md-nav__link">
       Management Apis
     </a>
   </li>
@@ -820,8 +889,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../advanced/ethereum_name_service/" title="Ethereum Name Service" class="md-nav__link">
+    <a href="../advanced/ethereum_name_service/" class="md-nav__link">
       Ethereum Name Service
     </a>
   </li>
@@ -832,8 +902,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../advanced/tls_websockets/" title="TLS over Websockets" class="md-nav__link">
+    <a href="../advanced/tls_websockets/" class="md-nav__link">
       TLS over Websockets
     </a>
   </li>
@@ -844,8 +915,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../advanced/web3j_core_modules/" title="Web3j Core Modules" class="md-nav__link">
+    <a href="../advanced/web3j_core_modules/" class="md-nav__link">
       Web3j Core Modules
     </a>
   </li>
@@ -859,6 +931,7 @@
       
       
       
+
 
   
 
@@ -875,7 +948,7 @@
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Command Line Tools" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Command Line Tools
     </a>
     
@@ -1021,9 +1094,12 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" >
     
     <label class="md-nav__link" for="nav-13">
       References
@@ -1042,8 +1118,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../references/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+    <a href="../references/troubleshooting/" class="md-nav__link">
       Troubleshooting
     </a>
   </li>
@@ -1054,8 +1131,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../references/projects_using_web3j/" title="Projects using Web3j" class="md-nav__link">
+    <a href="../references/projects_using_web3j/" class="md-nav__link">
       Projects using Web3j
     </a>
   </li>
@@ -1066,8 +1144,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../references/companies_using_web3j/" title="Companies using Web3j" class="md-nav__link">
+    <a href="../references/companies_using_web3j/" class="md-nav__link">
       Companies using Web3j
     </a>
   </li>
@@ -1078,8 +1157,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../references/developer_guide/" title="Developer Guide" class="md-nav__link">
+    <a href="../references/developer_guide/" class="md-nav__link">
       Developer Guide
     </a>
   </li>
@@ -1090,8 +1170,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../references/links_and_useful_resources/" title="Links and Useful Resources" class="md-nav__link">
+    <a href="../references/links_and_useful_resources/" class="md-nav__link">
       Links and Useful Resources
     </a>
   </li>
@@ -1102,8 +1183,9 @@
           
 
 
+
   <li class="md-nav__item">
-    <a href="../references/thanks_and_credits/" title="Thanks and Credits" class="md-nav__link">
+    <a href="../references/thanks_and_credits/" class="md-nav__link">
       Thanks and Credits
     </a>
   </li>
@@ -1119,8 +1201,9 @@
       
 
 
+
   <li class="md-nav__item">
-    <a href="https://docs.web3j.io/latest/javadoc-api/" title="Javadoc" class="md-nav__link">
+    <a href="https://docs.web3j.io/latest/javadoc-api/" class="md-nav__link">
       Javadoc
     </a>
   </li>
@@ -1133,7 +1216,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1305,7 +1389,6 @@
 <div class="codehilite"><pre><span></span><code>curl -L get.web3j.io <span class="p">|</span> sh <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.web3j/source.sh
 </code></pre></div>
 
-
 <p>You can verify the installation was successful by running <code>web3j -V</code>, which should output as follows:</p>
 <div class="codehilite"><pre><span></span><code>$ web3j -v
   __          __  _    ____  _                                   
@@ -1319,7 +1402,6 @@
 BY WEB3LABS
 Version: <span class="m">1</span>.4.0
 </code></pre></div>
-
 
 <p>Alternatively you can download the latest CLI release <a href="https://github.com/web3j/web3j-cli/releases/latest">here</a>.</p>
 <h2 id="project-creation">Project creation<a class="headerlink" href="#project-creation" title="Permanent link">&para;</a></h2>
@@ -1349,7 +1431,6 @@ Version: <span class="m">1</span>.4.0
 <div class="codehilite"><pre><span></span><code>web3j new <span class="o">[</span>--kotlin<span class="p">|</span>-o &lt;output path&gt;<span class="p">|</span>-n &lt;project name&gt;<span class="p">|</span>-p &lt;package name&gt;<span class="o">]</span> <span class="o">[</span>helloworld<span class="p">|</span>erc20<span class="p">|</span>erc777<span class="o">]</span>
 </code></pre></div>
 
-
 <p>Where supported <code>new</code> command arguments are as follows:</p>
 <ul>
 <li><code>--kotlin</code>
@@ -1367,20 +1448,17 @@ Version: <span class="m">1</span>.4.0
 <div class="codehilite"><pre><span></span><code>web3j new helloworld
 </code></pre></div>
 
-
 <p>Details of the created project structure are <a href="#generated-project-structure">below</a>.</p>
 <h3 id="import-an-existing-project">Import an existing project<a class="headerlink" href="#import-an-existing-project" title="Permanent link">&para;</a></h3>
 <p>Similarly, to <code>web3j new</code>, <code>web3j import</code> will create a new  project but with user defined smart contracts. By default a Java project will be generated if no option is provided.</p>
 <div class="codehilite"><pre><span></span><code>web3j import -s &lt;path to solidity sources&gt; <span class="o">[</span>-o &lt;path&gt;<span class="p">|</span>-n &lt;project name&gt;<span class="p">|</span>-p &lt;package name&gt;<span class="o">]</span> -t
 </code></pre></div>
 
-
 <p>The <code>-s</code> option will work with a single Solidity file or a folder containing Solidity files.
 The <code>-t</code> option is true by default. By passing <code>-t</code> unit tests will be generated for the Java wrappers.</p>
 <p>or </p>
 <div class="codehilite"><pre><span></span><code>web3j import 
 </code></pre></div>
-
 
 <p>Then, you will be prompted to set the Solidity files directory:</p>
 <div class="codehilite"><pre><span></span><code>You will be prompted to answer a series of questions to create your project:
@@ -1400,7 +1478,6 @@ Please enter the path to your solidity file/folder [Required Field]:
 /path/to/solidity
 ...
 </code></pre></div>
-
 
 <h2 id="running-your-application">Running your application<a class="headerlink" href="#running-your-application" title="Permanent link">&para;</a></h2>
 <p>The <code>web3j run &lt;network&gt;</code> command can be used to run your application on a specify an Ethereum network. Web3j will need the node endpoint the wallet path and the wallet password.</p>
@@ -1441,7 +1518,6 @@ Please enter the path to your solidity file/folder [Required Field]:
 java -jar &lt;app&gt;.jar
 </code></pre></div>
 
-
 <p>You can find the relevent application binary in the following locations:</p>
 <p>Java or Kotlin projects:</p>
 <ul>
@@ -1462,12 +1538,10 @@ If running the built container with Docker, you should use the following syntax 
 docker run -e VAR1=value1 -e VAR2=value2 web3app
 </code></pre></div>
 
-
 <h3 id="running-with-gradle">Running with Gradle<a class="headerlink" href="#running-with-gradle" title="Permanent link">&para;</a></h3>
 <p>If you wish to use the Gradle build tool to run your application, you should pass in the required variables in using the following syntax, where variable names are in lowercase and understcores are replaced with hyphens in their names.</p>
 <div class="codehilite"><pre><span></span><code>./gradlew run --args<span class="o">=</span><span class="s2">&quot;--&lt;var1&gt; &lt;value1&gt; --&lt;var2&gt; &lt;value2&gt; ...&quot;</span>
 </code></pre></div>
-
 
 <h2 id="generated-javakotlin-project-structure">Generated Java/Kotlin project structure<a class="headerlink" href="#generated-javakotlin-project-structure" title="Permanent link">&para;</a></h2>
 <p>Your application code and tests will be located in the following project directories:</p>
@@ -1521,32 +1595,26 @@ docker run -e VAR1=value1 -e VAR2=value2 web3app
 <div class="codehilite"><pre><span></span><code>./gradlew build
 </code></pre></div>
 
-
 <p>To update just the smart contract bindings following changes to the Solidity code run:</p>
 <div class="codehilite"><pre><span></span><code>./gradlew generateContractWrappers
 </code></pre></div>
-
 
 <p>To update the OpenAPI code, when using an OpenAPI project, following changes to the Solidity code run:</p>
 <div class="codehilite"><pre><span></span><code>./gradlew generateWeb3jOpenApi
 </code></pre></div>
 
-
 <p>To update the generated SwaggerUI, when using an OpenAPI project, following changes to the Solidity code run:</p>
 <div class="codehilite"><pre><span></span><code>./gradlew generateWeb3jSwaggerUi
 </code></pre></div>
-
 
 <p>To delete all project build artifacts, creating a clean environment, run:</p>
 <div class="codehilite"><pre><span></span><code>./gradlew clean
 </code></pre></div>
 
-
 <h2 id="stand-alone-unit-test-generation">Stand-alone unit test generation<a class="headerlink" href="#stand-alone-unit-test-generation" title="Permanent link">&para;</a></h2>
 <p>When creating a new project or importing solidity contracts, by using:</p>
 <div class="codehilite"><pre><span></span><code>web3j generate tests
 </code></pre></div>
-
 
 <p>You will be prompted to answer a series of questions to generate your tests:</p>
 <div class="codehilite"><pre><span></span><code>  __          __  _    ____  _                                   
@@ -1566,11 +1634,9 @@ Where would you like to save your tests.
 Unit tests were generated successfully at location: .
 </code></pre></div>
 
-
 <p>The command can also be used non-interactively</p>
 <div class="codehilite"><pre><span></span><code>web3j generate tests -i &lt;Solidity Java wrappers&gt; -o &lt;output path&gt;
 </code></pre></div>
-
 
 <p>When adding the path to your Java wrappers make sure you specify the path up to the package root e.g:
 If a class with name HelloWorld and package name <code>org.com.web3j</code> is located under <code>/home/user/code/myproject/org/com/web3j/HelloWorld.java</code>, the correct way to point to that class is <code>/home/user/code/myproject/</code></p>
@@ -1579,23 +1645,19 @@ If a class with name HelloWorld and package name <code>org.com.web3j</code> is l
 <div class="codehilite"><pre><span></span><code>$ web3j wallet create
 </code></pre></div>
 
-
 <p>To update the password for an existing wallet:</p>
 <div class="codehilite"><pre><span></span><code>$ web3j wallet update &lt;walletfile&gt;
 </code></pre></div>
 
-
 <p>To send Ether to another address:</p>
 <div class="codehilite"><pre><span></span><code>$ web3j wallet send &lt;walletfile&gt; 0x&lt;address&gt;<span class="p">|</span>&lt;ensName&gt;
 </code></pre></div>
-
 
 <p>When sending Ether to another address you will be asked a series of questions before the transaction takes place. Check below for a full example.</p>
 <p>The following example demonstrates using Web3j to send Ether to another wallet.</p>
 <p>With the following input:</p>
 <div class="codehilite"><pre><span></span><code>web3j wallet send &lt;walletfile&gt; 0x&lt;address&gt;<span class="p">|</span>&lt;ensName&gt;
 </code></pre></div>
-
 
 <p>Web3j proceeds as follows:</p>
 <div class="codehilite"><pre><span></span><code>  __          __  _    ____  _                                   
@@ -1623,13 +1685,11 @@ Transaction hash: 0xb00afc5c2bb92a76d03e17bd3a0175b80609e877cb124c02d19000d52939
 Mined block number: <span class="m">1849039</span>
 </code></pre></div>
 
-
 <h2 id="auditing-tools">Auditing Tools<a class="headerlink" href="#auditing-tools" title="Permanent link">&para;</a></h2>
 <p>Smart contracts written in Solidity often include logic bugs and other issues which might compromise their security. These are not always obvious to programmers. Issues can include <a href="https://github.com/smartdec/classification#arithmetic">integer precision problems</a>, <a href="https://github.com/smartdec/classification#contract-interaction">re-entrancy attacks</a>, and many other flaws. As Ethereum smart contracts are immutable once they have been deployed, it is important that they are bug-free at this point. Web3j is able to audit smart contracts for certain common issues and vulnerabilities using static code analysis. </p>
 <p>To audit a smart contract (in this instance, Campaign.sol):</p>
 <div class="codehilite"><pre><span></span><code>$ web3j audit Campaign.sol
 </code></pre></div>
-
 
 <p>An example of the output from this command is as follows:</p>
 <div class="codehilite"><pre><span></span><code>  __          __  _    ____  _                                   
@@ -1651,7 +1711,6 @@ BY WEB3LABS
 
 ✖ <span class="m">5</span> problems <span class="o">(</span><span class="m">5</span> errors<span class="o">)</span>
 </code></pre></div>
-
 
 <p>The output is in the form of a list of issues/errors detected by the static analysis tool. The first column of output shows the line and the character at which the issue was encountered. The second column shows the severity; this ranges from 1 to 3, with 3 being the most severe. The next column contains a description of the issue found, and the final column provides a reference to the rule used to find the issue.</p>
 <p>This functionality is provided by <a href="https://github.com/smartdec/smartcheck">SmartCheck</a>.</p>
@@ -1675,7 +1734,7 @@ BY WEB3LABS
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../advanced/web3j_core_modules/" title="Web3j Core Modules" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../advanced/web3j_core_modules/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1690,7 +1749,7 @@ BY WEB3LABS
           </a>
         
         
-          <a href="../references/troubleshooting/" title="Troubleshooting" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../references/troubleshooting/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1758,15 +1817,15 @@ BY WEB3LABS
       
     </div>
     
-      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
