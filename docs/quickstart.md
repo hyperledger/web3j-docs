@@ -33,7 +33,7 @@ To add the [Gradle](plugins/web3j_gradle_plugin.md) plugin to your project:
 
 ``` 
 plugins {
-    id "org.web3j" version "4.8.1"
+    id "org.web3j" version "{{ web3j.version }}"
 }
 ``` 
 
@@ -55,7 +55,7 @@ To add the [Maven](plugins/web3j_maven_plugin.md) plugin to your project:
         <plugin>
             <groupId>org.web3j</groupId>
             <artifactId>web3j-maven-plugin</artifactId>
-            <version>4.6.5</version>
+            <version>4.8.1</version>
             <configuration>
                 <soliditySourceFiles/>
             </configuration>

@@ -6,7 +6,7 @@ Sokt is currently under active development. You can use it in one of your own pr
 
 ```groovy
 dependencies {
-    compile group: 'org.web3j', name: 'web3j-sokt', version: '0.2.1'
+    compile group: 'org.web3j', name: 'web3j-sokt', version: '{{ sokt.version }}'
 }
 ```
 For other build systems, see [here](https://mvnrepository.com/artifact/org.web3j/web3j-sokt/0.2.1).

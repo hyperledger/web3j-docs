@@ -15,7 +15,7 @@ Java:
 <dependency>
   <groupId>org.web3j</groupId>
   <artifactId>core</artifactId>
-  <version>4.8.1</version>
+  <version>{{ web3j.version }}</version>
 </dependency>
 ```
 
@@ -25,7 +25,7 @@ Android:
 <dependency>
   <groupId>org.web3j</groupId>
   <artifactId>core</artifactId>
-  <version>4.6.0-android</version>
+  <version>{{ android.version }}</version>
 </dependency>
 ```
 
@@ -34,13 +34,13 @@ Android:
 Java:
 
 ``` groovy
-compile ('org.web3j:core:4.8.1')
+compile ('org.web3j:core:{{ web3j.version }}')
 ```
 
 Android:
 
 ``` groovy
-compile ('org.web3j:core:4.6.0-android')
+compile ('org.web3j:core:{{ android.version }}')
 ```
 
 ## Plugins 

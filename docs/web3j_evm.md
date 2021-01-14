@@ -29,8 +29,8 @@ repositories {
 }
 
 dependencies {
-    implementation "org.web3j:core:4.6.3"
-    implementation "org.web3j:web3j-evm:4.6.3"
+    implementation "org.web3j:core:{{ web3j.version }}"
+    implementation "org.web3j:web3j-evm:{{ web3j.version }}"
 }
 ```
 

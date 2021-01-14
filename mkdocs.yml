@@ -71,34 +71,42 @@ nav:
 
 # Configuration
 theme:
-    name: "material"
-    language: "en"
-    logo: "img/logo.png"
-    favicon: "img/favicon.ico"
-    palette:
-        primary: "white"
-        accent: "deep-orange"
+  name: "material"
+  language: "en"
+  logo: "img/logo.png"
+  favicon: "img/favicon.ico"
+  palette:
+    primary: "white"
+    accent: "deep-orange"
 
 
 # Customization
 extra:
-    version:
-        method: mike
-    manifest: "manifest.webmanifest"
-    social:
-      - icon: "fontawesome/brands/github-alt"
-        link: "https://github.com/web3j"
-      - icon: "fontawesome/brands/twitter"
-        link: "https://twitter.com/web3labs"
-      - icon: "fontawesome/brands/linkedin"
-        link: "https://linkedin.com/in/web3labs"
+  web3j:
+    version: 4.8.3
+  android:
+    version: 4.6.0
+  sokt:
+    version: 0.2.1
+  version:
+    method: mike
+  manifest: "manifest.webmanifest"
+  social:
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/web3j"
+    - icon: "fontawesome/brands/twitter"
+      link: "https://twitter.com/web3labs"
+    - icon: "fontawesome/brands/linkedin"
+      link: "https://linkedin.com/in/web3labs"
+
+
 
 extra_css:
   - "stylesheets/extra.css"
   - "css/version-select.css"
 
 
-# Google Analytics
+  # Google Analytics
   - css/version-select.css
 google_analytics:
   - 'UA-85710619-1'
@@ -109,10 +117,14 @@ google_analytics:
 markdown_extensions:
   - admonition
   - codehilite:
-        guess_lang: false
+      guess_lang: false
   - pymdownx.details
   - toc:
-        permalink: true
-        toc_depth: 3
+      permalink: true
+      toc_depth: 3
 extra_javascript:
   - js/version-select.js
+
+plugins:
+  - search
+  - markdownextradata: {}

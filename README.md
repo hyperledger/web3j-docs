@@ -42,4 +42,5 @@ Set default version to latest
 mike set-default VERSION or ALIAS -p
 ```
 
+To update the versions of the dependencies simply change them in the `mkdocs.yml` file under the extra tag
 

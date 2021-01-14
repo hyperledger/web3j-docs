@@ -82,7 +82,7 @@ generates the following `OpenAPI` specs :
          "url":"http://web3labs.com",
          "email":"hi@web3labs.com"
       },
-      "version":"4.8.1"
+      "version":"{{ web3j.version }}"
    },
    "tags":[
       {
@@ -233,7 +233,7 @@ Make sure to add the client dependency to your project.
 
 ```groovy
 dependencies {
-    implementation "org.web3j.openapi:web3j-openapi-client:4.8.1"
+    implementation "org.web3j.openapi:web3j-openapi-client:{{ web3j.version }}"
 }
 ```
 
@@ -554,7 +554,7 @@ Start by adding dependency to the client:
 
 ```groovy
 dependencies {
-    implementation "org.web3j.openapi:web3j-openapi-client:4.8.1"
+    implementation "org.web3j.openapi:web3j-openapi-client:{{ web3j.version }}"
 }
 ```
 
