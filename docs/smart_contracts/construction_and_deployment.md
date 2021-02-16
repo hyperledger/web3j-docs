@@ -38,7 +38,7 @@ Web3j supports the auto-generation of smart contract function wrappers in Java f
 The Web3j [Command Line Tools](http://docs.web3j.io/latest/command_line_tools/) tools ship with a command line utility for generating the smart contract function wrappers:
 
 ``` bash
-$ web3j solidity generate [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
+$ web3j generate solidity [-hV] [-jt] [-st] -a=<abiFile> [-b=<binFile>] -o=<destinationFileDir> -p=<packageName>
 
    -h, --help                        Show this help message and exit.
    -V, --version                     Print version information and exit.
@@ -79,7 +79,7 @@ Web3j also supports the generation of Java smart contract function wrappers dire
 Schema](https://github.com/trufflesuite/truffle-contract-schema) via the [Command Line Tools](http://docs.web3j.io/latest/command_line_tools/#solidity-smart-contract-wrapper-generator) utility.
 
 ``` bash
-$ web3j truffle generate [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
+$ web3j generate truffle [--javaTypes|--solidityTypes] /path/to/<truffle-smart-contract-output>.json -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
 And this also can be invoked by calling the Java class:

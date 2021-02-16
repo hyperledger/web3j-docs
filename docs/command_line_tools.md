@@ -442,5 +442,5 @@ This functionality is provided by [SmartCheck](https://github.com/smartdec/smart
 
 ## Solidity smart contract wrapper generator
 
-Please refer to [solidity smart contract wrappers](https://docs.web3j.io/smart_contracts/#solidity-smart-contract-wrappers).
+Please refer to [solidity smart contract wrappers](http://localhost:8000/latest/smart_contracts/construction_and_deployment/#solidity-smart-contract-wrappers).
 
