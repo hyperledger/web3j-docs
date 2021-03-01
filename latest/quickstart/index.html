@@ -257,6 +257,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#use-web3j-plugins" class="md-nav__link">
+    Use Web3j plugins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-web3j" class="md-nav__link">
+    Use Web3j
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Web3j">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploying-a-smart-contract" class="md-nav__link">
+    Deploying a Smart Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#loading-a-smart-contract" class="md-nav__link">
     Loading a Smart Contract
   </a>
@@ -1166,6 +1193,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#use-web3j-plugins" class="md-nav__link">
+    Use Web3j plugins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-web3j" class="md-nav__link">
+    Use Web3j
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Web3j">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploying-a-smart-contract" class="md-nav__link">
+    Deploying a Smart Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#loading-a-smart-contract" class="md-nav__link">
     Loading a Smart Contract
   </a>
@@ -1207,71 +1261,54 @@
 </code></pre></div>
 
 <p>On Windows:</p>
-<p>```shell script
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/web3j/web3j-installer/master/installer.ps1'))</p>
-<div class="codehilite"><pre><span></span><code>For more information on Web3j CLI check the [instruction](http://docs.web3j.io/latest/command_line_tools/).
-
-#### Create a new project     
-
-`$ web3j new `
-
-This will create a sample project to get you started. 
-
-It includes a `HelloWorld` smart contract and boilerplate code that is easy to follow.
-
-#### Run your project
-
-Then run the project with the command `web3j run &lt;network_url&gt; &lt;wallet_path&gt; &lt;wallet_password&gt;`.
-You can also provide [custom parameters](http://docs.web3j.io/latest/command_line_tools/) to run your project locally.
-
-### Use Web3j plugins
-
-To generate Java Wrappers for Solidity Contracts in your project, you need to add one of the Web3j&#39;s plugins available for Maven and Gradle.
-
-#### Gradle plugin
-
-To add the [Gradle](plugins/web3j_gradle_plugin.md) plugin to your project:
+<div class="codehilite"><pre><span></span><code>Set-ExecutionPolicy Bypass -Scope Process -Force<span class="p">;</span> iex <span class="o">((</span>New-Object System.Net.WebClient<span class="o">)</span>.DownloadString<span class="o">(</span><span class="s1">&#39;https://raw.githubusercontent.com/web3j/web3j-installer/master/installer.ps1&#39;</span><span class="o">))</span>
 </code></pre></div>
 
-<p>plugins {
-    id "org.web3j" version "4.8.4"
-}</p>
-<div class="codehilite"><pre><span></span><code>Once the plugin is downloaded you should see a new set of tasks under the Web3j label:
-
-![](./general_media/web3j_plugin.png)
-
-The simplest way is to create a new folder `src/main/solidity` and place your smart contracts there.
-To generate the Java wrappers simply run generateContractWrappers or `./gradlew/generateContractWrappers`.
-The wrappers will generate under `build/generated/source/web3j/main/java`. 
-
-#### Maven plugin        
-
-To add the [Maven](plugins/web3j_maven_plugin.md) plugin to your project:
+<p>For more information on Web3j CLI check the <a href="http://docs.web3j.io/latest/command_line_tools/">instruction</a>.</p>
+<h4>Create a new project</h4>
+<p><code>$ web3j new</code></p>
+<p>This will create a sample project to get you started. </p>
+<p>It includes a <code>HelloWorld</code> smart contract and boilerplate code that is easy to follow.</p>
+<h4>Run your project</h4>
+<p>Then run the project with the command <code>web3j run &lt;network_url&gt; &lt;wallet_path&gt; &lt;wallet_password&gt;</code>.
+You can also provide <a href="http://docs.web3j.io/latest/command_line_tools/">custom parameters</a> to run your project locally.</p>
+<h3 id="use-web3j-plugins">Use Web3j plugins<a class="headerlink" href="#use-web3j-plugins" title="Permanent link">&para;</a></h3>
+<p>To generate Java Wrappers for Solidity Contracts in your project, you need to add one of the Web3j's plugins available for Maven and Gradle.</p>
+<h4>Gradle plugin</h4>
+<p>To add the <a href="../plugins/web3j_gradle_plugin/">Gradle</a> plugin to your project:</p>
+<div class="codehilite"><pre><span></span><code>plugins {
+    id &quot;org.web3j&quot; version &quot;4.8.4&quot;
+}
 </code></pre></div>
 
-<p><build>
-    <plugins>
-        <plugin>
-            <groupId>org.web3j</groupId>
-            <artifactId>web3j-maven-plugin</artifactId>
-            <version>4.8.1</version>
-            <configuration>
-                <soliditySourceFiles/>
-            </configuration>
-        </plugin>
-    </plugins>
-</build></p>
-<div class="codehilite"><pre><span></span><code>## Use Web3j
+<p>Once the plugin is downloaded you should see a new set of tasks under the Web3j label:</p>
+<p><img alt="" src="../general_media/web3j_plugin.png" /></p>
+<p>The simplest way is to create a new folder <code>src/main/solidity</code> and place your smart contracts there.
+To generate the Java wrappers simply run generateContractWrappers or <code>./gradlew/generateContractWrappers</code>.
+The wrappers will generate under <code>build/generated/source/web3j/main/java</code>. </p>
+<h4>Maven plugin</h4>
+<p>To add the <a href="../plugins/web3j_maven_plugin/">Maven</a> plugin to your project:</p>
+<div class="codehilite"><pre><span></span><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.web3j&lt;/groupId&gt;
+            &lt;artifactId&gt;web3j-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;4.8.1&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;soliditySourceFiles/&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre></div>
 
-### Deploying a Smart Contract
-
-To deploy the HelloWorld contract from the previous example:
-
-```java
-  Web3j web3j = Web3j.build(new HttpService(&quot;&lt;your_node_url&gt;&quot;));
-  HelloWorld helloWorld = HelloWorld.deploy(web3j, Credentials.create(&quot;your_private_key&quot;), new DefaultGasProvider(), &quot;Hello Blockchain World&quot;).send();
-  String greeting = helloWorld.greeting().send();
-  web3j.shutdown();
+<h2 id="use-web3j">Use Web3j<a class="headerlink" href="#use-web3j" title="Permanent link">&para;</a></h2>
+<h3 id="deploying-a-smart-contract">Deploying a Smart Contract<a class="headerlink" href="#deploying-a-smart-contract" title="Permanent link">&para;</a></h3>
+<p>To deploy the HelloWorld contract from the previous example:</p>
+<div class="codehilite"><pre><span></span><code>  <span class="n">Web3j</span> <span class="n">web3j</span> <span class="o">=</span> <span class="n">Web3j</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span> <span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;&lt;your_node_url&gt;&quot;</span><span class="p">));</span>
+  <span class="n">HelloWorld</span> <span class="n">helloWorld</span> <span class="o">=</span> <span class="n">HelloWorld</span><span class="p">.</span><span class="na">deploy</span><span class="p">(</span><span class="n">web3j</span><span class="p">,</span> <span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;your_private_key&quot;</span><span class="p">),</span> <span class="k">new</span> <span class="n">DefaultGasProvider</span><span class="p">(),</span> <span class="s">&quot;Hello Blockchain World&quot;</span><span class="p">).</span><span class="na">send</span><span class="p">();</span>
+  <span class="n">String</span> <span class="n">greeting</span> <span class="o">=</span> <span class="n">helloWorld</span><span class="p">.</span><span class="na">greeting</span><span class="p">().</span><span class="na">send</span><span class="p">();</span>
+  <span class="n">web3j</span><span class="p">.</span><span class="na">shutdown</span><span class="p">();</span>
 </code></pre></div>
 
 <p>There are many ways to create <code>Credentials</code> in Web3j, for more information go to the <a href="../transactions/credentials/">credentials</a> section.</p>
