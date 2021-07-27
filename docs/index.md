@@ -42,5 +42,5 @@ It also uses [JavaPoet](https://github.com/square/javapoet) for generating smart
 Commercial support and training
 ===============================
 
-Commercial support and training is available from [web3labs](https://www.web3labs.com/).
+Commercial support and training is available from [Web3 Labs](https://www.web3labs.com/web3j-sdk).
 
