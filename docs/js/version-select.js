@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function () {
         container.id = "version-selector";
         container.className = "md-nav__item";
         container.appendChild(select);
-        var sidebar = document.querySelector(".md-header-nav__ellipsis");
+        var sidebar = document.querySelector(".md-header__ellipsis");
         var web3jSpan = sidebar.firstElementChild;
         web3jSpan.style.width=null;
         sidebar.removeChild(sidebar.lastElementChild);
