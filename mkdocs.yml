@@ -35,10 +35,10 @@ nav:
       - Gas: transactions/gas.md
       - Credentials: transactions/credentials.md
       - Transfer Eth: transactions/transfer_eth.md
-      - Transction Mechanisms: transactions/transaction_mechanisms.md
-      - Transction Nonce: transactions/transaction_nonce.md
-      - Transction Types: transactions/transaction_types.md
-      - Transctions and Smart Contracts: transactions/transactions_and_smart_contracts.md
+      - Transaction Mechanisms: transactions/transaction_mechanisms.md
+      - Transaction Nonce: transactions/transaction_nonce.md
+      - Transaction Types: transactions/transaction_types.md
+      - Transactions and Smart Contracts: transactions/transactions_and_smart_contracts.md
       - Wallet Files: transactions/wallet_files.md
   - Web3j Eth2 Client: web3j_eth2_client.md
   - Web3j OpenAPI: web3j_openapi.md
