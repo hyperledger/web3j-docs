@@ -9,7 +9,7 @@ There are two ways to create credentials in Web3j.
 
 ### Use WalletUtils functionality
 
-The `WalletUtils` class cna be used to load your credentials from various formats:
+The `WalletUtils` class can be used to load your credentials from various formats:
 
 - `WalletUtils.loadCredentials(String password,String source)`
 - `WalletUtils.loadBip39Credentials(String password,String mnemonic)`
