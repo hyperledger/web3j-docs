@@ -1,4 +1,6 @@
-# CLI
+# web3CLI
+
+curl -L get.web3j.io | sh && source ~/.web3j/source.sh
 
 A Web3j binary is distributed, providing an interactive command line (CLI). It supports a number of key Web3j project features including the creation of:
 
