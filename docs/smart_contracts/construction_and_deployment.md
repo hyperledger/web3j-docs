@@ -5,7 +5,7 @@ Construction and deployment of smart contracts happens with the *deploy* method:
 
 ```java
 YourSmartContract contract = YourSmartContract.deploy(
-        <web3j>, <credentials>, GAS_PRICE, GAS_LIMIT,
+        <web3j>, <credentials>, <contractGasProvider>,
         [<initialValue>,]
         <param1>, ..., <paramN>).send();
 ```
@@ -19,7 +19,7 @@ simply pass in it's address:
 
 ```java
 YourSmartContract contract = YourSmartContract.load(
-        "0x<address>|<ensName>", web3j, credentials, GAS_PRICE, GAS_LIMIT);
+        "0x<address>|<ensName>", web3j, credentials, contractGasProvider);
 ```
 
 Deploying and interacting with smart contracts
