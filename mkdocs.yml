@@ -58,7 +58,7 @@ nav:
       - Filters and Events: advanced/filters_and_events.md
       - Management Apis: advanced/management_apis.md
       - Ethereum Name Service: advanced/ethereum_name_service.md
-      - TLS over Websockets: advanced/tls_websockets.md
+      - TLS over HTTP and Websockets: advanced/tls_http_websockets.md
       - Web3j Core Modules: advanced/web3j_core_modules.md
   - Command Line Tools: command_line_tools.md
   - References:
