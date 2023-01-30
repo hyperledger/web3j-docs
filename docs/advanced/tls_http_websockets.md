@@ -48,7 +48,7 @@ sslContext.init(keyManagerFactory.getKeyManagers(), trustManagerFactory.getTrust
 
 // Create an OkHttpClient with the custom certificate
 OkHttpClient client = new OkHttpClient.Builder()
-        .sslSocketFactory(sslContext.getSocketFactory())
+        .sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustManagerFactory.getTrustManagers()[0])
         .build();
 
 final HttpService httpService = new HttpService("https://<web3j-endpoint>", client, false);
