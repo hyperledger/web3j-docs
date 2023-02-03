@@ -1,6 +1,6 @@
 # Web3j-OpenAPI
 
-[Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) is a [OpenAPI](https://swagger.io/specification/)
+[Web3j-OpenAPI](https://github.com/web3j/web3j-openapi) is an [OpenAPI](https://swagger.io/specification/)
 client and server generator from [Solidity](https://solidity.readthedocs.io/) smart contracts.
 It provides a way to interact with the [Ethereum](https://ethereum.org/) smart contracts using a simple RESTful API.
 These interactions can be done using plain HTTP requests 
@@ -179,7 +179,7 @@ You should be seeing logs similar to the following:
 
 ### Configure the project
 
-You can run the project easily, without specify any configuration, using the [Web3j-cli](http://docs.web3j.io/latest/command_line_tools/).
+You can run the project easily, without specifying any configuration, using the [Web3j-cli](http://docs.web3j.io/latest/command_line_tools/).
 
 If not, you need to specify runtime parameters. for example, the `private key` or `wallet file` for the signing,
 the `node endpoint` to connect to, etc.
