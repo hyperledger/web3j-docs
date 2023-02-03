@@ -39,7 +39,7 @@ and simple contract interactions. Using the ConsoleDebugTracer, we're
 able to step through the EVM bytecode, inspect the stack and also see
 where in the related solidity code we're currently at.
 
-The demo also show to how get started with the `EmbeddedWeb3jService`
+The demo also shows to how to get started with the `EmbeddedWeb3jService`
 which is what you'd use when building your web3j instance.
 
 This demo is available on the [example project](https://github.com/web3j/web3j-evmexample).
@@ -61,7 +61,7 @@ OperationTracer operationTracer = new ConsoleDebugTracer();
 Web3j web3j = Web3j.build(new EmbeddedWeb3jService(configuration, operationTracer));
 ```
 
-When your project leverages our [gradle plugin](https://github.com/web3j/web3j-gradle-plugin) the ```ConsoleDebugTracer``` will automatically pick up Solidity contract metadata and use that to display source code context. Usually, these meta data json files are stored within ```build/resources/main/solidity```. If you have chosen to place these elsewhere you will need to specify their location when creating the debugger instance:
+When your project leverages our [gradle plugin](https://github.com/web3j/web3j-gradle-plugin) the ```ConsoleDebugTracer``` will automatically pick up Solidity contract metadata and use that to display source code context. Usually, these metadata json files are stored within ```build/resources/main/solidity```. If you have chosen to place these elsewhere you will need to specify their location when creating the debugger instance:
 
 ```java
 OperationTracer operationTracer = new ConsoleDebugTracer(new File("alternative/metadata/file/location"));
@@ -109,7 +109,7 @@ If you want to use this feature within your unit and integration tests, we would
 
 ## How to run Web3j with embedded EVM
 
-As shown on the [EVM example project](https://github.com/web3j/web3j-evmexample), using the embedded EVM is as easy as adding required dependencies and then use the ```EmbeddedWeb3jService```.
+As shown in the [EVM example project](https://github.com/web3j/web3j-evmexample), using the embedded EVM is as easy as adding required dependencies and then use the ```EmbeddedWeb3jService```.
 
 ```groovy
 repositories {
