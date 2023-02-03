@@ -8,7 +8,7 @@ This is the recommended option for full project creation.
     
 #### Install Web3j CLI
 
-To install the command line tools you can follow these [instruction](http://docs.web3j.io/latest/command_line_tools/).
+To install the command line tools you can follow these [instructions](http://docs.web3j.io/latest/command_line_tools/).
 
 #### Create a new project     
 
