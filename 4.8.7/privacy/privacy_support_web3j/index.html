@@ -9,14 +9,19 @@
         <meta name="description" content="Documentation portal for the web3j Blockchain Library">
       
       
-      
         <meta name="author" content="Web3 Labs">
       
       
         <link rel="canonical" href="https://web3j.io/4.8.7/privacy/privacy_support_web3j/">
       
+      
+        <link rel="prev" href="../privacy_with_besu/">
+      
+      
+        <link rel="next" href="../../advanced/recursive_length_prefix/">
+      
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
@@ -24,28 +29,23 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.24c991ad.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7bf56d0a.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ffffff">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
+      
+
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
-    
-      <link rel="manifest" href="../../manifest.webmanifest" crossorigin="use-credentials">
     
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
@@ -54,21 +54,11 @@
     
       <link rel="stylesheet" href="../../css/version-select.css">
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
 
-
-
-  
-  
-
-
-
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-85710619-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
-
+    
     
     
   </head>
@@ -79,10 +69,9 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="deep-orange">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -99,9 +88,16 @@
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Web3j" class="md-header__button md-logo" aria-label="Web3j" data-md-component="logo">
       
@@ -109,7 +105,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -131,22 +127,21 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -157,7 +152,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -166,14 +161,13 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/web3j/web3j-docs/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/web3j/web3j" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    web3j/web3j-docs
+    web3j/web3j
   </div>
 </a>
       </div>
@@ -211,14 +205,13 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/web3j/web3j-docs/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/web3j/web3j" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    web3j/web3j-docs
+    web3j/web3j
   </div>
 </a>
     </div>
@@ -251,17 +244,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           Getting Started
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Getting Started
@@ -355,17 +349,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Smart Contracts
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Smart Contracts" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Smart Contracts
@@ -515,17 +510,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           Transactions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Transactions" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Transactions
@@ -778,17 +774,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_10">
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           Build Plugins
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Build Plugins" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Build Plugins
@@ -856,17 +853,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_11">
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Privacy & Permissioning
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Privacy & Permissioning" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Privacy & Permissioning
@@ -910,7 +908,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
@@ -924,6 +922,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -995,17 +994,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_12">
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Advanced" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
           Advanced
@@ -1074,8 +1074,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/tls_websockets/" class="md-nav__link">
-        TLS over Websockets
+      <a href="../../advanced/tls_http_websockets/" class="md-nav__link">
+        TLS over HTTP and Websockets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/HSM_transaction_signing/" class="md-nav__link">
+        HSM Transaction Signing
       </a>
     </li>
   
@@ -1128,17 +1142,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_14">
+        <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
           References
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="References" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_14">
           <span class="md-nav__icon md-icon"></span>
           References
@@ -1262,6 +1277,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1315,287 +1331,258 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <a href="https://github.com/web3j/web3j-docs/edit/master/docs/privacy/privacy_support_web3j.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                  <h1>Privacy Support in Web3j</h1>
-                
-                <h2 id="privacy-support-in-web3j">Privacy Support in Web3j<a class="headerlink" href="#privacy-support-in-web3j" title="Permanent link">&para;</a></h2>
-<p>As mentioned earlier, the Besu module in Web3j can be used to create privacy groups and send private transactions in Besu. The Besu privacy quickstart starts up three nodes with their associated Orion instances, which will henceforth be called Alice, Bob and Charlie for ease of use. The keys associated with each are predetermined, and can be represented in Java as follows:</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Credentials</span> <span class="n">ALICE</span> <span class="o">=</span>
-        <span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63&quot;</span><span class="p">);</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Credentials</span> <span class="n">BOB</span> <span class="o">=</span>
-        <span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3&quot;</span><span class="p">);</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Credentials</span> <span class="n">CHARLIE</span> <span class="o">=</span>
-        <span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;ae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f&quot;</span><span class="p">);</span>
+                  
 
-<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Base64String</span> <span class="n">ENCLAVE_KEY_ALICE</span> <span class="o">=</span>
-        <span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="s">&quot;A1aVtMxLCUHmBVHXoZzzBgPbW/wj5axDpW9X8l91SGo=&quot;</span><span class="p">);</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Base64String</span> <span class="n">ENCLAVE_KEY_BOB</span> <span class="o">=</span>
-        <span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="s">&quot;Ko2bVqD+nNlNYL5EE7y3IdOnviftjiizpjRt+HTuFBs=&quot;</span><span class="p">);</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Base64String</span> <span class="n">ENCLAVE_KEY_CHARLIE</span> <span class="o">=</span>
-        <span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="s">&quot;k2zXEin4Ip/qBGlRkJejnGWdP9cjkK+DAvKNW31L2C8=&quot;</span><span class="p">);</span>
+  
+  
+
+
+  <h1>Privacy Support in Web3j</h1>
+
+<h2 id="privacy-support-in-web3j">Privacy Support in Web3j<a class="headerlink" href="#privacy-support-in-web3j" title="Permanent link">&para;</a></h2>
+<p>As mentioned earlier, the Besu module in Web3j can be used to create privacy groups and send private transactions in Besu. The Besu privacy quickstart starts up three nodes with their associated Orion instances, which will henceforth be called Alice, Bob and Charlie for ease of use. The keys associated with each are predetermined, and can be represented in Java as follows:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Credentials</span><span class="w"> </span><span class="n">ALICE</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63&quot;</span><span class="p">);</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Credentials</span><span class="w"> </span><span class="n">BOB</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3&quot;</span><span class="p">);</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Credentials</span><span class="w"> </span><span class="n">CHARLIE</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">Credentials</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;ae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f&quot;</span><span class="p">);</span>
+
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Base64String</span><span class="w"> </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="s">&quot;A1aVtMxLCUHmBVHXoZzzBgPbW/wj5axDpW9X8l91SGo=&quot;</span><span class="p">);</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Base64String</span><span class="w"> </span><span class="n">ENCLAVE_KEY_BOB</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="s">&quot;Ko2bVqD+nNlNYL5EE7y3IdOnviftjiizpjRt+HTuFBs=&quot;</span><span class="p">);</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Base64String</span><span class="w"> </span><span class="n">ENCLAVE_KEY_CHARLIE</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="s">&quot;k2zXEin4Ip/qBGlRkJejnGWdP9cjkK+DAvKNW31L2C8=&quot;</span><span class="p">);</span>
 </code></pre></div>
 
 <p>The instances of the class <code>Credentials</code> above are the private keys associated with the default account of each Besu node in the network. These are configured in the config files for Besu in the privacy quickstart. The <code>Base64Strings</code> are the Orion keys associated with each member, and are configured in the config files for Orion in the privacy quickstart. If you choose to create your own network, these values will differ from the defaults as specified in the privacy quickstart.</p>
 <p>Web3j provides the class <code>org.web3j.protocol.besu.Besu</code> which encapsulates all Besu specific methods with all of the usual Web3j commands. We can use several instances of these to talk to the running quickstart instance:</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">private</span> <span class="kd">static</span> <span class="n">Besu</span> <span class="n">nodeAlice</span> <span class="o">=</span> <span class="n">Besu</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span> <span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;http://localhost:20000&quot;</span><span class="p">));</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="n">Besu</span> <span class="n">nodeBob</span> <span class="o">=</span> <span class="n">Besu</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span> <span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;http://localhost:20002&quot;</span><span class="p">));</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="n">Besu</span> <span class="n">nodeCharlie</span> <span class="o">=</span> <span class="n">Besu</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span> <span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;http://localhost:20004&quot;</span><span class="p">));</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="n">PollingPrivateTransactionReceiptProcessor</span> <span class="n">processor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PollingPrivateTransactionReceiptProcessor</span><span class="p">(</span><span class="n">nodeAlice</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Besu</span><span class="w"> </span><span class="n">nodeAlice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Besu</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;http://localhost:20000&quot;</span><span class="p">));</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Besu</span><span class="w"> </span><span class="n">nodeBob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Besu</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;http://localhost:20002&quot;</span><span class="p">));</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Besu</span><span class="w"> </span><span class="n">nodeCharlie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Besu</span><span class="p">.</span><span class="na">build</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">HttpService</span><span class="p">(</span><span class="s">&quot;http://localhost:20004&quot;</span><span class="p">));</span>
+<span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">PollingPrivateTransactionReceiptProcessor</span><span class="w"> </span><span class="n">processor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PollingPrivateTransactionReceiptProcessor</span><span class="p">(</span><span class="n">nodeAlice</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span>
 </code></pre></div>
 
 <h3 id="creating-a-privacy-group">Creating a privacy group<a class="headerlink" href="#creating-a-privacy-group" title="Permanent link">&para;</a></h3>
 <p>In order to create a new privacy group, first a random 32 byte base64 string is generated to form the group ID. Then the create group function is called, and we wait for the transaction receipt to be returned. Finally, we can call the <code>privOnChainFindPrivacyGroup</code> method, which will find the privacy group which was just created by using the two Orion keys of the group members. </p>
 <div class="codehilite"><pre><span></span><code><span class="c1">// Generate a new random Base64 string for the privacy group ID</span>
-<span class="n">Base64String</span> <span class="n">privacyGroupId</span> <span class="o">=</span> <span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">generateRandomBytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+<span class="n">Base64String</span><span class="w"> </span><span class="n">privacyGroupId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">generateRandomBytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
 
 <span class="c1">// Create the privacy group</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">txHash</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainCreatePrivacyGroup</span><span class="p">(</span>
-                        <span class="n">privacyGroupId</span><span class="p">,</span>
-                        <span class="n">ALICE</span><span class="p">,</span>
-                        <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
-                        <span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">txHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainCreatePrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">privacyGroupId</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
 
 <span class="c1">// Wait for the transaction to be mined &amp; get the receipt</span>
-<span class="n">TransactionReceipt</span> <span class="n">receipt</span> <span class="o">=</span> <span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">txHash</span><span class="p">);</span>
+<span class="n">TransactionReceipt</span><span class="w"> </span><span class="n">receipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">txHash</span><span class="p">);</span>
 
 <span class="c1">// Find the privacy group based on the two members</span>
-<span class="n">Optional</span><span class="o">&lt;</span><span class="n">PrivacyGroup</span><span class="o">&gt;</span> <span class="n">group</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
-                        <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getGroups</span><span class="p">().</span><span class="na">stream</span><span class="p">().</span><span class="na">filter</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span><span class="p">.</span><span class="na">getPrivacyGroupId</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">privacyGroupId</span><span class="p">)).</span><span class="na">findFirst</span><span class="p">();</span>
+<span class="n">Optional</span><span class="o">&lt;</span><span class="n">PrivacyGroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getGroups</span><span class="p">().</span><span class="na">stream</span><span class="p">().</span><span class="na">filter</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">getPrivacyGroupId</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">privacyGroupId</span><span class="p">)).</span><span class="na">findFirst</span><span class="p">();</span>
 </code></pre></div>
 
 <h3 id="adding-removing-members">Adding &amp; removing members<a class="headerlink" href="#adding-removing-members" title="Permanent link">&para;</a></h3>
 <p>After a privacy group has been created, users can be added to the group using the <code>privOnChainAddToPrivacyGroup</code> method, and removed from the group using the <code>privOnChainRemoveFromPrivacyGroup</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Base64String</span> <span class="n">privacyGroupId</span> <span class="o">=</span> <span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">generateRandomBytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">createTxHash</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainCreatePrivacyGroup</span><span class="p">(</span>
-                        <span class="n">privacyGroupId</span><span class="p">,</span>
-                        <span class="n">ALICE</span><span class="p">,</span>
-                        <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
-                        <span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Base64String</span><span class="w"> </span><span class="n">privacyGroupId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">generateRandomBytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">createTxHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainCreatePrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">privacyGroupId</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
 
-<span class="n">TransactionReceipt</span> <span class="n">createReceipt</span> <span class="o">=</span> <span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">createTxHash</span><span class="p">);</span>
+<span class="n">TransactionReceipt</span><span class="w"> </span><span class="n">createReceipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">createTxHash</span><span class="p">);</span>
 
 <span class="c1">// Once the group has been created, add Charlie from Alice&#39;s node</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">addTxHash</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainAddToPrivacyGroup</span><span class="p">(</span>
-                        <span class="n">privacyGroupId</span><span class="p">,</span>
-                        <span class="n">ALICE</span><span class="p">,</span>
-                        <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
-                        <span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_CHARLIE</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">addTxHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainAddToPrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">privacyGroupId</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_CHARLIE</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
 
-<span class="n">TransactionReceipt</span> <span class="n">addReceipt</span> <span class="o">=</span> <span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">addTxHash</span><span class="p">);</span>
+<span class="n">TransactionReceipt</span><span class="w"> </span><span class="n">addReceipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">addTxHash</span><span class="p">);</span>
 
 <span class="c1">// Once the add transaction has been mined, find the privacy group which contains Alice, Bob &amp; Charlie</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">PrivacyGroup</span><span class="o">&gt;</span> <span class="n">groups</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
-                        <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
-                                <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_BOB</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_CHARLIE</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getGroups</span><span class="p">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">PrivacyGroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">groups</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">                                </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_CHARLIE</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getGroups</span><span class="p">();</span>
 
 <span class="c1">// Remove Charlie from the privacy group</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">removeTxHash</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainRemoveFromPrivacyGroup</span><span class="p">(</span>
-                        <span class="n">privacyGroupId</span><span class="p">,</span> <span class="n">ALICE</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_CHARLIE</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">removeTxHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainRemoveFromPrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">privacyGroupId</span><span class="p">,</span><span class="w"> </span><span class="n">ALICE</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_CHARLIE</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
 
-<span class="n">TransactionReceipt</span> <span class="n">removeReceipt</span> <span class="o">=</span> <span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">removeTxHash</span><span class="p">);</span>
+<span class="n">TransactionReceipt</span><span class="w"> </span><span class="n">removeReceipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">removeTxHash</span><span class="p">);</span>
 
 <span class="c1">// Get the privacy group with only Alice and Bob now in it.</span>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">PrivacyGroup</span><span class="o">&gt;</span> <span class="n">removedGroups</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
-                        <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getGroups</span><span class="p">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">PrivacyGroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">removedGroups</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getGroups</span><span class="p">();</span>
 </code></pre></div>
 
 <h3 id="creating-interacting-with-a-smart-contract">Creating &amp; interacting with a smart contract<a class="headerlink" href="#creating-interacting-with-a-smart-contract" title="Permanent link">&para;</a></h3>
 <p>Once a privacy group has been created, smart contracts can be created &amp; executed within the privacy group. The state of the contract and all of the associated transactions will only be viewable to those within the privacy group. In this example, an instance of a <code>HumanStandardToken</code> is deployed within the group, and is visible to each member:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">// Create a new privacy group</span>
-<span class="n">Base64String</span> <span class="n">aliceBobGroup</span> <span class="o">=</span> <span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">generateRandomBytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
-<span class="kd">final</span> <span class="n">String</span> <span class="n">createTxHash</span> <span class="o">=</span>
-        <span class="n">nodeAlice</span>
-                <span class="p">.</span><span class="na">privOnChainCreatePrivacyGroup</span><span class="p">(</span>
-                        <span class="n">aliceBobGroup</span><span class="p">,</span>
-                        <span class="n">ALICE</span><span class="p">,</span>
-                        <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
-                        <span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
+<span class="n">Base64String</span><span class="w"> </span><span class="n">aliceBobGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64String</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">generateRandomBytes</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">createTxHash</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeAlice</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainCreatePrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">aliceBobGroup</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">Collections</span><span class="p">.</span><span class="na">singletonList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getTransactionHash</span><span class="p">();</span>
 
-<span class="n">TransactionReceipt</span> <span class="n">createReceipt</span> <span class="o">=</span> <span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">createTxHash</span><span class="p">);</span>
+<span class="n">TransactionReceipt</span><span class="w"> </span><span class="n">createReceipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processor</span><span class="p">.</span><span class="na">waitForTransactionReceipt</span><span class="p">(</span><span class="n">createTxHash</span><span class="p">);</span>
 
 <span class="c1">// Find the privacy group that was built by Alice from Bob&#39;s node</span>
-<span class="kd">final</span> <span class="n">Base64String</span> <span class="n">aliceBobGroupFromBobNode</span> <span class="o">=</span>
-        <span class="n">nodeBob</span>
-                <span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
-                        <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span> <span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">().</span><span class="na">getGroups</span><span class="p">().</span><span class="na">stream</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">g</span> <span class="o">-&gt;</span> <span class="n">g</span><span class="p">.</span><span class="na">getPrivacyGroupId</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">aliceBobGroup</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">findFirst</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">orElseThrow</span><span class="p">(</span><span class="n">RuntimeException</span><span class="p">::</span><span class="k">new</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">getPrivacyGroupId</span><span class="p">();</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">Base64String</span><span class="w"> </span><span class="n">aliceBobGroupFromBobNode</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">nodeBob</span>
+<span class="w">                </span><span class="p">.</span><span class="na">privOnChainFindPrivacyGroup</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span><span class="w"> </span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">().</span><span class="na">getGroups</span><span class="p">().</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">g</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="na">getPrivacyGroupId</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">aliceBobGroup</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">findFirst</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">orElseThrow</span><span class="p">(</span><span class="n">RuntimeException</span><span class="p">::</span><span class="k">new</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">getPrivacyGroupId</span><span class="p">();</span>
 
 <span class="c1">// Create two private transaction manager instances for Alice and Bob in order to interact with smart contracts</span>
-<span class="kd">final</span> <span class="n">PrivateTransactionManager</span> <span class="n">tmAlice</span> <span class="o">=</span>
-        <span class="k">new</span> <span class="n">BesuPrivateTransactionManager</span><span class="p">(</span>
-                <span class="n">nodeAlice</span><span class="p">,</span>
-                <span class="n">ZERO_GAS_PROVIDER</span><span class="p">,</span>
-                <span class="n">ALICE</span><span class="p">,</span>
-                <span class="mi">2018</span><span class="p">,</span>
-                <span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
-                <span class="n">aliceBobGroup</span><span class="p">);</span>
-<span class="kd">final</span> <span class="n">PrivateTransactionManager</span> <span class="n">tmBob</span> <span class="o">=</span>
-        <span class="k">new</span> <span class="n">BesuPrivateTransactionManager</span><span class="p">(</span>
-                <span class="n">nodeBob</span><span class="p">,</span>
-                <span class="n">ZERO_GAS_PROVIDER</span><span class="p">,</span>
-                <span class="n">BOB</span><span class="p">,</span>
-                <span class="mi">2018</span><span class="p">,</span>
-                <span class="n">ENCLAVE_KEY_BOB</span><span class="p">,</span>
-                <span class="n">aliceBobGroupFromBobNode</span><span class="p">);</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">PrivateTransactionManager</span><span class="w"> </span><span class="n">tmAlice</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">BesuPrivateTransactionManager</span><span class="p">(</span>
+<span class="w">                </span><span class="n">nodeAlice</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ZERO_GAS_PROVIDER</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ALICE</span><span class="p">,</span>
+<span class="w">                </span><span class="mi">2018</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ENCLAVE_KEY_ALICE</span><span class="p">,</span>
+<span class="w">                </span><span class="n">aliceBobGroup</span><span class="p">);</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">PrivateTransactionManager</span><span class="w"> </span><span class="n">tmBob</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">BesuPrivateTransactionManager</span><span class="p">(</span>
+<span class="w">                </span><span class="n">nodeBob</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ZERO_GAS_PROVIDER</span><span class="p">,</span>
+<span class="w">                </span><span class="n">BOB</span><span class="p">,</span>
+<span class="w">                </span><span class="mi">2018</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ENCLAVE_KEY_BOB</span><span class="p">,</span>
+<span class="w">                </span><span class="n">aliceBobGroupFromBobNode</span><span class="p">);</span>
 
 <span class="c1">// Deploy the token from Alice&#39;s node</span>
-<span class="kd">final</span> <span class="n">HumanStandardToken</span> <span class="n">tokenAlice</span> <span class="o">=</span>
-        <span class="n">HumanStandardToken</span><span class="p">.</span><span class="na">deploy</span><span class="p">(</span>
-                        <span class="n">nodeAlice</span><span class="p">,</span>
-                        <span class="n">tmAlice</span><span class="p">,</span>
-                        <span class="n">ZERO_GAS_PROVIDER</span><span class="p">,</span>
-                        <span class="n">BigInteger</span><span class="p">.</span><span class="na">TEN</span><span class="p">,</span>
-                        <span class="s">&quot;eea_token&quot;</span><span class="p">,</span>
-                        <span class="n">BigInteger</span><span class="p">.</span><span class="na">TEN</span><span class="p">,</span>
-                        <span class="s">&quot;EEATKN&quot;</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">send</span><span class="p">();</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">HumanStandardToken</span><span class="w"> </span><span class="n">tokenAlice</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">HumanStandardToken</span><span class="p">.</span><span class="na">deploy</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">nodeAlice</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">tmAlice</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ZERO_GAS_PROVIDER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">TEN</span><span class="p">,</span>
+<span class="w">                        </span><span class="s">&quot;eea_token&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">TEN</span><span class="p">,</span>
+<span class="w">                        </span><span class="s">&quot;EEATKN&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">();</span>
 
 <span class="c1">// Get an instance of the token from Bob&#39;s node</span>
-<span class="kd">final</span> <span class="n">HumanStandardToken</span> <span class="n">tokenBob</span> <span class="o">=</span>
-        <span class="n">HumanStandardToken</span><span class="p">.</span><span class="na">load</span><span class="p">(</span>
-                <span class="n">tokenAlice</span><span class="p">.</span><span class="na">getContractAddress</span><span class="p">(),</span> <span class="n">nodeBob</span><span class="p">,</span> <span class="n">tmBob</span><span class="p">,</span> <span class="n">ZERO_GAS_PROVIDER</span><span class="p">);</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">HumanStandardToken</span><span class="w"> </span><span class="n">tokenBob</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="n">HumanStandardToken</span><span class="p">.</span><span class="na">load</span><span class="p">(</span>
+<span class="w">                </span><span class="n">tokenAlice</span><span class="p">.</span><span class="na">getContractAddress</span><span class="p">(),</span><span class="w"> </span><span class="n">nodeBob</span><span class="p">,</span><span class="w"> </span><span class="n">tmBob</span><span class="p">,</span><span class="w"> </span><span class="n">ZERO_GAS_PROVIDER</span><span class="p">);</span>
 </code></pre></div>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
       </main>
       
-        
-<footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../privacy_with_besu/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Privacy with Hyperledger Besu" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Privacy with Hyperledger Besu
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../advanced/recursive_length_prefix/" class="md-footer__link md-footer__link--next" aria-label="Next: Recursive Length Prefix" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Recursive Length Prefix
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017-2019 Web3 Labs Ltd
-          </div>
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2017-2023 Web3 Labs Ltd
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
+        <div class="md-social">
+  
+    
+    
+    
     
       
       
-        
-        
-      
-      <a href="https://github.com/web3j" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-      </a>
+    
+    <a href="https://github.com/web3j" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
     
       
       
-        
-        
-      
-      <a href="https://twitter.com/web3labs" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-      </a>
+    
+    <a href="https://twitter.com/web3labs" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
     
       
       
-        
-        
-      
-      <a href="https://linkedin.com/in/web3labs" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://linkedin.com/in/web3labs" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1604,10 +1591,11 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.e99e714c.min.js", "version": {"method": "mike"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.bc35569b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
       
         <script src="../../js/version-select.js"></script>
       
