@@ -63,13 +63,13 @@ It also provides integration tests for demonstrating the deploying and working w
 EIP-20 Ethereum token standard smart contract 
 ---------------------------------------------
 
-There an Ethereum standard, [EIP-20](https://eips.ethereum.org/EIPS/eip-20) which started off as an [Ethereum Improvement Proposal
+There is an Ethereum standard, [EIP-20](https://eips.ethereum.org/EIPS/eip-20) which started off as an [Ethereum Improvement Proposal
 (EIP)](https://github.com/ethereum/EIPs), that defines the standard functions that a smart contract providing tokens should implement.
 
 The EIP-20 standard provides function definitions, but does not provide an implementation example. However, there is an implementation provided in
 [codegen/src/test/resources/solidity/contracts](https://github.com/web3j/web3j/tree/master/codegen/src/test/resources/solidity/contracts), which has been taken from ConsenSys' [Tokens project](https://github.com/ConsenSys/Tokens).
 
-Open Zeppelin also provide an example implementation on [GitHub](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/token).
+Open Zeppelin also provides an example implementation on [GitHub](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/token).
 
 There are two integration tests that have been written to fully demonstrate the functionality of this token smart contract.
 
