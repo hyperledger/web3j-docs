@@ -9,40 +9,40 @@ Web3j implementation
 
 To make this possible, a new transaction signing class has been created: [TxHSMSignService](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/service/TxHSMSignService.java). This extends TxSignService so it can be easily added to the transaction manager instantiation in order to sign transactions.
 
-![image](img/HSM/HSM_sign_service.png)
+![image](../img/HSM/HSM_sign_service.png)
 
 TxHSMSignService is based on other two classes. First is [HSMPass](https://github.com/web3j/web3j/blob/master/crypto/src/main/java/org/web3j/crypto/HSMPass.java) that holds the address and the public key in order to can perform a request to a HSM. Second one is [HSMRequestProcessor](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/service/HSMRequestProcessor.java) which process the request to HSM.
 
-![image](img/HSM/HSM_interfaces.png)
+![image](../img/HSM/HSM_interfaces.png)
 
 Usage in web3j
 -----------------------------
 
 To implement and sign transactions with HSM using Web3j do the following:
 
-1.  Implement HSMRequestProcessor in order to handle requests submitted to the HSM. Currently Web3J handles HTTP request to HSM which is implemented in the classes HSMHTTPRequestProcessor and HSMHTTPPass, see class diagram below:
+- Implement HSMRequestProcessor in order to handle requests submitted to the HSM. Currently Web3J handles HTTP request to HSM which is implemented in the classes HSMHTTPRequestProcessor and HSMHTTPPass, see class diagram below:
 
-![image](img/HSM/HSM_http_approach.png)
+![image](../img/HSM/HSM_http_approach.png)
 NOTE! HSMHTTPRequestProcessor is an abstract class so you need to extend it and to implement proper handling for createRequest and readRespons methods. Check [this](https://github.com/web3j/web3j/blob/master/core/src/test/java/org/web3j/tx/HSMHTTPRequestProcessorTestImpl.java) unit test to inspire.
 
-2.  Instantiate new HSMPass object:
+- Instantiate new HSMPass object:
 ```java
 HSMHTTPPass hsmhttpPass = new HSMHTTPPass(
         <account_address>, 
         <account_public_key>, 
         <hms_url>);
 ```
-3.  Instantiate the new implementation of HSMHTTPRequestProcessor:
+- Instantiate the new implementation of HSMHTTPRequestProcessor:
 ```java
 HSMHTTPRequestProcessor hsmRequestProcessor = 
         new HSMHTTPRequestProcessorTestImpl<>(<http_client>);
 ```
-4. Create new HSM sing service:
+- Create new HSM sing service:
 ```java
 TxSignService txHSMSignService = 
         new TxHSMSignService<>(hsmRequestProcessor, hsmhttpPass);
 ```
-5.  Submit the transaction service to a transaction manager and sign the transaction:
+- Submit the transaction service to a transaction manager and sign the transaction:
 ```java
 RawTransactionManager transactionManager = new RawTransactionManager(
         web3j, 
