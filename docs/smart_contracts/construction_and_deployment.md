@@ -62,7 +62,7 @@ You can also generate the wrappers by calling the Java class directly:
 org.web3j.codegen.SolidityFunctionWrapperGenerator -b /path/to/<smart-contract>.bin -a /path/to/<smart-contract>.abi -o /path/to/src/main/java -p com.your.organisation.name
 ```
 
-Where the *bin* and *abi* are obtained as per [Compiling Solidity sourse code](compiling_solidity.md#compiling-solidity-source-code)
+Where the *bin* and *abi* are obtained as per [Compiling Solidity source code](compiling_solidity.md#compiling-solidity-source-code)
 
 The native Java to Solidity type conversions used are detailed in the [Application Binary Interface](application_binary_interface.md) section.
 
