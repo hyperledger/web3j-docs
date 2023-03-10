@@ -7,7 +7,7 @@ repo_name: "web3j/web3j"
 repo_url: "https://github.com/web3j/web3j"
 
 # Copyright
-copyright: "Copyright &copy; 2017-2019 Web3 Labs Ltd"
+copyright: "Copyright &copy; 2017-2023 Web3 Labs Ltd"
 
 
 nav:
@@ -59,6 +59,7 @@ nav:
       - Management Apis: advanced/management_apis.md
       - Ethereum Name Service: advanced/ethereum_name_service.md
       - TLS over HTTP and Websockets: advanced/tls_http_websockets.md
+      - HSM Transaction Signing: advanced/HSM_transaction_signing.md
       - Web3j Core Modules: advanced/web3j_core_modules.md
   - Command Line Tools: command_line_tools.md
   - References:
@@ -84,7 +85,7 @@ theme:
 # Customization
 extra:
   web3j:
-    version: 4.8.7
+    version: 4.9.7
   android:
     version: 4.6.0
   sokt:

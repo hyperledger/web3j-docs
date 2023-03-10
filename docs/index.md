@@ -20,6 +20,7 @@ Features
 -   Support for OpenEthereum's [Personal](https://openethereum.github.io/wiki/JSONRPC-personal-module), and Geth's [Personal](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal) client APIs
 -   Support for [Alchemy](https://alchemyapi.io/) and [Infura](https://infura.io/), so you don't have to run an Ethereum client yourself
 -   Support for ERC20 and ERC721 token standards
+-   Support for HSM
 -   Comprehensive integration tests demonstrating a number of the above scenarios
 -   Command line tools
 -   Android compatible
