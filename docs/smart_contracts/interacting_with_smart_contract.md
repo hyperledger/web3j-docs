@@ -7,7 +7,7 @@ However, you may wish to modify the transaction manager, which you can pass to t
 
 ```java
 YourSmartContract contract = YourSmartContract.deploy(
-        <web3j>, <transactionManager>, GAS_PRICE, GAS_LIMIT,
+        <web3j>, <transactionManager>, <contractGasProvider>,
         <param1>, ..., <paramN>).send();
 ```
 

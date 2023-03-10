@@ -14,7 +14,7 @@ You can use ENS names anywhere you wish to transact in web3j. In practice this m
 
 ```java
 YourSmartContract contract = YourSmartContract.load(
-        "0x<address>|<ensName>", web3j, credentials, GAS_PRICE, GAS_LIMIT);
+        "0x<address>|<ensName>", web3j, credentials, contractGasProvider);
 ```
 
 Also, when performing Ether transfers, such as using the command line

@@ -23,7 +23,7 @@ Credentials credentials = WalletUtils.loadCredentials("password", "/path/to/wall
 
 YourSmartContract contract = YourSmartContract.deploy(
         <web3j>, <credentials>,
-        GAS_PRICE, GAS_LIMIT,
+        <contractGasProvider>,
         <param1>, ..., <paramN>).send();  // constructor params
 ```
 
@@ -31,7 +31,7 @@ Or use an existing contract:
 
 ```java
 YourSmartContract contract = YourSmartContract.load(
-        "0x<address>|<ensName>", <web3j>, <credentials>, GAS_PRICE, GAS_LIMIT);
+        "0x<address>|<ensName>", <web3j>, <credentials>, <contractGasProvider>);
 ```
 
 To transact with a smart contract:
