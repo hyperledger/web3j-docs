@@ -27,5 +27,7 @@ jobs:
         run: |
           git config --global user.name Web3Labs
           git config --global user.email web3labs@web3labs.com
+          git checkout gh-pages
+          git pull origin gh-pages
       - name: Deploy with Mike
         run: mike deploy ${{ env.version }} -p
