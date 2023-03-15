@@ -2,262 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://web3j.io/4.9.7/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/command_line_tools/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/quickstart/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/web3j_eth2_client/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/web3j_evm/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/web3j_openapi/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/web3j_sokt/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/web3j_unit/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/HSM_transaction_signing/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/ethereum_name_service/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/filters_and_events/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/management_apis/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/recursive_length_prefix/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/tls_http_websockets/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/advanced/web3j_core_modules/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/getting_started/deploy_interact_smart_contracts/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/getting_started/interacting_with_node/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/getting_started/manual_configuration/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/getting_started/pub_sub/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/getting_started/run_node_locally/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/plugins/solidity_gradle_plugin/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/plugins/web3j_gradle_plugin/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/plugins/web3j_maven_plugin/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/privacy/besu_quickstart/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/privacy/privacy_support_web3j/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/privacy/privacy_with_besu/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/references/companies_using_web3j/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/references/developer_guide/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/references/links_and_useful_resources/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/references/projects_using_web3j/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/references/thanks_and_credits/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/references/troubleshooting/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/application_binary_interface/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/compiling_solidity/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/construction_and_deployment/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/contract_validity/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/contracts_supported_by_web3j/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/getting_started_solidity/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/interacting_with_smart_contract/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/smart_contracts_overview/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/smart_contracts/testing_smart_contracts/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/credentials/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/ethereum_testnets/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/gas/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/obtaining_ether/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/transaction_mechanisms/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/transaction_nonce/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/transaction_types/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/transactions/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/transactions_and_smart_contracts/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/transfer_eth/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://web3j.io/4.9.7/transactions/wallet_files/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
