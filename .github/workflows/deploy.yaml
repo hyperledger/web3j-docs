@@ -21,5 +21,7 @@ jobs:
         run: pip install mike
       - name: Install mkdocs-material
         run: pip install mkdocs-material
+      - name: Install mkdocs-markdownextradata-plugin
+        run: pip install mkdocs-markdownextradata-plugin
       - name: Deploy with Mike
         run: mike deploy ${{ env.version }} -p
