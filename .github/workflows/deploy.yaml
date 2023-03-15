@@ -1,0 +1,27 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+env:
+  VERSION: ${{ steps.get_version.outputs.version }}
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get version number
+        id: get_version
+        run: echo "::set-output name=version::$(grep -A 2 "extra:" mkdocs.yml | grep -A 1 "web3j:" | awk '/version:/ {print $2}')"
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: Install Mike
+        run: pip install mike
+      - name: Install mkdocs-material
+        run: pip install mkdocs-material
+      - name: Deploy with Mike
+        run: mike deploy $VERSION -p
