@@ -8,7 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Get version number
         id: get_version
         run: |
@@ -27,7 +29,6 @@ jobs:
         run: |
           git config --global user.name Web3Labs
           git config --global user.email web3labs@web3labs.com
-          git checkout gh-pages
-          git pull origin gh-pages
+          git fetch origin gh-pages --depth=1
       - name: Deploy with Mike
         run: mike deploy ${{ env.version }} -p
