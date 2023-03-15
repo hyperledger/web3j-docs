@@ -23,5 +23,9 @@ jobs:
         run: pip install mkdocs-material
       - name: Install mkdocs-markdownextradata-plugin
         run: pip install mkdocs-markdownextradata-plugin
+      - name: Setup git config
+        run: |
+          git config --global user.name Web3Labs
+          git config --global user.email web3labs@web3labs.com
       - name: Deploy with Mike
         run: mike deploy ${{ env.version }} -p
