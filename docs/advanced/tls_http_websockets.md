@@ -54,4 +54,4 @@ OkHttpClient client = new OkHttpClient.Builder()
 final HttpService httpService = new HttpService("https://<web3j-endpoint>", client, false);
 final Web3j web3j = Web3j.build(httpService);
 ```
-Source: [okHttp TLS docs](https://square.github.io/okhttp/features/https/)
+Source: [okHttp TLS docs](https://square.github.io/okhttp/features/https/) 
