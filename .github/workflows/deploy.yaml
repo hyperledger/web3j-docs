@@ -11,7 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Get version number
         id: get_version
-        run: echo "::set-output name=version::$(grep -A 2 "extra:" mkdocs.yml | grep -A 1 "web3j:" | awk '/version:/ {print $2}')"
+        run: |
+          echo "version=$(grep -A 2 "extra:" mkdocs.yml | grep -A 1 "web3j:" | awk '/version:/ {print $2}')" >> $GITHUB_ENV
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
         with:
@@ -21,4 +22,4 @@ jobs:
       - name: Install mkdocs-material
         run: pip install mkdocs-material
       - name: Deploy with Mike
-        run: mike deploy ${{ steps.get_version.outputs.version }} -p
+        run: mike deploy ${{ env.version }} -p
