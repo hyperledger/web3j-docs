@@ -11,7 +11,7 @@ dependencies {
 ```
 For other build systems, see [here](https://mvnrepository.com/artifact/org.web3j/web3j-sokt/0.2.1).
 
-Example usage:
+Example usage Sokt:
 ```java
   String fileName = filePath.substringAfterLast("/");
   System.out.println("sokt Processing " + fileName);
