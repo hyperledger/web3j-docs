@@ -1,0 +1,2392 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation portal for the web3j Blockchain Library">
+      
+      
+        <meta name="author" content="Web3 Labs">
+      
+      
+        <link rel="canonical" href="https://web3j.io/4.9.8/web3j_openapi/">
+      
+      
+        <link rel="prev" href="../web3j_eth2_client/">
+      
+      
+        <link rel="next" href="../web3j_unit/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Web3j OpenAPI - Web3j</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../css/version-select.css">
+    
+      <link rel="stylesheet" href="../css/version-select.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web3j-openapi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Web3j" class="md-header__button md-logo" aria-label="Web3j" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web3j
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web3j OpenAPI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/web3j/web3j" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    web3j/web3j
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Web3j" class="md-nav__button md-logo" aria-label="Web3j" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    Web3j
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/web3j/web3j" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    web3j/web3j
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        Quickstart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/run_node_locally/" class="md-nav__link">
+        Run a Node locally
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/interacting_with_node/" class="md-nav__link">
+        Interacting with a Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/deploy_interact_smart_contracts/" class="md-nav__link">
+        Deploy and Interact with Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/pub_sub/" class="md-nav__link">
+        Filters and Flowables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/manual_configuration/" class="md-nav__link">
+        Manual Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/smart_contracts_overview/" class="md-nav__link">
+        Smart Contract Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/getting_started_solidity/" class="md-nav__link">
+        Getting Started with Solidity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/compiling_solidity/" class="md-nav__link">
+        Compiling Solidity source code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/construction_and_deployment/" class="md-nav__link">
+        Construction and Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/interacting_with_smart_contract/" class="md-nav__link">
+        Interacting with Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/contract_validity/" class="md-nav__link">
+        Contract Validity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/testing_smart_contracts/" class="md-nav__link">
+        Testing Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/application_binary_interface/" class="md-nav__link">
+        Application Binary Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smart_contracts/contracts_supported_by_web3j/" class="md-nav__link">
+        Contracts Supported by Web3j
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Transactions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Transactions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/transactions/" class="md-nav__link">
+        Ethereum Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/obtaining_ether/" class="md-nav__link">
+        Obtaining Ether
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/ethereum_testnets/" class="md-nav__link">
+        Ethereum Test Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/gas/" class="md-nav__link">
+        Gas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/credentials/" class="md-nav__link">
+        Credentials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/transfer_eth/" class="md-nav__link">
+        Transfer Eth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/transaction_mechanisms/" class="md-nav__link">
+        Transaction Mechanisms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/transaction_nonce/" class="md-nav__link">
+        Transaction Nonce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/transaction_types/" class="md-nav__link">
+        Transaction Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/transactions_and_smart_contracts/" class="md-nav__link">
+        Transactions and Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/wallet_files/" class="md-nav__link">
+        Wallet Files
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3j_eth2_client/" class="md-nav__link">
+        Web3j Eth2 Client
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Web3j OpenAPI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Web3j OpenAPI
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-web3j-openapi" class="md-nav__link">
+    Getting started with Web3j-OpenAPI
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started with Web3j-OpenAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-project" class="md-nav__link">
+    Generate a project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-project" class="md-nav__link">
+    Configure the project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-project" class="md-nav__link">
+    Run the project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interact-with-the-generated-project" class="md-nav__link">
+    Interact with the generated project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaggerui" class="md-nav__link">
+    SwaggerUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-requests" class="md-nav__link">
+    HTTP requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-application" class="md-nav__link">
+    Client application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ways-to-generate-an-openapi-project" class="md-nav__link">
+    Ways to generate an OpenAPI project
+  </a>
+  
+    <nav class="md-nav" aria-label="Ways to generate an OpenAPI project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-hello-world-project" class="md-nav__link">
+    Generate a Hello World project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-using-custom-solidity-smart-contracts" class="md-nav__link">
+    Generate using custom Solidity smart contracts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-an-executable-jar" class="md-nav__link">
+    Generate an executable JAR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-the-rest-api-only" class="md-nav__link">
+    Generate the REST API only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-using-the-web3j-openapi-gradle-plugin" class="md-nav__link">
+    Generate using the web3j-openapi-gradle-plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-project_1" class="md-nav__link">
+    Run the project
+  </a>
+  
+    <nav class="md-nav" aria-label="Run the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#runtime-parameters" class="md-nav__link">
+    Runtime parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-parameters" class="md-nav__link">
+    Supported parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-of-precedence" class="md-nav__link">
+    Order of precedence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-arguments" class="md-nav__link">
+    CLI arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-server" class="md-nav__link">
+    Start the server
+  </a>
+  
+    <nav class="md-nav" aria-label="Start the server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-generated-jar" class="md-nav__link">
+    The generated JAR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-distribution-executable" class="md-nav__link">
+    The distribution executable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-gradle" class="md-nav__link">
+    Using gradle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-web3j-openapi-client" class="md-nav__link">
+    The Web3j-OpenAPI client
+  </a>
+  
+    <nav class="md-nav" aria-label="The Web3j-OpenAPI client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-events" class="md-nav__link">
+    Handling events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3j_unit/" class="md-nav__link">
+        Web3j Unit
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3j_evm/" class="md-nav__link">
+        Web3j EVM
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3j_sokt/" class="md-nav__link">
+        Web3j Sokt
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          Build Plugins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Build Plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/solidity_gradle_plugin/" class="md-nav__link">
+        Solidity Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/web3j_gradle_plugin/" class="md-nav__link">
+        Web3j Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/web3j_maven_plugin/" class="md-nav__link">
+        Web3j Maven Plugin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          Privacy & Permissioning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Privacy & Permissioning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/besu_quickstart/" class="md-nav__link">
+        Besu Quickstart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/privacy_with_besu/" class="md-nav__link">
+        Privacy with Hyperledger Besu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy/privacy_support_web3j/" class="md-nav__link">
+        Privacy Support in Web3j
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/recursive_length_prefix/" class="md-nav__link">
+        Recursive Length Prefix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/filters_and_events/" class="md-nav__link">
+        Filters and Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/management_apis/" class="md-nav__link">
+        Management Apis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/ethereum_name_service/" class="md-nav__link">
+        Ethereum Name Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/tls_http_websockets/" class="md-nav__link">
+        TLS over HTTP and Websockets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/HSM_transaction_signing/" class="md-nav__link">
+        HSM Transaction Signing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/web3j_core_modules/" class="md-nav__link">
+        Web3j Core Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/jwk_support/" class="md-nav__link">
+        Json Web Key (JWK) support
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command_line_tools/" class="md-nav__link">
+        Command Line Tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          References
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/projects_using_web3j/" class="md-nav__link">
+        Projects using Web3j
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/companies_using_web3j/" class="md-nav__link">
+        Companies using Web3j
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/developer_guide/" class="md-nav__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/links_and_useful_resources/" class="md-nav__link">
+        Links and Useful Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/thanks_and_credits/" class="md-nav__link">
+        Thanks and Credits
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.web3j.io/latest/javadoc-api/" class="md-nav__link">
+        Javadoc
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-web3j-openapi" class="md-nav__link">
+    Getting started with Web3j-OpenAPI
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started with Web3j-OpenAPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-project" class="md-nav__link">
+    Generate a project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-project" class="md-nav__link">
+    Configure the project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-project" class="md-nav__link">
+    Run the project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interact-with-the-generated-project" class="md-nav__link">
+    Interact with the generated project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaggerui" class="md-nav__link">
+    SwaggerUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-requests" class="md-nav__link">
+    HTTP requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-application" class="md-nav__link">
+    Client application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ways-to-generate-an-openapi-project" class="md-nav__link">
+    Ways to generate an OpenAPI project
+  </a>
+  
+    <nav class="md-nav" aria-label="Ways to generate an OpenAPI project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generate-a-hello-world-project" class="md-nav__link">
+    Generate a Hello World project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-using-custom-solidity-smart-contracts" class="md-nav__link">
+    Generate using custom Solidity smart contracts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-an-executable-jar" class="md-nav__link">
+    Generate an executable JAR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-the-rest-api-only" class="md-nav__link">
+    Generate the REST API only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-using-the-web3j-openapi-gradle-plugin" class="md-nav__link">
+    Generate using the web3j-openapi-gradle-plugin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-project_1" class="md-nav__link">
+    Run the project
+  </a>
+  
+    <nav class="md-nav" aria-label="Run the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#runtime-parameters" class="md-nav__link">
+    Runtime parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-parameters" class="md-nav__link">
+    Supported parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-of-precedence" class="md-nav__link">
+    Order of precedence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cli-arguments" class="md-nav__link">
+    CLI arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-server" class="md-nav__link">
+    Start the server
+  </a>
+  
+    <nav class="md-nav" aria-label="Start the server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-generated-jar" class="md-nav__link">
+    The generated JAR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-distribution-executable" class="md-nav__link">
+    The distribution executable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-gradle" class="md-nav__link">
+    Using gradle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-web3j-openapi-client" class="md-nav__link">
+    The Web3j-OpenAPI client
+  </a>
+  
+    <nav class="md-nav" aria-label="The Web3j-OpenAPI client">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-events" class="md-nav__link">
+    Handling events
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="web3j-openapi">Web3j-OpenAPI<a class="headerlink" href="#web3j-openapi" title="Permanent link">&para;</a></h1>
+<p><a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> is an <a href="https://swagger.io/specification/">OpenAPI</a>
+client and server generator from <a href="https://solidity.readthedocs.io/">Solidity</a> smart contracts.
+It provides a way to interact with the <a href="https://ethereum.org/">Ethereum</a> smart contracts using a simple RESTful API.
+These interactions can be done using plain HTTP requests 
+or via the <a href="https://swagger.io/tools/swagger-ui/">Swagger-UI</a>, 
+which is generated with every project.</p>
+<p>This workflow can be summed in the following steps:</p>
+<ul>
+<li>
+<p>Writing a Solidity smart contract</p>
+</li>
+<li>
+<p>Generating the corresponding <a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> project using <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-CLI</a></p>
+</li>
+<li>
+<p>Running the generated project as a standalone server</p>
+</li>
+<li>
+<p>Sending HTTP requests using the <code>Swagger-UI</code>, <code>Java/Kotlin</code> client, <code>Curl</code> or other.</p>
+</li>
+</ul>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>The following Hello World contract :</p>
+<div class="codehilite"><pre><span></span><code>// SPDX-License-Identifier: Apache-2.0
+pragma solidity ^0.7.0;
+
+// Modified Greeter contract. Based on example at https://www.ethereum.org/greeter.
+
+contract Mortal {
+    /* Define variable owner of the type address*/
+    address owner;
+
+    /* this function is executed at initialization and sets the owner of the contract */
+    constructor () {owner = msg.sender;}
+
+    modifier onlyOwner {
+        require(
+            msg.sender == owner,
+            &quot;Only owner can call this function.&quot;
+        );
+        _;
+    }
+
+    /* Function to recover the funds on the contract */
+    function kill() onlyOwner public {selfdestruct(msg.sender);}
+}
+
+contract HelloWorld is Mortal {
+    /* define variable greeting of the type string */
+    string greet;
+
+    /* this runs when the contract is executed */
+    constructor (string memory _greet) {
+        greet = _greet;
+    }
+
+    function newGreeting(string memory _greet) onlyOwner public {
+        emit Modified(greet, _greet, greet, _greet);
+        greet = _greet;
+    }
+
+    /* main function */
+    function greeting() public view returns (string memory)  {
+        return greet;
+    }
+
+    event Modified(
+        string indexed oldGreetingIdx, string indexed newGreetingIdx,
+        string oldGreeting, string newGreeting);
+}
+</code></pre></div>
+
+<p>generates the following <code>OpenAPI</code> specs : </p>
+<div class="codehilite"><pre><span></span><code>{
+   &quot;openapi&quot;:&quot;3.0.1&quot;,
+   &quot;info&quot;:{
+      &quot;title&quot;:&quot;Web3j OpenApi&quot;,
+      &quot;contact&quot;:{
+         &quot;name&quot;:&quot;Web3 Labs&quot;,
+         &quot;url&quot;:&quot;http://web3labs.com&quot;,
+         &quot;email&quot;:&quot;hi@web3labs.com&quot;
+      },
+      &quot;version&quot;:&quot;4.9.8&quot;
+   },
+   &quot;tags&quot;:[
+      {
+         &quot;name&quot;:&quot;default&quot;,
+         &quot;description&quot;:&quot;Lists existing contracts and events&quot;
+      },
+      {
+         &quot;name&quot;:&quot;HelloWorld Methods&quot;,
+         &quot;description&quot;:&quot;List HelloWorld method&amp;#39;s calls&quot;
+      },
+      {
+         &quot;name&quot;:&quot;HelloWorld Events&quot;,
+         &quot;description&quot;:&quot;List HelloWorld event&amp;#39;s calls&quot;
+      }
+   ],
+   &quot;paths&quot;:{
+      &quot;/Web3App/contracts/helloworld/{contractAddress}/Kill&quot;:{
+         &quot;get&quot;:{
+            &quot;tags&quot;:[
+               &quot;HelloWorld Methods&quot;
+            ],
+            &quot;summary&quot;:&quot;Execute the Kill method&quot;,
+            &quot;operationId&quot;:&quot;kill&quot;,
+            &quot;parameters&quot;:[
+               {
+                  &quot;name&quot;:&quot;contractAddress&quot;,
+                  &quot;in&quot;:&quot;path&quot;,
+                  &quot;required&quot;:true,
+                  &quot;schema&quot;:{
+                     &quot;type&quot;:&quot;string&quot;
+                  }
+               }
+            ],
+            &quot;responses&quot;:{
+               &quot;default&quot;:{
+                  &quot;description&quot;:&quot;default response&quot;,
+                  &quot;content&quot;:{
+                     &quot;application/json&quot;:{
+                        &quot;schema&quot;:{
+                           &quot;$ref&quot;:&quot;#/components/schemas/TransactionReceiptModel&quot;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
+...
+</code></pre></div>
+
+<p>With a corresponding <code>Swagger-UI</code> : 
+<img alt="image" src="../img/Web3j-OpenAPI/SwaggerUI_1.png" /></p>
+<p>The available methods are:</p>
+<p><img alt="image" src="../img/Web3j-OpenAPI/SwaggerUI_2.png" /></p>
+<p>The available events are:</p>
+<p><img alt="image" src="../img/Web3j-OpenAPI/SwaggerUI_2_Events.png" /></p>
+<h2 id="getting-started-with-web3j-openapi">Getting started with Web3j-OpenAPI<a class="headerlink" href="#getting-started-with-web3j-openapi" title="Permanent link">&para;</a></h2>
+<h3 id="generate-a-project">Generate a project<a class="headerlink" href="#generate-a-project" title="Permanent link">&para;</a></h3>
+<p>To generate an OpenAPI project using the <a href="https://github.com/web3j/web3j-openapi">Web3j-OpenAPI</a> generator, you need to have the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-CLI</a> installed on your machine. 
+It’s easy to do (for Windows instructions head <a href="http://docs.web3j.io/latest/command_line_tools/">here</a>):</p>
+<div class="codehilite"><pre><span></span><code>$ curl -L get.web3j.io | sh
+</code></pre></div>
+
+<p>Then, you can run the</p>
+<div class="codehilite"><pre><span></span><code>$ web3j openapi import --help
+</code></pre></div>
+
+<p>To check the generator available options. </p>
+<p><img alt="image" src="../img/Web3j-OpenAPI/Generator_help.png" /></p>
+<p>In this case, we will be using the above Hello World contract.</p>
+<p>Put that contract in a file named <code>HelloWorld.sol</code> for starters.</p>
+<p>Then, execute the following command: </p>
+<div class="codehilite"><pre><span></span><code>$ web3j openapi import \
+    -s=HelloWorld.sol \
+    --package=com.tutorial \
+    --project-name=HelloWorldProject \
+    --output-dir=. 
+</code></pre></div>
+
+<p>You should be seeing logs similar to the following:
+<img alt="image" src="../img/Web3j-OpenAPI/Generator_logs.png" /></p>
+<h3 id="configure-the-project">Configure the project<a class="headerlink" href="#configure-the-project" title="Permanent link">&para;</a></h3>
+<p>You can run the project easily, without specifying any configuration, using the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-cli</a>.</p>
+<p>If not, you need to specify runtime parameters. for example, the <code>private key</code> or <code>wallet file</code> for the signing,
+the <code>node endpoint</code> to connect to, etc.</p>
+<p>To see the available options, run the distributions <code>executable</code> or the <code>JAR</code> with the <code>--help</code> flag. You'll get the following display:</p>
+<p><img alt="image" src="../img/Web3j-OpenAPI/Server_help.png" /></p>
+<p>To specify these parameters, you can set the following environment variables:</p>
+<div class="codehilite"><pre><span></span><code>$ export WEB3J_ENDPOINT=&lt;link_to_your_Ethereum_node&gt;
+$ export WEB3J_PRIVATE_KEY=&lt;your_private_key&gt;
+$ export WEB3J_OPENAPI_HOST=localhost
+$ export WEB3J_OPENAPI_PORT=9090
+</code></pre></div>
+
+<p>For more ways to pass these parameters, check the configuration section below.</p>
+<h3 id="run-the-project">Run the project<a class="headerlink" href="#run-the-project" title="Permanent link">&para;</a></h3>
+<p>We can run the project directly : </p>
+<div class="codehilite"><pre><span></span><code>$ ./gradlew run
+</code></pre></div>
+
+<p>You should be able to run the server and see the following:</p>
+<p><img alt="image" src="../img/Web3j-OpenAPI/Server_logs.png" /></p>
+<h3 id="interact-with-the-generated-project">Interact with the generated project<a class="headerlink" href="#interact-with-the-generated-project" title="Permanent link">&para;</a></h3>
+<p>Interactions can be done in multiple ways : </p>
+<h3 id="swaggerui">SwaggerUI<a class="headerlink" href="#swaggerui" title="Permanent link">&para;</a></h3>
+<p>The generated <code>SwaggerUI</code> is located on <code>{host}:{port}/swagger-ui</code> and can be used
+to do all possible interactions with the API. eg:</p>
+<p><img alt="image" src="../img/Web3j-OpenAPI/SwaggerUI_3.png" /></p>
+<h3 id="http-requests">HTTP requests<a class="headerlink" href="#http-requests" title="Permanent link">&para;</a></h3>
+<p>Sending HTTP requests via tools like <code>Curl</code>:</p>
+<div class="codehilite"><pre><span></span><code>$ curl -X POST &quot;http://{host}:{port}/HelloWorldProject/contracts/helloworld/{contract address}/NewGreeting&quot; -H &quot;accept: application/json&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{\&quot;_greet\&quot;:\&quot;Hello Web3j-OpenAPI\&quot;}&quot;
+</code></pre></div>
+
+<h3 id="client-application">Client application<a class="headerlink" href="#client-application" title="Permanent link">&para;</a></h3>
+<p>It is also possible to interact using a Java/Kotlin client application. 
+This latter can be done using our client implementation.</p>
+<p>Make sure to add the client dependency to your project.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;org.web3j.openapi:web3j-openapi-client:4.9.8&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>Then, you will be able to interact with the API as follows:</p>
+<div class="codehilite"><pre><span></span><code>val service = ClientService(&quot;http://localhost:9090&quot;)
+val helloWorldProject = ClientFactory.create(HelloWorldProjectApi::class.java, service)
+
+println(&quot;Deploying the HelloWorld contract...&quot;)
+
+val receipt = helloWorldProject.contracts.helloWorld.deploy(HelloWorldDeployParameters(&quot;Hello&quot;))
+
+println(&quot;Deployed contract address: ${receipt.contractAddress}&quot;)
+
+val newGreetingHash = helloWorldProject.contracts
+    .helloWorld
+    .load(receipt.contractAddress)
+    .newGreeting(NewGreetingParameters(&quot;Hello Web3j-OpenAPI&quot;))
+    .transactionHash
+
+println(&quot;NewGreeting method execution transaction hash: $newGreetingHash&quot;)
+
+val greeting = helloWorldProject.contracts
+    .helloWorld
+    .load(receipt.contractAddress)
+    .greeting()
+    .result
+
+println(&quot;Greeting method result: $greeting&quot;)
+</code></pre></div>
+
+<h2 id="ways-to-generate-an-openapi-project">Ways to generate an OpenAPI project<a class="headerlink" href="#ways-to-generate-an-openapi-project" title="Permanent link">&para;</a></h2>
+<p>First, you need to install the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-CLI</a> on your 
+machine. </p>
+<p>It’s easy to do (for Windows instructions head <a href="http://docs.web3j.io/latest/command_line_tools/">here</a>):</p>
+<div class="codehilite"><pre><span></span><code>$ curl -L get.web3j.io | sh
+</code></pre></div>
+
+<h3 id="generate-a-hello-world-project">Generate a Hello World project<a class="headerlink" href="#generate-a-hello-world-project" title="Permanent link">&para;</a></h3>
+<p>A Hello World project is a simple project based on a simple Solidity contract.
+It is generated using:</p>
+<div class="codehilite"><pre><span></span><code>$ web3j openapi new
+</code></pre></div>
+
+<p>This project can be used as a minimal project to start building your custom application
+upon.</p>
+<h3 id="generate-using-custom-solidity-smart-contracts">Generate using custom Solidity smart contracts<a class="headerlink" href="#generate-using-custom-solidity-smart-contracts" title="Permanent link">&para;</a></h3>
+<p>To generate a project using your desired smart contracts, use the following command:</p>
+<div class="codehilite"><pre><span></span><code>$ web3j openapi import \
+    --solidity-path &lt;path_to_Solidity_contracts&gt; \
+    --project-name &lt;project name&gt; \
+    --package &lt;package name&gt;
+</code></pre></div>
+
+<h3 id="generate-an-executable-jar">Generate an executable JAR<a class="headerlink" href="#generate-an-executable-jar" title="Permanent link">&para;</a></h3>
+<p>The following command will generate an executable JAR ready to be run: </p>
+<div class="codehilite"><pre><span></span><code>$ web3j openapi jar \
+    --solidity-path &lt;path_to_Solidity_contracts&gt;
+</code></pre></div>
+
+<h3 id="generate-the-rest-api-only">Generate the REST API only<a class="headerlink" href="#generate-the-rest-api-only" title="Permanent link">&para;</a></h3>
+<p>To generate only the API, ie the defined endpoints with their implementations,
+use the following:</p>
+<div class="codehilite"><pre><span></span><code>$ web3j openapi generate \
+    --solidity-path &lt;path_to_Solidity_contracts&gt; \
+    --with-implementations=true
+</code></pre></div>
+
+<p>This command will not generate a whole project structure. Thus, you will not have a
+runnable application. To have one, check the above sections.</p>
+<p>The <code>with-implementations</code> flag is set to <code>true</code> by default. This means that 
+the RESTful endpoints will be generated along their implementations. </p>
+<p>If you prefer to generate only the interfaces. Set that flag to <code>false</code>: </p>
+<div class="codehilite"><pre><span></span><code>--with-implementations=false
+</code></pre></div>
+
+<h3 id="generate-using-the-web3j-openapi-gradle-plugin">Generate using the <a href="https://github.com/web3j/web3j-openapi-gradle-plugin">web3j-openapi-gradle-plugin</a><a class="headerlink" href="#generate-using-the-web3j-openapi-gradle-plugin" title="Permanent link">&para;</a></h3>
+<p>It is possible to generate a Web3j-OpenAPI project directly from your <code>gradle</code> project using the <code>web3j-openapi-gradle-plugin</code>. 
+Check the <a href="https://github.com/web3j/web3j-openapi-gradle-plugin">documentation</a> for more information.</p>
+<h2 id="run-the-project_1">Run the project<a class="headerlink" href="#run-the-project_1" title="Permanent link">&para;</a></h2>
+<h3 id="runtime-parameters">Runtime parameters<a class="headerlink" href="#runtime-parameters" title="Permanent link">&para;</a></h3>
+<p>Before running the server, there are some parameters that need to
+be set. There are multiple ways of doing so:</p>
+<ul>
+<li>Environment variables</li>
+<li>Configuration file</li>
+<li>Passing the parameters directly to the JAR or the executable.</li>
+</ul>
+<p>Also, you can run the project without worrying about any of this
+using the <a href="http://docs.web3j.io/latest/command_line_tools/">Web3j-cli</a></p>
+<h3 id="supported-parameters">Supported parameters<a class="headerlink" href="#supported-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="center">Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td align="center"><code>Generation project name</code></td>
+<td>The project name</td>
+</tr>
+<tr>
+<td><code>config file</code></td>
+<td align="center"><code>~/.web3j/web3j.openapi.&lt;extension&gt;</code></td>
+<td>A custom configuration file to import extra parameters</td>
+</tr>
+<tr>
+<td><code>endpoint</code></td>
+<td align="center"><code>none</code></td>
+<td>Ethereum node endpoint to target when interacting with the blockchain</td>
+</tr>
+<tr>
+<td><code>private key</code></td>
+<td align="center"><code>none</code></td>
+<td>User private key in hex format prefixed by <code>0x</code></td>
+</tr>
+<tr>
+<td><code>wallet path</code></td>
+<td align="center"><code>none</code></td>
+<td>The path to the wallet file (can be absolute or relative)</td>
+</tr>
+<tr>
+<td><code>wallet password</code></td>
+<td align="center"><code>none</code></td>
+<td>The password of the specified wallet file in plain text</td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td align="center"><code>localhost</code></td>
+<td>The server host (can be an IP address or a hostname)</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td align="center"><code>8080</code></td>
+<td>The server port</td>
+</tr>
+<tr>
+<td><code>contract addresses</code></td>
+<td align="center"><code>none</code></td>
+<td>Use pre-deployed contract addresses: <code>contract1=0x123,contract2=0x1234</code>. All you need to provide to the generator is the ABIs.</td>
+</tr>
+</tbody>
+</table>
+<p>The necessary parameters are:</p>
+<ul>
+<li>
+<p>The Ethereum node endpoint to target when 
+interacting with the Ethereum network <code>endpoint</code></p>
+</li>
+<li>
+<p>Credentials : which can be either <code>private key</code>, or <code>wallet path</code> and <code>wallet password</code></p>
+</li>
+</ul>
+<p>The remaining parameters are optional.</p>
+<h3 id="order-of-precedence">Order of precedence<a class="headerlink" href="#order-of-precedence" title="Permanent link">&para;</a></h3>
+<p>The parameters can be specified interchangeably between different sources.
+ie, you can have some defined in a default configuration file and others in environment
+variables etc.</p>
+<p>However, for duplicated values, we enforce the following order :</p>
+<ol>
+<li>CLI arguments</li>
+<li>Custom configuration file specified in the CLI</li>
+<li>Custom configuration file specified in Environment variables</li>
+<li>Default configuration file </li>
+<li>Environment variables</li>
+</ol>
+<p>Check the following sections for more information.</p>
+<h3 id="cli-arguments">CLI arguments<a class="headerlink" href="#cli-arguments" title="Permanent link">&para;</a></h3>
+<p>The CLI arguments can be passed to the command the usual way.</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<p>Check the Starting the server section below to choose a command.</p>
+<div class="codehilite"><pre><span></span><code>$ &lt;command&gt; \
+    --private-key 0x1234 \
+    --name OpenApiProject \
+    --endpoint &lt;Ethereum node endpoint&gt; \
+    --host localhost \
+    --port 9090 \
+    --contract-addresses contract1=0x1234,contract2=0x123
+</code></pre></div>
+
+<h3 id="configuration-file">Configuration file<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h3>
+<p>You can put the parameters in a <code>configuration file</code>. This latter, can be 
+<code>YAML</code>, <code>Json</code> or <code>Java properties</code> type of files.</p>
+<p>The configuration file can be :</p>
+<ul>
+<li>Put in the default directory : <code>~/.web3j/web3j.openapi.&lt;extension&gt;</code></li>
+<li>Set in an environment variable: <code>WEB3J_OPENAPI_CONFIG_FILE</code> where the value is the path
+to the file.
+eg.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>export WEB3J_OPENAPI_CONFIG_FILE=&lt;path_to_the_config_file}
+</code></pre></div>
+
+<ul>
+<li>Set as an argument when running the JAR or the executable: <code>--config-file</code></li>
+</ul>
+<p>The supported extensions are :</p>
+<ul>
+<li><code>yaml</code> for a <code>YAML</code> configuration. Example:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nt">contractAddresses</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">helloworld</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0x1234&quot;</span>
+<span class="w">  </span><span class="nt">helloworld2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0x1234&quot;</span>
+<span class="nt">credentials</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0x1234&quot;</span>
+<span class="nt">network</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">endpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;your_node_endpoint_address&gt;&quot;</span>
+<span class="nt">project</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OpenApiProject&quot;</span>
+<span class="nt">server</span><span class="p">:</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost&quot;</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9090</span>
+</code></pre></div>
+
+<ul>
+<li><code>json</code> for a <code>Json</code> configuration. Example:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;contractAddresses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;helloworld&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0x1234&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;helloworld2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0x1234&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;credentials&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;privateKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0x1234&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;network&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your node endpoint address&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OpenApiProject&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;server&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9090</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><code>properties</code> for a <code>Java properties</code> configuration. Example:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>contractAddresses=helloworld=0x1234,helloworld2=0x1234
+credentials.privateKey=0x1234
+network.endpoint=your node endpoint address
+project.name=OpenApiProject
+server.host=localhost
+server.port=9090
+</code></pre></div>
+
+<h3 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>The easiest way to provide the runtime parameters is through environment variables.</p>
+<p>The rule is to:</p>
+<ul>
+<li>
+<p>Replace the <code>-</code> with a <code>_</code> : <code>private-key =&gt; private_key</code></p>
+</li>
+<li>
+<p>Upper case the options' names : <code>private-key =&gt; PRIVATE_KEY</code></p>
+</li>
+</ul>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>$ export WEB3J_ENDPOINT=&lt;link_to_your_Ethereum_node&gt;
+$ export WEB3J_OPENAPI_HOST=localhost
+$ export WEB3J_OPENAPI_PORT=9090
+$ export WEB3J_OPENAPI_NAME=Web3jOpenAPI
+$ export WEB3J_OPENAPI_CONTRACT_ADDRESSES=helloworld=0x1234,helloworld2=0x12345
+$ export WEB3J_OEPNAPI_CONFIG_FILE=~/myConfig.yaml
+</code></pre></div>
+
+<p>And one of the following:</p>
+<ul>
+<li>A raw private key :</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>$ export WEB3J_PRIVATE_KEY=0x1234
+</code></pre></div>
+
+<ul>
+<li>A wallet :</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>$ export WEB3J_WALLET_PATH=~/myWallet.json
+$ export WEB3J_WALLET_PASSWORD=myStrongPassword
+</code></pre></div>
+
+<h2 id="start-the-server">Start the server<a class="headerlink" href="#start-the-server" title="Permanent link">&para;</a></h2>
+<p>Starting the server can be done in the following ways:</p>
+<h3 id="the-generated-jar">The generated JAR<a class="headerlink" href="#the-generated-jar" title="Permanent link">&para;</a></h3>
+<p>A <code>JAR</code> can be generated using the following command:</p>
+<div class="codehilite"><pre><span></span><code>$ ./gradlew shadowJar
+</code></pre></div>
+
+<p>It will be found under the <code>build/libs</code> directory.</p>
+<p>The generated <code>JAR</code> can be run using the following:</p>
+<div class="codehilite"><pre><span></span><code>$ java -jar build/libs/&lt;project name&gt;-all.jar &lt;parameters&gt;
+</code></pre></div>
+
+<p>check the parameters section above for the supported parameters.</p>
+<h3 id="the-distribution-executable">The distribution executable<a class="headerlink" href="#the-distribution-executable" title="Permanent link">&para;</a></h3>
+<p>A server executable can be generated using the following:</p>
+<div class="codehilite"><pre><span></span><code>$ ./gradlew installShadowDist &lt;parameters&gt;
+</code></pre></div>
+
+<p>Which can be found in <code>build/install/&lt;app name&gt;-shadow/bin/</code></p>
+<h3 id="using-gradle">Using gradle<a class="headerlink" href="#using-gradle" title="Permanent link">&para;</a></h3>
+<p>To run the project using gradle. Make sure to have set some environment variables or configuration
+file as specified above.</p>
+<p>Then, run the following : </p>
+<div class="codehilite"><pre><span></span><code>$ ./gradlew run
+</code></pre></div>
+
+<h2 id="the-web3j-openapi-client">The Web3j-OpenAPI client<a class="headerlink" href="#the-web3j-openapi-client" title="Permanent link">&para;</a></h2>
+<p>Among the available ways to interact with a Web3j-OpenAPI server, there is the <code>Kotlin</code> client.</p>
+<p>It is easy to use.</p>
+<p>Start by adding dependency to the client:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;org.web3j.openapi:web3j-openapi-client:4.9.8&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>Then, within a client application:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClientService</span><span class="p">(</span><span class="s">&quot;http://localhost:9090&quot;</span><span class="p">)</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClientFactory</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="o">&lt;</span><span class="n">AppNameApi</span><span class="o">&gt;::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">,</span><span class="w"> </span><span class="n">service</span><span class="p">)</span>
+
+<span class="c1">// Then you have access to all the API resources</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">receipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="na">contracts</span><span class="p">.</span><span class="na">contractName</span><span class="p">.</span><span class="na">deploy</span><span class="p">()</span>
+
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;Deployment receipt: </span><span class="si">${</span><span class="n">receipt</span><span class="p">.</span><span class="na">contractAddress</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+
+<span class="c1">// ...</span>
+</code></pre></div>
+
+<h3 id="handling-events">Handling events<a class="headerlink" href="#handling-events" title="Permanent link">&para;</a></h3>
+<p>In web3j-OpenAPI, we handle events using Server-Sent Events <a href="https://docs.huihoo.com/jersey/2.13/sse.html">SSE</a>.</p>
+<p>In a nutshell, SSE is a one way mechanism that allows a server to asynchronously push data
+from the server to the client once the client-server connection is established by the client.</p>
+<p>To query events from <code>Kotlin/Java</code>. Add the <code>web3j-openapi-client</code> dependency as done above.
+Then, use the following code:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClientService</span><span class="p">(</span><span class="s">&quot;http://localhost:9090&quot;</span><span class="p">)</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClientFactory</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">AppNameApi</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">,</span><span class="w"> </span><span class="n">service</span><span class="p">)</span>
+
+<span class="c1">// Start listening for events</span>
+<span class="kd">val</span><span class="w"> </span><span class="nv">event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="na">contracts</span><span class="p">.</span><span class="o">&lt;</span><span class="n">contract_name</span><span class="o">&gt;</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="o">&lt;</span><span class="n">contract_Address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">events</span>
+<span class="w">        </span><span class="p">.</span><span class="o">&lt;</span><span class="n">event_name</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="p">.</span><span class="na">onEvent</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Received event: </span><span class="si">$</span><span class="n">it</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">// Trigger an event</span>
+<span class="n">app</span><span class="p">.</span><span class="na">contracts</span>
+<span class="w">    </span><span class="p">.</span><span class="o">&lt;</span><span class="n">contract_name</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="o">&lt;</span><span class="n">contract_Address</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="o">&lt;</span><span class="n">method_triggering_event</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">method_parameters</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Then run this code. You should be able to see events printing on the screen.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2017-2023 Web3 Labs Ltd
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/web3j" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/web3labs" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/web3labs" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+        <script src="../js/version-select.js"></script>
+      
+    
+  </body>
+</html>
