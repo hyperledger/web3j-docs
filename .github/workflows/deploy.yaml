@@ -32,3 +32,5 @@ jobs:
           git fetch origin gh-pages --depth=1
       - name: Deploy with Mike
         run: mike deploy ${{ env.version }} -p
+      - name: Set default version with Mike
+        run: mike set-default ${{ env.version }} -p
