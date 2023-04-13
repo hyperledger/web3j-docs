@@ -61,6 +61,7 @@ nav:
       - TLS over HTTP and Websockets: advanced/tls_http_websockets.md
       - HSM Transaction Signing: advanced/HSM_transaction_signing.md
       - Web3j Core Modules: advanced/web3j_core_modules.md
+      - Json Web Key (JWK) support: advanced/jwk_support.md
   - Command Line Tools: command_line_tools.md
   - References:
       - Troubleshooting: references/troubleshooting.md
@@ -85,7 +86,7 @@ theme:
 # Customization
 extra:
   web3j:
-    version: 4.9.7
+    version: 4.9.8
   android:
     version: 4.6.0
   sokt:
