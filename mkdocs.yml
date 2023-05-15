@@ -63,6 +63,8 @@ nav:
       - Web3j Core Modules: advanced/web3j_core_modules.md
       - Json Web Key (JWK) support: advanced/jwk_support.md
   - Command Line Tools: command_line_tools.md
+  - Use Cases:
+      - Meta Transactions: use_cases/meta_transaction.md
   - References:
       - Troubleshooting: references/troubleshooting.md
       - Projects using Web3j: references/projects_using_web3j.md
@@ -86,7 +88,7 @@ theme:
 # Customization
 extra:
   web3j:
-    version: 4.9.8
+    version: 4.10.0
   android:
     version: 4.6.0
   sokt:
