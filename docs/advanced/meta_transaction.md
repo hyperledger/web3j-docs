@@ -17,7 +17,7 @@ The actors of this scheme are:
 The Forwarder contract
 -----------------------------
 
-The basic mechanism is given by the OpenZeppelin’s MinimalForwarder implementation, to be used together with an ERC2771 compatible contract as the Recipient contract 
+The basic mechanism is given by the [OpenZeppelin’s MinimalForwarder](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.8.2/contracts/metatx/MinimalForwarder.sol) implementation, to be used together with an ERC2771 compatible contract as the Recipient contract 
 
 Recipient Contract
 -----------------------------
