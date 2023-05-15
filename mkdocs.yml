@@ -62,6 +62,7 @@ nav:
       - HSM Transaction Signing: advanced/HSM_transaction_signing.md
       - Web3j Core Modules: advanced/web3j_core_modules.md
       - Json Web Key (JWK) support: advanced/jwk_support.md
+      - Meta Transaction: advanced/meta_transaction.md
   - Command Line Tools: command_line_tools.md
   - References:
       - Troubleshooting: references/troubleshooting.md
