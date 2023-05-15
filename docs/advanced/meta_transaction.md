@@ -4,6 +4,8 @@ Meta Transactions
 Meta transactions are a popular way to enable users to transact on a blockchain without directly paying the gas fees. Instead, they sign a message off-chain, which is then relayed by a relayer who pays the gas fees.
 
 ![img.png](../img/Meta-Transaction/meta_transaction.png)
+<p style="text-align: center;">Interaction Diagram [1]</p>
+
 
 The actors of this scheme are:
 
@@ -11,8 +13,6 @@ The actors of this scheme are:
 - <b>Relayer</b>: a web server with a wallet that signs a valid Ethereum transaction (that has the meta transaction as the payload) and sends it to the blockchain.
 - <b>Forwarder</b>: an Ethereum contract in charge of verifying the signature of the meta transaction that, not surprisingly, forwards the request to a recipient contract.
 - <b>Recipient</b>: the Ethereum contract that the user intended to call without paying the gas fee, this contract has to be able to preserve the identity of the user that initially requested the transaction.
-
-[source](https://medium.com/coinmonks/gas-free-transactions-meta-transactions-explained-f829509a462d)
 
 The Forwarder contract
 -----------------------------
@@ -53,8 +53,7 @@ contract Recipient is ERC2771Context {
 EIP-712: Typed structured data JSON
 -----------------------------
 
-Before proceeding with the code, let's first look at the JSON structure of the data that will be used to sign the message:
-
+In order to be able to sign the message JSON structured data has to be created and it should look like:
 ```json
 {
   "types": {
@@ -77,7 +76,7 @@ Before proceeding with the code, let's first look at the JSON structure of the d
   "domain": {
     "name": "MinimalForwarder",
     "version": "0.0.1",
-    "chainId": 1,
+    "chainId": <network_chain_id>,
     "verifyingContract": "<forwarder_contract_address>"
   },
   "message": {
@@ -107,12 +106,12 @@ Web3j implementation
 Create a Web3j instance and connect to a node:
 ```java
 
-Web3j web3j = Web3j.build(new HttpService("https://mainnet.infura.io/v3/your-project-id"));
+Web3j web3j = Web3j.build(new HttpService("<network_http_rpc_endpoint>"));
 ```
 Load the MinimalForwarder and Recipient contract
 ```java
-MinimalForwarder minimalForwarder = MinimalForwarder.load("0x707325cd8bc6789f2cd2d87e53438ade70eada11", web3j, credentials, new StaticGasProvider(BigInteger.valueOf(4_100_000_000L),BigInteger.valueOf(6721975L)));
-Recipient recipient = Recipient.load("0x88685d266aa6664444820494a98c16b284cda5e6", web3j, credentials, new StaticGasProvider(BigInteger.valueOf(4_100_000_000L),BigInteger.valueOf(6721975L)));
+MinimalForwarder minimalForwarder = MinimalForwarder.load("<minimalForwarder_contract_address>", web3j, credentials, new StaticGasProvider(BigInteger.valueOf(4_100_000_000L),BigInteger.valueOf(6721975L)));
+Recipient recipient = Recipient.load("<recipient_contract_address>", web3j, credentials, new StaticGasProvider(BigInteger.valueOf(4_100_000_000L),BigInteger.valueOf(6721975L)));
 ```
 Define the recipient function and encode it:
 ```java
@@ -162,4 +161,4 @@ minimalForwarder.execute(forwardRequest, getSignatureBytes(retval, BigInteger.va
 System.out.println(recipient.color().send());  // returns "blue" color
 ```
 
-
+[1] [medium.com](https://medium.com/coinmonks/gas-free-transactions-meta-transactions-explained-f829509a462d)

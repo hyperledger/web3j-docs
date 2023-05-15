@@ -87,7 +87,7 @@ theme:
 # Customization
 extra:
   web3j:
-    version: 4.9.8
+    version: 4.10.0
   android:
     version: 4.6.0
   sokt:
