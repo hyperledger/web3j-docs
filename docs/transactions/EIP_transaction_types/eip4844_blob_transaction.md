@@ -39,6 +39,10 @@ Each of these elements are defined as follows:
 
 ### Example
 
+#### Prerequisites
+Before proceeding with the following code example, please ensure that the network you are working with has EIP-4844 support 
+enabled.
+
 ```java
 public class Web3App {
     
