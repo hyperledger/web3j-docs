@@ -14,6 +14,7 @@ nav:
   - Quickstart: quickstart.md
   - Getting Started:
       - Run a Node locally: getting_started/run_node_locally.md
+      - Setting up project for Android: getting_started/setup_android.md
       - Interacting with a Node: getting_started/interacting_with_node.md
       - Deploy and Interact with Smart Contracts: getting_started/deploy_interact_smart_contracts.md
       - Filters and Flowables: getting_started/pub_sub.md
