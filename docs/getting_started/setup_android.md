@@ -1,9 +1,9 @@
-Setting up Latest Web3J Library for Android Development
+Setting up Project for Android
 --------------------------------------------------------
 
-Web3j is a lightweight, highly modular, reactive, and type-safe Java and Android library designed to work with Smart Contracts and integrate with clients (nodes) on the Ethereum network. This powerful library enables developers to interact with the Ethereum blockchain without the additional overhead of writing custom integration code. In this article, we’ll walk through the steps to set up Web3j for Android development using the latest version.
+In this article, we’ll walk through the steps to set up Web3j for Android development using the latest version.
 
-> The latest version of Web3J Library (4.12.0) requires at least **JDK version 17**
+> The latest version of Web3j Library (4.12.0) requires at least **JDK version 17**
 
 ## Step 1: Add Web3j Dependency
 
@@ -43,8 +43,5 @@ android {
 }
 ```
 
-## Step 3: Sync Gradle
-
-After adding the dependencies and updating the packaging options, sync your Gradle files to ensure all changes are applied. This can be done by clicking the “**Sync Now**” prompt that appears in the top-right corner of Android Studio, or by selecting “**File > Sync Project with Gradle Files”**.
 
 
